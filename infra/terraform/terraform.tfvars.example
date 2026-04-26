@@ -1,0 +1,117 @@
+# ---------------------------------------------------------------------------
+# terraform.tfvars.example
+#
+# Copy this file to terraform.tfvars and fill in the values for your
+# target environment before running terraform plan / apply.
+#
+# NEVER commit terraform.tfvars to source control — it may contain
+# sensitive values.  The file is already listed in .gitignore.
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Core
+# ---------------------------------------------------------------------------
+
+aws_region   = "us-east-1"
+environment  = "prod"
+project_name = "modcompat"
+
+# ---------------------------------------------------------------------------
+# Networking
+# ---------------------------------------------------------------------------
+
+vpc_cidr = "10.0.0.0/16"
+
+public_subnet_cidrs = [
+  "10.0.0.0/20",
+  "10.0.16.0/20",
+  "10.0.32.0/20",
+]
+
+private_subnet_cidrs = [
+  "10.0.128.0/20",
+  "10.0.144.0/20",
+  "10.0.160.0/20",
+]
+
+# Set to true in staging/dev to save NAT gateway costs
+single_nat_gateway = false
+
+# ---------------------------------------------------------------------------
+# EKS
+# ---------------------------------------------------------------------------
+
+eks_cluster_version = "1.31"
+
+eks_system_node_instance_types = ["m6i.large"]
+eks_system_node_min_size       = 2
+eks_system_node_max_size       = 4
+eks_system_node_desired_size   = 2
+
+eks_general_node_instance_types = ["m6i.2xlarge", "m6a.2xlarge"]
+eks_general_node_min_size       = 3
+eks_general_node_max_size       = 20
+eks_general_node_desired_size   = 3
+
+eks_node_disk_size_gb = 100
+
+# ---------------------------------------------------------------------------
+# RDS PostgreSQL
+# ---------------------------------------------------------------------------
+
+rds_instance_class        = "db.r6g.xlarge"
+rds_allocated_storage     = 100
+rds_max_allocated_storage = 1000
+rds_postgres_version      = "16.3"
+rds_backup_retention_days = 14
+rds_multi_az              = true
+rds_deletion_protection   = true
+
+# ---------------------------------------------------------------------------
+# ElastiCache Redis
+# ---------------------------------------------------------------------------
+
+redis_node_type               = "cache.r6g.large"
+redis_num_node_groups         = 3
+redis_replicas_per_node_group = 1
+redis_engine_version          = "7.1"
+
+# ---------------------------------------------------------------------------
+# OpenSearch
+# ---------------------------------------------------------------------------
+
+opensearch_instance_type        = "r6g.large.search"
+opensearch_instance_count       = 3
+opensearch_master_instance_type = "r6g.large.search"
+opensearch_master_count         = 3
+opensearch_ebs_volume_size      = 100
+opensearch_engine_version       = "OpenSearch_2.13"
+opensearch_deletion_protection  = true
+
+# ---------------------------------------------------------------------------
+# MSK (Managed Kafka)
+# ---------------------------------------------------------------------------
+
+msk_broker_instance_type                  = "kafka.m5.large"
+msk_broker_count                          = 3
+msk_kafka_version                         = "3.6.0"
+msk_broker_ebs_volume_size                = 1000
+msk_storage_autoscaling_max_capacity      = 4000
+msk_storage_autoscaling_target_percentage = 70
+
+# ---------------------------------------------------------------------------
+# S3 / Terraform state
+# ---------------------------------------------------------------------------
+
+# Add a unique suffix to avoid S3 global naming conflicts.
+# Example: your AWS account ID or a random string.
+terraform_state_bucket_suffix = "123456789012"
+
+# ---------------------------------------------------------------------------
+# Extra tags (optional)
+# ---------------------------------------------------------------------------
+
+extra_tags = {
+  CostCenter = "platform-engineering"
+  Team       = "infrastructure"
+}

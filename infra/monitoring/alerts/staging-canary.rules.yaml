@@ -1,0 +1,54 @@
+groups:
+  - name: modcompat-staging-canary
+    rules:
+      - alert: ModcompatStagingCanaryFailed
+        expr: modcompat_canary_overall_success{environment="staging"} < 1
+        for: 5m
+        labels:
+          severity: critical
+          environment: staging
+        annotations:
+          summary: Staging synthetic canary failed
+          description: The latest staging canary reported a failed probe. Inspect .phase13-canary-report.json and compose service logs.
+
+      - alert: ModcompatStagingCanaryProbeFailed
+        expr: modcompat_canary_success{environment="staging"} < 1
+        for: 5m
+        labels:
+          severity: warning
+          environment: staging
+        annotations:
+          summary: A staging canary probe is failing
+          description: One or more staging canary sub-probes are unhealthy. Check the probe label and the canary report artifact.
+
+      - alert: ModcompatStagingCanaryStale
+        expr: time() - modcompat_canary_run_timestamp_seconds{environment="staging"} > 1800
+        for: 10m
+        labels:
+          severity: warning
+          environment: staging
+        annotations:
+          summary: Staging synthetic canary data is stale
+          description: No fresh staging canary result has been recorded within the last 30 minutes.
+
+      - alert: ModcompatStagingCanarySlow
+        expr: max by (probe) (modcompat_canary_duration_milliseconds{environment="staging"}) > 15000
+        for: 10m
+        labels:
+          severity: warning
+          environment: staging
+        annotations:
+          summary: A staging canary probe is slow
+          description: A staging canary probe exceeded the 15 second latency threshold.
+
+  - name: modcompat-staging-healthz
+    rules:
+      - alert: ModcompatStagingServiceHealthFailing
+        expr: min by (instance) (probe_success{job="modcompat-staging-healthz", environment="staging"}) < 1
+        for: 5m
+        labels:
+          severity: critical
+          environment: staging
+        annotations:
+          summary: A staging service health probe is failing
+          description: A blackbox health probe against a staging service is reporting failure.

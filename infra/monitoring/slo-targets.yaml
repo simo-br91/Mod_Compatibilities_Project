@@ -1,0 +1,37 @@
+schemaVersion: 1
+environment: staging
+objectives:
+  - objectiveId: staging-canary-success-rate
+    description: Latest synthetic canary runs should succeed during active staging release work.
+    target: 0.99
+    window: 7d
+    indicator:
+      type: synthetic
+      metric: modcompat_canary_overall_success
+      aggregation: avg_over_time
+  - objectiveId: staging-canary-freshness
+    description: Synthetic canary data should not go stale while staging is being actively validated.
+    target: 1800
+    unit: seconds
+    indicator:
+      type: freshness
+      metric: modcompat_canary_run_timestamp_seconds
+      aggregation: time_since_latest
+  - objectiveId: staging-service-health-availability
+    description: Staging backend services should answer blackbox health probes reliably.
+    target: 0.995
+    window: 7d
+    indicator:
+      type: blackbox
+      metric: probe_success
+      selector:
+        job: modcompat-staging-healthz
+      aggregation: avg_over_time
+  - objectiveId: staging-canary-latency
+    description: Individual staging canary probes should stay comfortably below operator triage thresholds.
+    target: 15000
+    unit: milliseconds
+    indicator:
+      type: synthetic
+      metric: modcompat_canary_duration_milliseconds
+      aggregation: max_over_time

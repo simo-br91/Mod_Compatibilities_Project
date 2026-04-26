@@ -1,0 +1,28 @@
+{
+  "rule_id": "vr_optifine_fabric_loader_conflict",
+  "version": 1,
+  "title": "OptiFine is not a verified Fabric 1.21.1 baseline",
+  "finding_type": "verified_rule_conflict",
+  "severity": "critical",
+  "confidence": 0.99,
+  "reproducibility": "confirmed",
+  "summary": "The verified rule set flags OptiFine as incompatible with the supported Fabric 1.21.1 baseline used in Phase 1 deterministic analysis.",
+  "recommended_actions": [
+    "Remove OptiFine from Fabric snapshots.",
+    "Use Sodium and Lithium when you need rendering and general performance improvements."
+  ],
+  "conditions": [
+    {
+      "type": "project_present",
+      "project_id": "cp_optifine"
+    },
+    {
+      "type": "loader_is",
+      "loader": "fabric"
+    },
+    {
+      "type": "minecraft_version_is",
+      "minecraft_version": "1.21.1"
+    }
+  ]
+}

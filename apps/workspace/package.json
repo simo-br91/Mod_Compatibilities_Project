@@ -1,0 +1,19 @@
+{
+  "name": "@modcompat/workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@modcompat/api-contracts": "workspace:*",
+    "@modcompat/config": "workspace:*",
+    "@modcompat/observability": "workspace:*",
+    "@modcompat/platform-core": "workspace:*",
+    "stripe": "^16.0.0"
+  },
+  "scripts": {
+    "dev": "tsx ./src/index.ts",
+    "serve": "tsx ./src/server.ts",
+    "test": "node --import tsx --test ./src/**/*.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  }
+}

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --sidebar-width: 240px;
+  }
+
+  body {
+    @apply bg-mc-bg text-mc-text;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    line-height: 1.4;
+    min-height: 100vh;
+    image-rendering: pixelated;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'VT323', monospace;
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.8);
+  }
+
+  input, select, textarea, button {
+    font-family: 'VT323', monospace;
+    font-size: inherit;
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #111; }
+  ::-webkit-scrollbar-thumb { background: #555; border: 1px solid #333; }
+  ::-webkit-scrollbar-thumb:hover { background: #777; }
+}
+
+@layer components {
+  .mc-panel {
+    @apply bg-mc-panel border-2 border-mc-border p-4;
+    box-shadow: 4px 4px 0px #000000;
+  }
+
+  .mc-panel-inner {
+    @apply bg-mc-bg border-2 border-mc-stone-dark p-3;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.5);
+  }
+
+  .mc-btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 font-minecraft text-mc-text border-2 border-mc-border transition-all cursor-pointer select-none;
+    background: #3a3a3a;
+    box-shadow: 2px 2px 0px #000, inset 1px 1px 0px rgba(255,255,255,0.12);
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.8);
+    letter-spacing: 0.05em;
+  }
+
+  .mc-btn:hover:not(:disabled) {
+    background: #4a4a4a;
+    box-shadow: 1px 1px 0px #000, inset 1px 1px 0px rgba(255,255,255,0.18);
+    transform: translate(1px, 1px);
+  }
+
+  .mc-btn:active:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+
+  .mc-btn:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  .mc-btn-primary {
+    @apply mc-btn;
+    background: #3d7a19;
+    border-color: #2a5510;
+    color: #ffffff;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.9);
+  }
+
+  .mc-btn-primary:hover:not(:disabled) {
+    background: #4d9a21;
+    border-color: #3d7a19;
+  }
+
+  .mc-btn-danger {
+    @apply mc-btn;
+    background: #7a1919;
+    border-color: #551010;
+  }
+
+  .mc-btn-danger:hover:not(:disabled) {
+    background: #9a2121;
+  }
+
+  .mc-input {
+    @apply w-full bg-mc-bg border-2 border-mc-stone-dark px-3 py-2 text-mc-text font-minecraft;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.5);
+    outline: none;
+    font-size: inherit;
+  }
+
+  .mc-input:focus {
+    @apply border-mc-green;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.5), 0 0 0 1px #5ab552;
+  }
+
+  .mc-select {
+    @apply mc-input appearance-none cursor-pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0l6 8 6-8z' fill='%23aaa'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 2rem;
+  }
+
+  .mc-divider {
+    @apply border-t-2 border-mc-stone-dark my-4;
+  }
+
+  .mc-label {
+    @apply block text-mc-text-muted text-base mb-1 tracking-wider;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 16px;
+  }
+
+  .mc-badge {
+    @apply inline-block px-2 py-0 border border-mc-border text-xs font-minecraft;
+    background: #3a3a3a;
+    text-shadow: none;
+  }
+
+  .mc-success-box {
+    @apply border-2 p-4;
+    border-color: #3d7a19;
+    background: #1a2f10;
+    box-shadow: 2px 2px 0px #000;
+  }
+
+  .mc-error-box {
+    @apply border-2 p-4;
+    border-color: #7a1919;
+    background: #2f1010;
+    box-shadow: 2px 2px 0px #000;
+  }
+
+  .mc-info-box {
+    @apply border-2 p-4;
+    border-color: #555;
+    background: #222;
+    box-shadow: 2px 2px 0px #000;
+  }
+}
+
+@layer utilities {
+  .severity-critical { @apply border-l-4 border-l-critical bg-red-950 text-red-200; }
+  .severity-high     { @apply border-l-4 border-l-high bg-orange-950 text-orange-200; }
+  .severity-medium   { @apply border-l-4 border-l-medium bg-yellow-950 text-yellow-200; }
+  .severity-low      { @apply border-l-4 border-l-low bg-blue-950 text-blue-200; }
+  .severity-info     { @apply border-l-4 border-l-info bg-mc-stone-dark text-mc-text-muted; }
+
+  .text-shadow-mc { text-shadow: 2px 2px 0px rgba(0,0,0,0.8); }
+  .text-shadow-none { text-shadow: none; }
+}

@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 2,
+  "releaseVersion": "phase13-image-history-smoke",
+  "environment": "staging",
+  "createdAt": "2026-04-18T12:38:28.922Z",
+  "source": {
+    "gitSha": "local-worktree",
+    "gitRef": "local",
+    "generatedBy": "local-operator"
+  },
+  "validation": {
+    "requiredChecks": [
+      "pnpm contracts:check",
+      "pnpm typecheck",
+      "pnpm test:regression",
+      "pnpm --filter @modcompat/web build",
+      "pnpm canary:staging",
+      "pnpm smoke:staging"
+    ],
+    "smokeWorkflow": "Staging Smoke",
+    "regressionSuite": "pnpm test:regression"
+  },
+  "runtime": {
+    "envTemplatePath": ".env.example",
+    "composeFilePath": "docker-compose.yml",
+    "appComposeFilePath": "docker-compose.staging.yml",
+    "infrastructureDependencies": [
+      {
+        "serviceId": "postgres",
+        "source": "docker-compose",
+        "ports": [
+          "5432:5432"
+        ]
+      },
+      {
+        "serviceId": "redis",
+        "source": "docker-compose",
+        "ports": [
+          "6379:6379"
+        ]
+      },
+      {
+        "serviceId": "temporal",
+        "source": "docker-compose",
+        "ports": [
+          "7233:7233"
+        ]
+      },
+      {
+        "serviceId": "neo4j",
+        "source": "docker-compose",
+        "ports": [
+          "7474:7474",
+          "7687:7687"
+        ]
+      },
+      {
+        "serviceId": "opensearch",
+        "source": "docker-compose",
+        "ports": [
+          "9200:9200"
+        ]
+      },
+      {
+        "serviceId": "minio",
+        "source": "docker-compose",
+        "ports": [
+          "9000:9000",
+          "9001:9001"
+        ]
+      }
+    ]
+  },
+  "services": [
+    {
+      "serviceId": "evidence",
+      "deployable": true,
+      "language": "typescript",
+      "role": "evidence service",
+      "startCommand": "pnpm --filter @modcompat/evidence exec tsx src/index.ts",
+      "healthUrl": "http://localhost:8081/healthz",
+      "envKeys": [
+        "APP_ENV",
+        "LOG_LEVEL",
+        "POSTGRES_URL",
+        "EVIDENCE_HTTP_PORT"
+      ],
+      "imageRepository": "modcompat/evidence",
+      "dockerfilePath": "docker/node-service.Dockerfile",
+      "buildContext": "."
+    },
+    {
+      "serviceId": "admin",
+      "deployable": true,
+      "language": "typescript",
+      "role": "admin curation service",
+      "startCommand": "pnpm --filter @modcompat/admin exec tsx src/index.ts",
+      "healthUrl": "http://localhost:8082/healthz",
+      "envKeys": [
+        "APP_ENV",
+        "LOG_LEVEL",
+        "POSTGRES_URL",
+        "ADMIN_HTTP_PORT"
+      ],
+      "imageRepository": "modcompat/admin",
+      "dockerfilePath": "docker/node-service.Dockerfile",
+      "buildContext": "."
+    },
+    {
+      "serviceId": "analysis-orchestrator",
+      "deployable": true,
+      "language": "typescript",
+      "role": "analysis orchestration service",
+      "startCommand": "pnpm --filter @modcompat/analysis-orchestrator exec tsx src/index.ts",
+      "healthUrl": "http://localhost:8086/healthz",
+      "envKeys": [
+        "APP_ENV",
+        "LOG_LEVEL",
+        "POSTGRES_URL",
+        "ORCHESTRATOR_HTTP_PORT",
+        "ARTIFACT_ANALYSIS_SERVICE_URL"
+      ],
+      "imageRepository": "modcompat/analysis-orchestrator",
+      "dockerfilePath": "docker/node-service.Dockerfile",
+      "buildContext": "."
+    },
+    {
+      "serviceId": "recommendation",
+      "deployable": true,
+      "language": "go",
+      "role": "recommendation service",
+      "startCommand": "go run ./apps/recommendation/cmd/service",
+      "healthUrl": "http://localhost:8083/healthz",
+      "envKeys": [
+        "RECOMMENDATION_HTTP_PORT",
+        "ORCHESTRATOR_SERVICE_URL"
+      ],
+      "imageRepository": "modcompat/recommendation",
+      "dockerfilePath": "docker/go-service.Dockerfile",
+      "buildContext": "."
+    },
+    {
+      "serviceId": "graph",
+      "deployable": true,
+      "language": "go",
+      "role": "graph service",
+      "startCommand": "go run ./apps/graph/cmd/service",
+      "healthUrl": "http://localhost:8084/healthz",
+      "envKeys": [
+        "GRAPH_HTTP_PORT",
+        "ORCHESTRATOR_SERVICE_URL"
+      ],
+      "imageRepository": "modcompat/graph",
+      "dockerfilePath": "docker/go-service.Dockerfile",
+      "buildContext": "."
+    },
+    {
+      "serviceId": "simulation",
+      "deployable": true,
+      "language": "go",
+      "role": "simulation service",
+      "startCommand": "go run ./apps/simulation/cmd/service",
+      "healthUrl": "http://localhost:8085/healthz",
+      "envKeys": [
+        "SIMULATION_HTTP_PORT",
+        "ORCHESTRATOR_SERVICE_URL"
+      ],
+      "imageRepository": "modcompat/simulation",
+      "dockerfilePath": "docker/go-service.Dockerfile",
+      "buildContext": "."
+    },
+    {
+      "serviceId": "artifact-analysis",
+      "deployable": true,
+      "language": "java",
+      "role": "artifact analysis service",
+      "startCommand": "java -cp .staging-smoke-artifact-analysis-classes com.modcompat.artifactanalysis.ArtifactAnalysisServer",
+      "healthUrl": "http://localhost:9090/healthz",
+      "envKeys": [
+        "ARTIFACT_ANALYSIS_HTTP_PORT",
+        "JAVA_BIN"
+      ],
+      "imageRepository": "modcompat/artifact-analysis",
+      "dockerfilePath": "docker/artifact-analysis.Dockerfile",
+      "buildContext": "."
+    },
+    {
+      "serviceId": "web",
+      "deployable": false,
+      "language": "nextjs",
+      "role": "web application shell",
+      "startCommand": "pnpm --filter @modcompat/web start",
+      "healthUrl": "http://localhost:3000",
+      "envKeys": [
+        "WEB_BASE_URL",
+        "API_BASE_URL"
+      ]
+    }
+  ],
+  "images": {
+    "registryHost": "ghcr.io/modcompat",
+    "namespace": "platform",
+    "publishedAt": "2026-04-18T12:38:41.255Z",
+    "artifacts": [
+      {
+        "serviceId": "evidence",
+        "localImageRef": "modcompat/evidence:phase13-image-history-smoke",
+        "remoteImageRef": "ghcr.io/modcompat/platform/evidence:phase13-image-history-smoke",
+        "registryHost": "ghcr.io/modcompat",
+        "repository": "platform/evidence",
+        "tag": "phase13-image-history-smoke",
+        "publishStatus": "published",
+        "publishedAt": "2026-04-18T12:38:41.255Z",
+        "dockerfilePath": "docker/node-service.Dockerfile",
+        "buildContext": "."
+      },
+      {
+        "serviceId": "admin",
+        "localImageRef": "modcompat/admin:phase13-image-history-smoke",
+        "remoteImageRef": "ghcr.io/modcompat/platform/admin:phase13-image-history-smoke",
+        "registryHost": "ghcr.io/modcompat",
+        "repository": "platform/admin",
+        "tag": "phase13-image-history-smoke",
+        "publishStatus": "published",
+        "publishedAt": "2026-04-18T12:38:41.255Z",
+        "dockerfilePath": "docker/node-service.Dockerfile",
+        "buildContext": "."
+      },
+      {
+        "serviceId": "analysis-orchestrator",
+        "localImageRef": "modcompat/analysis-orchestrator:phase13-image-history-smoke",
+        "remoteImageRef": "ghcr.io/modcompat/platform/analysis-orchestrator:phase13-image-history-smoke",
+        "registryHost": "ghcr.io/modcompat",
+        "repository": "platform/analysis-orchestrator",
+        "tag": "phase13-image-history-smoke",
+        "publishStatus": "published",
+        "publishedAt": "2026-04-18T12:38:41.255Z",
+        "dockerfilePath": "docker/node-service.Dockerfile",
+        "buildContext": "."
+      },
+      {
+        "serviceId": "recommendation",
+        "localImageRef": "modcompat/recommendation:phase13-image-history-smoke",
+        "remoteImageRef": "ghcr.io/modcompat/platform/recommendation:phase13-image-history-smoke",
+        "registryHost": "ghcr.io/modcompat",
+        "repository": "platform/recommendation",
+        "tag": "phase13-image-history-smoke",
+        "publishStatus": "published",
+        "publishedAt": "2026-04-18T12:38:41.255Z",
+        "dockerfilePath": "docker/go-service.Dockerfile",
+        "buildContext": "."
+      },
+      {
+        "serviceId": "graph",
+        "localImageRef": "modcompat/graph:phase13-image-history-smoke",
+        "remoteImageRef": "ghcr.io/modcompat/platform/graph:phase13-image-history-smoke",
+        "registryHost": "ghcr.io/modcompat",
+        "repository": "platform/graph",
+        "tag": "phase13-image-history-smoke",
+        "publishStatus": "published",
+        "publishedAt": "2026-04-18T12:38:41.255Z",
+        "dockerfilePath": "docker/go-service.Dockerfile",
+        "buildContext": "."
+      },
+      {
+        "serviceId": "simulation",
+        "localImageRef": "modcompat/simulation:phase13-image-history-smoke",
+        "remoteImageRef": "ghcr.io/modcompat/platform/simulation:phase13-image-history-smoke",
+        "registryHost": "ghcr.io/modcompat",
+        "repository": "platform/simulation",
+        "tag": "phase13-image-history-smoke",
+        "publishStatus": "published",
+        "publishedAt": "2026-04-18T12:38:41.255Z",
+        "dockerfilePath": "docker/go-service.Dockerfile",
+        "buildContext": "."
+      },
+      {
+        "serviceId": "artifact-analysis",
+        "localImageRef": "modcompat/artifact-analysis:phase13-image-history-smoke",
+        "remoteImageRef": "ghcr.io/modcompat/platform/artifact-analysis:phase13-image-history-smoke",
+        "registryHost": "ghcr.io/modcompat",
+        "repository": "platform/artifact-analysis",
+        "tag": "phase13-image-history-smoke",
+        "publishStatus": "published",
+        "publishedAt": "2026-04-18T12:38:41.255Z",
+        "dockerfilePath": "docker/artifact-analysis.Dockerfile",
+        "buildContext": "."
+      }
+    ]
+  },
+  "deploymentTarget": {
+    "targetId": "staging-kubernetes",
+    "kind": "kubernetes",
+    "environment": "staging",
+    "registryHost": "ghcr.io/modcompat",
+    "manifestsPath": "infra/kubernetes",
+    "namespace": "modcompat-staging",
+    "composeFiles": [
+      "docker-compose.yml",
+      "docker-compose.staging.yml"
+    ],
+    "releaseStatePath": "infra/releases/environments/staging.json"
+  },
+  "probes": [
+    {
+      "probeId": "staging-canary",
+      "command": "pnpm canary:staging",
+      "purpose": "Quickly verify service health plus critical artifact-analysis, evidence, and admin write/read paths before the heavier staging smoke gate."
+    },
+    {
+      "probeId": "gateway-staging-smoke",
+      "command": "pnpm smoke:staging",
+      "purpose": "Boot live service topology and validate replay, persistence, and boundary modes."
+    },
+    {
+      "probeId": "curated-regression-suite",
+      "command": "pnpm test:regression",
+      "purpose": "Detect drift in findings, recommendation quality, simulation results, and release gating."
+    }
+  ]
+}

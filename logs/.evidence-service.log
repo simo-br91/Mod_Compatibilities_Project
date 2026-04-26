@@ -1,0 +1,2 @@
+{"level":"info","service":"evidence","message":"Evidence service initialized","routeCount":3,"indexes":["evidence-documents","evidence-snippets"]}
+{"level":"info","service":"evidence","message":"Evidence HTTP server listening","port":8081,"routeCount":3,"persistence":{"enabled":true,"connectionStringConfigured":true}}

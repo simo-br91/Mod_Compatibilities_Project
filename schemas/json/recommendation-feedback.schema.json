@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/recommendation-feedback.schema.json",
+  "title": "RecommendationFeedback",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "feedback_id",
+    "recommendation_set_id",
+    "recommendation_id",
+    "feedback_type",
+    "created_by",
+    "created_at"
+  ],
+  "properties": {
+    "feedback_id": { "type": "string" },
+    "recommendation_set_id": { "type": "string" },
+    "recommendation_id": { "type": "string" },
+    "feedback_type": {
+      "type": "string",
+      "enum": ["accepted", "dismissed", "helpful", "not_helpful"]
+    },
+    "note": { "type": "string" },
+    "created_by": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

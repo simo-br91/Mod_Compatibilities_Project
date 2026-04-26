@@ -1,0 +1,40 @@
+{
+  "name": "modpack-compatibility-platform",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "@types/pg": "^8.20.0",
+    "pg": "^8.20.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "build": "pnpm -r --if-present build",
+    "canary:staging": "node --import tsx ./scripts/staging/phase13_canary.ts",
+    "dev": "pnpm --filter @modcompat/gateway dev",
+    "lint": "pnpm -r --if-present lint",
+    "release:bundle": "node --import tsx ./scripts/release/phase13_release.ts bundle",
+    "release:publish:staging": "node --import tsx ./scripts/release/phase13_release.ts publish-images --environment staging",
+    "release:status": "node --import tsx ./scripts/release/phase13_release.ts status",
+    "release:deploy:staging": "node --import tsx ./scripts/release/phase13_release.ts deploy --environment staging",
+    "release:rollback:staging": "node --import tsx ./scripts/release/phase13_release.ts rollback --environment staging",
+    "release:verify:staging": "node --import tsx ./scripts/release/phase13_release.ts verify --environment staging",
+    "runtime:staging:up": "docker compose -f docker-compose.yml -f docker-compose.staging.yml up -d --build",
+    "runtime:staging:down": "docker compose -f docker-compose.yml -f docker-compose.staging.yml down --remove-orphans",
+    "test": "pnpm -r --if-present test",
+    "test:regression": "pnpm --filter @modcompat/platform-core test:regression",
+    "truth:run": "node --import tsx ./scripts/ground_truth/run.ts",
+    "truth:run:forge-local": "node --import tsx ./scripts/ground_truth/run_forge_local.ts",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "contracts:check": "pnpm --filter @modcompat/api-contracts contracts:check",
+    "smoke:staging": "node --import tsx ./scripts/staging/phase13_smoke.ts",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down --remove-orphans"
+  }
+}

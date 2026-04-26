@@ -1,0 +1,1275 @@
+openapi: 3.1.0
+info:
+  title: Modpack Compatibility Platform API
+  version: 0.2.0
+  description: Phase 0 implementation-grade contract for the documented public API subset.
+servers:
+  - url: http://localhost:8080
+    description: Local development gateway
+paths:
+  /v1/auth/session:
+    get:
+      summary: Get the authenticated session
+      operationId: getSession
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SessionResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/organizations:
+    post:
+      summary: Create an organization
+      operationId: createOrganization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateOrganizationRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Organization' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/organizations/{organizationId}:
+    get:
+      summary: Get an organization
+      operationId: getOrganization
+      parameters:
+        - { $ref: '#/components/parameters/OrganizationId' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Organization' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/organizations/{organizationId}/memberships:
+    post:
+      summary: Create an organization membership
+      operationId: createOrganizationMembership
+      parameters:
+        - { $ref: '#/components/parameters/OrganizationId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateMembershipRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/OrganizationMembership' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/organizations/{organizationId}/api-keys:
+    post:
+      summary: Create an API key
+      operationId: createApiKey
+      parameters:
+        - { $ref: '#/components/parameters/OrganizationId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateApiKeyRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ApiKey' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/workspaces:
+    post:
+      summary: Create a workspace
+      operationId: createWorkspace
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateWorkspaceRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Workspace' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/workspaces/{workspaceId}:
+    get:
+      summary: Get a workspace
+      operationId: getWorkspace
+      parameters: [{ $ref: '#/components/parameters/WorkspaceId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Workspace' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/workspaces/{workspaceId}/projects:
+    get:
+      summary: List projects for a workspace
+      operationId: listWorkspaceProjects
+      parameters: [{ $ref: '#/components/parameters/WorkspaceId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ProjectListResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects:
+    post:
+      summary: Create a project
+      operationId: createProject
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateProjectRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Project' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}:
+    get:
+      summary: Get a project
+      operationId: getProject
+      parameters: [{ $ref: '#/components/parameters/ProjectId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Project' }
+        default: { $ref: '#/components/responses/Error' }
+    patch:
+      summary: Update a project
+      operationId: updateProject
+      parameters: [{ $ref: '#/components/parameters/ProjectId' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/UpdateProjectRequest' }
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Project' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/imports:
+    post:
+      summary: Create an import job
+      operationId: createImport
+      parameters:
+        - { $ref: '#/components/parameters/ProjectId' }
+        - { $ref: '#/components/parameters/IdempotencyKey' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateImportRequest' }
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CreateImportResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/imports/{importId}:
+    get:
+      summary: Get an import job
+      operationId: getImport
+      parameters:
+        - { $ref: '#/components/parameters/ProjectId' }
+        - { $ref: '#/components/parameters/ImportId' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ImportDetail' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/imports/manifest:
+    post:
+      summary: Import a manifest payload
+      operationId: importManifest
+      parameters: [{ $ref: '#/components/parameters/ProjectId' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ManifestImportRequest' }
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CreateImportResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/imports/mod-list:
+    post:
+      summary: Import a normalized mod list
+      operationId: importModList
+      parameters: [{ $ref: '#/components/parameters/ProjectId' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ModListImportRequest' }
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CreateImportResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/imports/upload-url:
+    post:
+      summary: Create an upload URL for pack artifacts
+      operationId: createImportUploadUrl
+      parameters: [{ $ref: '#/components/parameters/ProjectId' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateUploadUrlRequest' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CreateUploadUrlResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/analyses:
+    post:
+      summary: Create a new analysis job
+      operationId: createAnalysis
+      parameters:
+        - { $ref: '#/components/parameters/ProjectId' }
+        - { $ref: '#/components/parameters/IdempotencyKey' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateAnalysisRequest' }
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CreateAnalysisResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}:
+    get:
+      summary: Get analysis summary
+      operationId: getAnalysis
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisSummary' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/progress:
+    get:
+      summary: Get analysis progress
+      operationId: getAnalysisProgress
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisProgressResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/findings:
+    get:
+      summary: Get findings for an analysis
+      operationId: listAnalysisFindings
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/FindingsResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/artifacts:
+    get:
+      summary: Get artifact analysis outputs for an analysis
+      operationId: listAnalysisArtifacts
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisArtifactsResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/graph:
+    get:
+      summary: Get graph snapshot for an analysis
+      operationId: getAnalysisGraph
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisGraphResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/graph/neighborhood:
+    get:
+      summary: Get a graph neighborhood for an analysis
+      operationId: getAnalysisGraphNeighborhood
+      parameters:
+        - { $ref: '#/components/parameters/AnalysisId' }
+        - in: query
+          name: node_id
+          required: true
+          schema: { type: string }
+        - in: query
+          name: depth
+          required: false
+          schema: { type: integer, minimum: 1, maximum: 5, default: 1 }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/GraphNeighborhoodResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/explanations/{findingId}:
+    get:
+      summary: Get an explanation path for a finding
+      operationId: getFindingExplanation
+      parameters:
+        - { $ref: '#/components/parameters/AnalysisId' }
+        - in: path
+          name: findingId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ExplanationPathResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/recommendations:
+    get:
+      summary: Get recommendations for an analysis
+      operationId: listAnalysisRecommendations
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RecommendationsResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/events/stream:
+    get:
+      summary: Stream analysis progress over SSE
+      operationId: streamAnalysisEvents
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: Event stream
+          content:
+            text/event-stream:
+              schema: { type: string }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/catalog/projects/search:
+    get:
+      summary: Search canonical projects
+      operationId: searchCatalogProjects
+      parameters:
+        - in: query
+          name: q
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CatalogSearchResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/catalog/projects/{projectKey}:
+    get:
+      summary: Get a canonical project
+      operationId: getCatalogProject
+      parameters:
+        - in: path
+          name: projectKey
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CatalogProject' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/catalog/versions/{versionId}:
+    get:
+      summary: Get a canonical version
+      operationId: getCatalogVersion
+      parameters:
+        - in: path
+          name: versionId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CatalogVersion' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/catalog/resolve:
+    post:
+      summary: Resolve a project reference to canonical identity
+      operationId: resolveCatalogProject
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CatalogResolveRequest' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CatalogResolveResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/findings/{findingId}:
+    patch:
+      summary: Update a finding state
+      operationId: updateFinding
+      parameters:
+        - in: path
+          name: findingId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/UpdateFindingRequest' }
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Finding' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/findings/{findingId}/feedback:
+    post:
+      summary: Submit feedback for a finding
+      operationId: submitFindingFeedback
+      parameters:
+        - in: path
+          name: findingId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/FindingFeedbackRequest' }
+      responses:
+        '202': { description: Accepted }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/report:
+    get:
+      summary: Get an analysis report
+      operationId: getAnalysisReport
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisReport' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/report/export:
+    get:
+      summary: Export an analysis report
+      operationId: exportAnalysisReport
+      parameters:
+        - { $ref: '#/components/parameters/AnalysisId' }
+        - in: query
+          name: format
+          required: true
+          schema: { type: string, enum: [json, pdf, markdown] }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ExportResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/diffs:
+    post:
+      summary: Create a persisted pack diff
+      operationId: createPackDiff
+      parameters:
+        - { $ref: '#/components/parameters/ProjectId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreatePackDiffRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PackDiffResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/pack-diffs/{packDiffId}:
+    get:
+      summary: Get a persisted pack diff
+      operationId: getPackDiff
+      parameters:
+        - in: path
+          name: packDiffId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PackDiffResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/integrations/github/installations/{installationId}/link:
+    post:
+      summary: Link a GitHub installation to a project
+      operationId: linkGitHubInstallation
+      parameters:
+        - in: path
+          name: installationId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/LinkGitHubInstallationRequest' }
+      responses:
+        '202': { description: Accepted }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/webhooks:
+    post:
+      summary: Register a webhook
+      operationId: createWebhook
+      parameters: [{ $ref: '#/components/parameters/IdempotencyKey' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateWebhookRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Webhook' }
+        default: { $ref: '#/components/responses/Error' }
+    get:
+      summary: List webhooks
+      operationId: listWebhooks
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items:
+                    type: array
+                    items: { $ref: '#/components/schemas/Webhook' }
+        default: { $ref: '#/components/responses/Error' }
+components:
+  parameters:
+    OrganizationId: { in: path, name: organizationId, required: true, schema: { type: string } }
+    WorkspaceId: { in: path, name: workspaceId, required: true, schema: { type: string } }
+    ProjectId: { in: path, name: projectId, required: true, schema: { type: string } }
+    ImportId: { in: path, name: importId, required: true, schema: { type: string } }
+    AnalysisId: { in: path, name: analysisId, required: true, schema: { type: string } }
+    IdempotencyKey: { in: header, name: Idempotency-Key, required: false, schema: { type: string } }
+  responses:
+    Error:
+      description: Error response
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/ErrorResponse' }
+  schemas:
+    SessionResponse:
+      type: object
+      required: [token, user, organization, memberships, workspaces, projects, api_keys]
+      properties:
+        token: { type: string }
+        user:
+          type: object
+          required: [user_id, email, display_name]
+          properties:
+            user_id: { type: string }
+            email: { type: string }
+            display_name: { type: string }
+        organization: { $ref: '#/components/schemas/Organization' }
+        memberships:
+          type: array
+          items: { $ref: '#/components/schemas/OrganizationMembership' }
+        workspaces:
+          type: array
+          items: { $ref: '#/components/schemas/Workspace' }
+        projects:
+          type: array
+          items: { $ref: '#/components/schemas/Project' }
+        api_keys:
+          type: array
+          items: { $ref: '#/components/schemas/ApiKey' }
+    Organization:
+      type: object
+      required: [organization_id, name, slug, created_at]
+      properties:
+        organization_id: { type: string }
+        tenant_id: { type: string }
+        name: { type: string }
+        slug: { type: string }
+        created_at: { type: string, format: date-time }
+    CreateOrganizationRequest:
+      type: object
+      required: [name, slug]
+      properties:
+        name: { type: string }
+        slug: { type: string }
+    OrganizationMembership:
+      type: object
+      required: [organization_id, user_id, role, created_at]
+      properties:
+        organization_id: { type: string }
+        user_id: { type: string }
+        role: { type: string, enum: [owner, admin, member, viewer] }
+        created_at: { type: string, format: date-time }
+    CreateMembershipRequest:
+      type: object
+      required: [user_id, role]
+      properties:
+        user_id: { type: string }
+        role: { type: string, enum: [owner, admin, member, viewer] }
+    ApiKey:
+      type: object
+      required: [api_key_id, organization_id, name, key_prefix, scopes, created_at]
+      properties:
+        api_key_id: { type: string }
+        organization_id: { type: string }
+        created_by: { type: string }
+        name: { type: string }
+        key_prefix: { type: string }
+        scopes: { type: array, items: { type: string } }
+        created_at: { type: string, format: date-time }
+        last_used_at: { type: string, format: date-time }
+        revoked_at: { type: string, format: date-time }
+        secret: { type: string }
+    CreateApiKeyRequest:
+      type: object
+      required: [name, scopes]
+      properties:
+        name: { type: string }
+        scopes: { type: array, items: { type: string } }
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: object
+          required: [code, message]
+          properties:
+            code: { type: string }
+            message: { type: string }
+            trace_id: { type: string }
+    Workspace:
+      type: object
+      required: [workspace_id, organization_id, name, slug, created_at]
+      properties:
+        workspace_id: { type: string }
+        organization_id: { type: string }
+        name: { type: string }
+        slug: { type: string }
+        created_at: { type: string, format: date-time }
+    CreateWorkspaceRequest:
+      type: object
+      required: [organization_id, name, slug]
+      properties:
+        organization_id: { type: string }
+        name: { type: string }
+        slug: { type: string }
+    Project:
+      type: object
+      required: [project_id, workspace_id, name, slug, visibility, created_at]
+      properties:
+        project_id: { type: string }
+        workspace_id: { type: string }
+        organization_id: { type: string }
+        name: { type: string }
+        slug: { type: string }
+        visibility: { type: string, enum: [private, organization, public] }
+        created_at: { type: string, format: date-time }
+    ProjectListResponse:
+      type: object
+      required: [items]
+      properties:
+        items: { type: array, items: { $ref: '#/components/schemas/Project' } }
+    CreateProjectRequest:
+      type: object
+      required: [workspace_id, name, slug]
+      properties:
+        workspace_id: { type: string }
+        name: { type: string }
+        slug: { type: string }
+        visibility: { type: string, enum: [private, organization, public] }
+    UpdateProjectRequest:
+      type: object
+      properties:
+        name: { type: string }
+        visibility: { type: string, enum: [private, organization, public] }
+    CreateImportRequest:
+      type: object
+      required: [source_type]
+      properties:
+        source_type: { type: string, enum: [manifest, mod_list, upload, repository] }
+        source_ref: { type: string }
+    ManifestImportRequest:
+      type: object
+      required: [manifest_format, manifest]
+      properties:
+        manifest_format: { type: string, enum: [curseforge, modrinth, prism] }
+        manifest: { type: object, additionalProperties: true }
+    ModListImportRequest:
+      type: object
+      required: [mods, environment]
+      properties:
+        mods:
+          type: array
+          items:
+            type: object
+            required: [name]
+            properties:
+              name: { type: string }
+              version: { type: string }
+              source: { type: string }
+        environment: { $ref: '#/components/schemas/AnalysisEnvironment' }
+    CreateUploadUrlRequest:
+      type: object
+      required: [content_type, filename]
+      properties:
+        content_type: { type: string }
+        filename: { type: string }
+    CreateUploadUrlResponse:
+      type: object
+      required: [upload_url, object_key]
+      properties:
+        upload_url: { type: string, format: uri }
+        object_key: { type: string }
+    CreateImportResponse:
+      type: object
+      required: [import_id, status]
+      properties:
+        import_id: { type: string }
+        pack_snapshot_id: { type: string }
+        status: { type: string, enum: [queued, processing, completed] }
+    ImportDetail:
+      type: object
+      required: [import_id, project_id, organization_id, source_type, status, created_at]
+      properties:
+        import_id: { type: string }
+        project_id: { type: string }
+        organization_id: { type: string }
+        source_type: { type: string, enum: [manifest, mod_list, upload, repository] }
+        status: { type: string, enum: [queued, processing, completed, failed] }
+        source_ref: { type: string }
+        pack_snapshot_id: { type: string }
+        created_at: { type: string, format: date-time }
+        completed_at: { type: string, format: date-time }
+        snapshot:
+          type: object
+          required: [pack_snapshot_id, normalized_hash, environment, mods]
+          properties:
+            pack_snapshot_id: { type: string }
+            normalized_hash: { type: string }
+            environment: { $ref: '#/components/schemas/AnalysisEnvironment' }
+            mods:
+              type: array
+              items:
+                type: object
+                required: [name, resolution_method, confidence]
+                properties:
+                  name: { type: string }
+                  version: { type: string }
+                  source: { type: string }
+                  canonical_project_id: { type: string }
+                  canonical_version_id: { type: string }
+                  resolution_method:
+                    type: string
+                    enum: [source_mapping, slug_match, alias_match, unresolved]
+                  confidence: { type: number, minimum: 0, maximum: 1 }
+    CreateAnalysisRequest:
+      type: object
+      required: [trigger, analysis_mode, input_ref, environment]
+      properties:
+        trigger: { type: string, enum: [manual, webhook, scheduled, api] }
+        analysis_mode: { type: string, enum: [fast, standard, deep] }
+        input_ref:
+          type: object
+          required: [type, id]
+          properties:
+            type: { type: string, enum: [pack_snapshot, import, manifest, uploaded_mods] }
+            id: { type: string }
+        environment: { $ref: '#/components/schemas/AnalysisEnvironment' }
+        options:
+          type: object
+          properties:
+            run_simulation: { type: boolean }
+            include_alternatives: { type: boolean }
+            include_low_confidence: { type: boolean }
+            compare_to_snapshot_id: { type: string }
+            baseline_analysis_id: { type: string }
+    CreateAnalysisResponse:
+      type: object
+      required: [analysis_id, status, progress_stream_url]
+      properties:
+        analysis_id: { type: string }
+        status: { type: string, enum: [queued, running] }
+        queue_position: { type: integer }
+        progress_stream_url: { type: string }
+    AnalysisEnvironment:
+      type: object
+      required: [minecraft_version, loader, java_version, side]
+      properties:
+        minecraft_version: { type: string }
+        loader: { type: string, enum: [forge, fabric, quilt, neoforge, unknown] }
+        java_version: { type: string }
+        side: { type: string, enum: [client, server, both] }
+    AnalysisSummary:
+      type: object
+      required: [analysis_id, project_id, workspace_id, status, trigger, analysis_mode, created_at]
+      properties:
+        analysis_id: { type: string }
+        project_id: { type: string }
+        workspace_id: { type: string }
+        organization_id: { type: string }
+        pack_snapshot_id: { type: string }
+        status: { type: string, enum: [queued, running, completed, failed, cancelled] }
+        trigger: { type: string, enum: [manual, webhook, scheduled, api] }
+        analysis_mode: { type: string, enum: [fast, standard, deep] }
+        score: { type: number, format: float }
+        created_at: { type: string, format: date-time }
+        started_at: { type: string, format: date-time }
+        finished_at: { type: string, format: date-time }
+        counts:
+          type: object
+          properties:
+            critical: { type: integer }
+            high: { type: integer }
+            medium: { type: integer }
+            low: { type: integer }
+            info: { type: integer }
+    AnalysisProgressResponse:
+      type: object
+      required: [analysis, phases, events]
+      properties:
+        analysis: { $ref: '#/components/schemas/AnalysisSummary' }
+        phases:
+          type: array
+          items:
+            type: object
+            required: [phase_id, analysis_id, phase_name, status, duration_ms, started_at, finished_at]
+            properties:
+              phase_id: { type: string }
+              analysis_id: { type: string }
+              phase_name:
+                type: string
+                enum: [normalization, resolution, static_analysis, graph_enrichment, merge_findings, pack_diff, rule_evaluation, recommendation, reporting]
+              status: { type: string, enum: [completed, skipped, failed] }
+              duration_ms: { type: integer }
+              started_at: { type: string, format: date-time }
+              finished_at: { type: string, format: date-time }
+        events:
+          type: array
+          items:
+            type: object
+            required: [event_id, analysis_id, event_type, message, occurred_at]
+            properties:
+              event_id: { type: string }
+              analysis_id: { type: string }
+              event_type:
+                type: string
+                enum:
+                  - analysis.queued
+                  - analysis.started
+                  - analysis.phase.completed
+                  - analysis.finding.emitted
+                  - analysis.completed
+                  - analysis.failed
+              message: { type: string }
+              occurred_at: { type: string, format: date-time }
+              phase_name:
+                type: string
+                enum: [normalization, resolution, static_analysis, graph_enrichment, merge_findings, pack_diff, rule_evaluation, recommendation, reporting]
+    FindingsResponse:
+      type: object
+      required: [items]
+      properties:
+        items: { type: array, items: { $ref: '#/components/schemas/Finding' } }
+        next_cursor: { type: string, nullable: true }
+    AnalysisArtifactsResponse:
+      type: object
+      required: [items]
+      properties:
+        items:
+          type: array
+          items: { $ref: '#/components/schemas/ArtifactAnalysis' }
+    Finding:
+      type: object
+      required: [finding_id, type, severity, confidence, reproducibility, title, subjects]
+      properties:
+        finding_id: { type: string }
+        type: { type: string }
+        severity: { type: string, enum: [info, low, medium, high, critical] }
+        confidence: { type: number, minimum: 0, maximum: 1 }
+        reproducibility: { type: string, enum: [confirmed, likely, intermittent, not_tested] }
+        title: { type: string }
+        summary: { type: string }
+        explanation: { type: string }
+        dedupe_key: { type: string }
+        scope: { $ref: '#/components/schemas/AnalysisEnvironment' }
+        evidence: { type: array, items: { $ref: '#/components/schemas/EvidenceRef' } }
+        subjects: { type: array, items: { $ref: '#/components/schemas/FindingSubject' } }
+        recommended_actions: { type: array, items: { type: string } }
+        provenance:
+          type: array
+          items: { $ref: '#/components/schemas/FindingProvenance' }
+        confidence_inputs:
+          type: array
+          items: { $ref: '#/components/schemas/ConfidenceInput' }
+    EvidenceRef:
+      type: object
+      required: [type, id]
+      properties:
+        type: { type: string, enum: [rule, issue, discussion, simulation, model, static_analysis, graph, catalog] }
+        id: { type: string }
+        snippet_id: { type: string }
+    FindingSubject:
+      type: object
+      required: [project_id]
+      properties:
+        project_id: { type: string }
+        version_id: { type: string }
+        relation: { type: string, enum: [primary, secondary, alternative, environment] }
+    FindingProvenance:
+      type: object
+      required: [kind, source_id, source_type]
+      properties:
+        kind: { type: string, enum: [resolver, verified_rule, static_analysis, graph, diff] }
+        source_id: { type: string }
+        source_type: { type: string }
+        version: { type: string }
+        note: { type: string }
+    ConfidenceInput:
+      type: object
+      required: [source, value, weight, rationale]
+      properties:
+        source: { type: string, enum: [resolver, verified_rule, static_analysis, graph, diff] }
+        value: { type: number, minimum: 0, maximum: 1 }
+        weight: { type: number, minimum: 0 }
+        rationale: { type: string }
+    AnalysisGraphResponse:
+      type: object
+      required: [graph]
+      properties:
+        graph: { $ref: '#/components/schemas/GraphSnapshot' }
+    GraphNeighborhoodResponse:
+      type: object
+      required: [neighborhood]
+      properties:
+        neighborhood: { $ref: '#/components/schemas/GraphNeighborhood' }
+    ExplanationPathResponse:
+      type: object
+      required: [explanation]
+      properties:
+        explanation: { $ref: '#/components/schemas/ExplanationPath' }
+    GraphSnapshot:
+      type: object
+      required: [graph_id, analysis_id, nodes, edges]
+      properties:
+        graph_id: { type: string }
+        analysis_id: { type: string }
+        nodes:
+          type: array
+          items: { $ref: '#/components/schemas/GraphNode' }
+        edges:
+          type: array
+          items: { $ref: '#/components/schemas/GraphEdge' }
+    GraphNode:
+      type: object
+      required: [node_id, node_type, label, analysis_id]
+      properties:
+        node_id: { type: string }
+        node_type: { type: string }
+        label: { type: string }
+        analysis_id: { type: string }
+        properties: { type: object, additionalProperties: true }
+    GraphEdge:
+      type: object
+      required: [edge_id, analysis_id, edge_type, source_id, target_id]
+      properties:
+        edge_id: { type: string }
+        analysis_id: { type: string }
+        edge_type: { type: string }
+        source_id: { type: string }
+        target_id: { type: string }
+        weight: { type: number, format: float }
+        properties: { type: object, additionalProperties: true }
+    GraphNeighborhood:
+      type: object
+      required: [analysis_id, center_node_id, depth, nodes, edges]
+      properties:
+        analysis_id: { type: string }
+        center_node_id: { type: string }
+        depth: { type: integer }
+        nodes:
+          type: array
+          items: { $ref: '#/components/schemas/GraphNode' }
+        edges:
+          type: array
+          items: { $ref: '#/components/schemas/GraphEdge' }
+    ExplanationPath:
+      type: object
+      required: [path_id, analysis_id, finding_id, summary, nodes, edges, created_at]
+      properties:
+        path_id: { type: string }
+        analysis_id: { type: string }
+        finding_id: { type: string }
+        summary: { type: string }
+        nodes:
+          type: array
+          items: { $ref: '#/components/schemas/GraphNode' }
+        edges:
+          type: array
+          items: { $ref: '#/components/schemas/GraphEdge' }
+        created_at: { type: string, format: date-time }
+    ArtifactAnalysis:
+      type: object
+      required: [artifact_analysis_id, analysis_id, pack_snapshot_id, project_id, metadata, class_targets, resource_targets, mixin_targets, embedded_libraries, fingerprint]
+      properties:
+        artifact_analysis_id: { type: string }
+        analysis_id: { type: string }
+        pack_snapshot_id: { type: string }
+        project_id: { type: string }
+        version_id: { type: string }
+        metadata:
+          type: object
+          required: [artifact_id, name, loader_hints, mixin_config_files]
+          properties:
+            artifact_id: { type: string }
+            name: { type: string }
+            version: { type: string }
+            loader_hints: { type: array, items: { type: string } }
+            mixin_config_files: { type: array, items: { type: string } }
+        class_targets:
+          type: array
+          items: { $ref: '#/components/schemas/ArtifactTarget' }
+        resource_targets:
+          type: array
+          items: { $ref: '#/components/schemas/ArtifactTarget' }
+        mixin_targets:
+          type: array
+          items: { $ref: '#/components/schemas/ArtifactTarget' }
+        embedded_libraries:
+          type: array
+          items: { $ref: '#/components/schemas/EmbeddedLibrary' }
+        fingerprint: { type: string }
+    ArtifactTarget:
+      type: object
+      required: [owner_artifact_id, target]
+      properties:
+        owner_artifact_id: { type: string }
+        target: { type: string }
+    EmbeddedLibrary:
+      type: object
+      required: [owner_artifact_id, coordinates, package_hints]
+      properties:
+        owner_artifact_id: { type: string }
+        coordinates: { type: string }
+        package_hints: { type: array, items: { type: string } }
+    Recommendation:
+      type: object
+      required: [recommendation_id, kind, rank, confidence, summary]
+      properties:
+        recommendation_id: { type: string }
+        kind: { type: string, enum: [replacement, bundle, remediation_plan] }
+        rank: { type: integer, minimum: 1 }
+        confidence: { type: number, minimum: 0, maximum: 1 }
+        summary: { type: string }
+        rationale: { type: string }
+        replaces_subjects: { type: array, items: { $ref: '#/components/schemas/FindingSubject' } }
+        candidate_projects: { type: array, items: { $ref: '#/components/schemas/FindingSubject' } }
+        migration_cost: { type: string, enum: [low, medium, high, unknown] }
+        expected_compatibility_gain: { type: number, minimum: 0, maximum: 1 }
+    RecommendationsResponse:
+      type: object
+      required: [recommendation_set_id, items]
+      properties:
+        recommendation_set_id: { type: string }
+        items: { type: array, items: { $ref: '#/components/schemas/Recommendation' } }
+    CatalogProject:
+      type: object
+      required: [project_id, slug, display_name]
+      properties:
+        project_id: { type: string }
+        slug: { type: string }
+        display_name: { type: string }
+        project_type: { type: string }
+        loaders: { type: array, items: { type: string } }
+        minecraft_versions: { type: array, items: { type: string } }
+    CatalogVersion:
+      type: object
+      required: [version_id, project_id, version_label]
+      properties:
+        version_id: { type: string }
+        project_id: { type: string }
+        version_label: { type: string }
+        release_channel: { type: string }
+        loaders: { type: array, items: { type: string } }
+        minecraft_versions: { type: array, items: { type: string } }
+    CatalogSearchResponse:
+      type: object
+      required: [items]
+      properties:
+        items: { type: array, items: { $ref: '#/components/schemas/CatalogProject' } }
+    CatalogResolveRequest:
+      type: object
+      required: [source_name]
+      properties:
+        source_name: { type: string }
+        source_project_id: { type: string }
+        source_slug: { type: string }
+        artifact_hash: { type: string }
+    CatalogResolveResponse:
+      type: object
+      required: [resolved]
+      properties:
+        resolved: { type: boolean }
+        canonical_project_id: { type: string }
+        confidence: { type: number, minimum: 0, maximum: 1 }
+        resolution_method: { type: string }
+    UpdateFindingRequest:
+      type: object
+      properties:
+        status: { type: string, enum: [open, ignored, muted, resolved] }
+        note: { type: string }
+    FindingFeedbackRequest:
+      type: object
+      required: [feedback_type]
+      properties:
+        feedback_type: { type: string, enum: [correct, incorrect, incomplete, useful] }
+        note: { type: string }
+    AnalysisReport:
+      type: object
+      required: [analysis, findings, recommendations]
+      properties:
+        analysis: { $ref: '#/components/schemas/AnalysisSummary' }
+        findings: { type: array, items: { $ref: '#/components/schemas/Finding' } }
+        recommendations: { type: array, items: { $ref: '#/components/schemas/Recommendation' } }
+    ExportResponse:
+      type: object
+      required: [format, download_url]
+      properties:
+        format: { type: string, enum: [json, pdf, markdown] }
+        download_url: { type: string, format: uri }
+    CreatePackDiffRequest:
+      type: object
+      required: [base_snapshot_id, target_snapshot_id]
+      properties:
+        base_snapshot_id: { type: string }
+        target_snapshot_id: { type: string }
+        baseline_analysis_id: { type: string }
+        target_analysis_id: { type: string }
+    PackDiffResponse:
+      type: object
+      required: [diff]
+      properties:
+        diff: { $ref: '#/components/schemas/PackDiff' }
+    PackDiff:
+      type: object
+      required: [pack_diff_id, project_id, base_snapshot_id, target_snapshot_id, summary, changes]
+      properties:
+        pack_diff_id: { type: string }
+        project_id: { type: string }
+        base_snapshot_id: { type: string }
+        target_snapshot_id: { type: string }
+        baseline_analysis_id: { type: string }
+        target_analysis_id: { type: string }
+        summary:
+          type: object
+          required: [added_mods, removed_mods, changed_versions, finding_adds, finding_resolutions]
+          properties:
+            added_mods: { type: integer }
+            removed_mods: { type: integer }
+            changed_versions: { type: integer }
+            finding_adds: { type: integer }
+            finding_resolutions: { type: integer }
+        changes:
+          type: array
+          items:
+            type: object
+            required: [change_type, summary]
+            properties:
+              change_type: { type: string, enum: [mod_added, mod_removed, version_changed, environment_changed, finding_added, finding_resolved] }
+              project_id: { type: string }
+              before: { type: string }
+              after: { type: string }
+              summary: { type: string }
+    LinkGitHubInstallationRequest:
+      type: object
+      required: [project_id, repository]
+      properties:
+        project_id: { type: string }
+        repository: { type: string }
+    CreateWebhookRequest:
+      type: object
+      required: [target_url, event_types]
+      properties:
+        project_id: { type: string }
+        target_url: { type: string, format: uri }
+        event_types: { type: array, items: { type: string } }
+        secret_ref: { type: string }
+    Webhook:
+      type: object
+      required: [webhook_id, target_url, event_types, status, created_at]
+      properties:
+        webhook_id: { type: string }
+        project_id: { type: string }
+        target_url: { type: string, format: uri }
+        event_types: { type: array, items: { type: string } }
+        status: { type: string, enum: [active, disabled] }
+        created_at: { type: string, format: date-time }

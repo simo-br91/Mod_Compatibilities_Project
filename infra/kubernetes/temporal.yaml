@@ -1,0 +1,135 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: temporal-frontend
+  namespace: modcompat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: temporal-frontend
+  template:
+    metadata:
+      labels:
+        app: temporal-frontend
+    spec:
+      serviceAccountName: modcompat-runtime
+      containers:
+        - name: temporal
+          image: temporalio/auto-setup:1.25.2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 7233
+              name: grpc
+          env:
+            - name: DB
+              value: postgres12
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: modcompat-runtime-secrets
+                  key: TEMPORAL_POSTGRES_PORT
+            - name: POSTGRES_SEEDS
+              valueFrom:
+                secretKeyRef:
+                  name: modcompat-runtime-secrets
+                  key: TEMPORAL_POSTGRES_SEEDS
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: modcompat-runtime-secrets
+                  key: TEMPORAL_POSTGRES_USER
+            - name: POSTGRES_PWD
+              valueFrom:
+                secretKeyRef:
+                  name: modcompat-runtime-secrets
+                  key: TEMPORAL_POSTGRES_PASSWORD
+          readinessProbe:
+            tcpSocket:
+              port: grpc
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: grpc
+            initialDelaySeconds: 30
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: 1000m
+              memory: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: temporal-frontend
+  namespace: modcompat
+spec:
+  selector:
+    app: temporal-frontend
+  ports:
+    - port: 7233
+      targetPort: grpc
+      name: grpc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: temporal-ui
+  namespace: modcompat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: temporal-ui
+  template:
+    metadata:
+      labels:
+        app: temporal-ui
+    spec:
+      serviceAccountName: modcompat-runtime
+      containers:
+        - name: temporal-ui
+          image: temporalio/ui:2.30.3
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              name: http
+          env:
+            - name: TEMPORAL_ADDRESS
+              value: temporal-frontend:7233
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 384Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: temporal-ui
+  namespace: modcompat
+spec:
+  selector:
+    app: temporal-ui
+  ports:
+    - port: 8080
+      targetPort: http
+      name: http

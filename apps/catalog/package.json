@@ -1,0 +1,15 @@
+{
+  "name": "@modcompat/catalog",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@modcompat/config": "workspace:*",
+    "@modcompat/observability": "workspace:*",
+    "@modcompat/platform-core": "workspace:*"
+  },
+  "scripts": {
+    "dev": "tsx ./src/index.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  }
+}

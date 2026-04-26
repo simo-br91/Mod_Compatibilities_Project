@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/pack-review-summary.schema.json",
+  "title": "PackReviewSummary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "review_summary_id",
+    "analysis_id",
+    "model_id",
+    "headline",
+    "overview",
+    "sections",
+    "created_at"
+  ],
+  "properties": {
+    "review_summary_id": { "type": "string" },
+    "analysis_id": { "type": "string" },
+    "model_id": { "type": "string" },
+    "headline": { "type": "string" },
+    "overview": { "type": "string" },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["section_id", "title", "body", "citations"],
+        "properties": {
+          "section_id": { "type": "string" },
+          "title": { "type": "string" },
+          "body": { "type": "string" },
+          "citations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["citation_id", "citation_type", "target_id"],
+              "properties": {
+                "citation_id": { "type": "string" },
+                "citation_type": { "type": "string", "enum": ["finding", "evidence_document", "evidence_snippet", "recommendation"] },
+                "target_id": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

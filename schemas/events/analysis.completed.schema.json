@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/events/analysis.completed.schema.json",
+  "title": "analysis.completed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "event_type",
+    "schema_version",
+    "occurred_at",
+    "correlation_id",
+    "trace_id",
+    "producer",
+    "payload"
+  ],
+  "properties": {
+    "event_id": { "type": "string" },
+    "event_type": { "const": "analysis.completed" },
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "correlation_id": { "type": "string" },
+    "trace_id": { "type": "string" },
+    "tenant_id": { "type": "string" },
+    "organization_id": { "type": "string" },
+    "workspace_id": { "type": "string" },
+    "project_id": { "type": "string" },
+    "producer": { "type": "string" },
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["analysis_id", "status", "finished_at", "counts"],
+      "properties": {
+        "analysis_id": { "type": "string" },
+        "status": { "const": "completed" },
+        "finished_at": { "type": "string", "format": "date-time" },
+        "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["critical", "high", "medium", "low", "info"],
+          "properties": {
+            "critical": { "type": "integer", "minimum": 0 },
+            "high": { "type": "integer", "minimum": 0 },
+            "medium": { "type": "integer", "minimum": 0 },
+            "low": { "type": "integer", "minimum": 0 },
+            "info": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "recommendation_set_id": { "type": "string" },
+        "report_id": { "type": "string" }
+      }
+    }
+  }
+}

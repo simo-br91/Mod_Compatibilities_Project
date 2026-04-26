@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/recommendation-outcome.schema.json",
+  "title": "RecommendationOutcome",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "outcome_id",
+    "recommendation_set_id",
+    "status",
+    "applied_recommendation_ids",
+    "validation_summary",
+    "created_by",
+    "created_at"
+  ],
+  "properties": {
+    "outcome_id": { "type": "string" },
+    "recommendation_set_id": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "validated", "rejected", "deferred"]
+    },
+    "applied_recommendation_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "validation_summary": { "type": "string" },
+    "created_by": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

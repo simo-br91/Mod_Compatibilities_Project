@@ -1,0 +1,19 @@
+{
+  "feedback": [
+    {
+      "feedbackType": "accepted",
+      "note": "This is the fastest path to unblock the pack.",
+      "createdBy": "usr_demo"
+    },
+    {
+      "feedbackType": "helpful",
+      "note": "The staged plan made the recommendation easy to review.",
+      "createdBy": "usr_demo"
+    }
+  ],
+  "outcome": {
+    "status": "validated",
+    "validationSummary": "The follow-up snapshot removed the OptiFine conflict and preserved the Fabric optimization stack.",
+    "createdBy": "usr_demo"
+  }
+}

@@ -1,0 +1,4432 @@
+{
+  "generatedAt": "2026-04-21T22:19:44.503Z",
+  "count": 25,
+  "mods": [
+    {
+      "project": {
+        "id": "uXXizFIs",
+        "slug": "ferrite-core",
+        "title": "FerriteCore",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.20",
+          "1.20.1"
+        ],
+        "loaders": [
+          "forge",
+          "neoforge"
+        ],
+        "id": "DG5Fn9Sz",
+        "project_id": "uXXizFIs",
+        "author_id": "cXzLZ8YY",
+        "featured": false,
+        "name": "6.0.1 (Forge)",
+        "version_number": "6.0.1",
+        "changelog": "- Fix performance issue in quad deduplication in some corner cases\n- Slightly improve memory usage for blocks with only one state",
+        "changelog_url": null,
+        "date_published": "2023-10-22T13:40:26.306516Z",
+        "downloads": 17127255,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "5DAl5AST",
+            "hashes": {
+              "sha1": "417fb6ce8f52abf40bd9d0390371790f9576f8ba",
+              "sha512": "a1960a7c03dc32d4ccaccaf28afdd9b078758bbd62d15a91d4039a83fa9397a098e89b69591f6bd5190254d9ee97e502504154b9aec764adb8c65f000b75ba2c"
+            },
+            "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/DG5Fn9Sz/ferritecore-6.0.1-forge.jar",
+            "filename": "ferritecore-6.0.1-forge.jar",
+            "primary": true,
+            "size": 123034,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.20",
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge",
+            "neoforge"
+          ],
+          "id": "DG5Fn9Sz",
+          "project_id": "uXXizFIs",
+          "author_id": "cXzLZ8YY",
+          "featured": false,
+          "name": "6.0.1 (Forge)",
+          "version_number": "6.0.1",
+          "changelog": "- Fix performance issue in quad deduplication in some corner cases\n- Slightly improve memory usage for blocks with only one state",
+          "changelog_url": null,
+          "date_published": "2023-10-22T13:40:26.306516Z",
+          "downloads": 17127255,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "5DAl5AST",
+              "hashes": {
+                "sha1": "417fb6ce8f52abf40bd9d0390371790f9576f8ba",
+                "sha512": "a1960a7c03dc32d4ccaccaf28afdd9b078758bbd62d15a91d4039a83fa9397a098e89b69591f6bd5190254d9ee97e502504154b9aec764adb8c65f000b75ba2c"
+              },
+              "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/DG5Fn9Sz/ferritecore-6.0.1-forge.jar",
+              "filename": "ferritecore-6.0.1-forge.jar",
+              "primary": true,
+              "size": 123034,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20",
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge",
+            "neoforge"
+          ],
+          "id": "ULSumfl4",
+          "project_id": "uXXizFIs",
+          "author_id": "cXzLZ8YY",
+          "featured": false,
+          "name": "6.0.0 (Forge)",
+          "version_number": "6.0.0-forge",
+          "changelog": "- Update to Minecraft 1.20",
+          "changelog_url": null,
+          "date_published": "2023-06-08T18:26:31.366709Z",
+          "downloads": 440500,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "ZCQrzHOj",
+              "hashes": {
+                "sha1": "5c090bf8e882c0ccb9dcdb4afe712fa430e03a02",
+                "sha512": "e78ddd02cca0a4553eb135dbb3ec6cbc59200dd23febf3491d112c47a0b7e9fe2b97f97a3d43bb44d69f1a10aad01143dcd84dc575dfa5a9eaa315a3ec182b37"
+              },
+              "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/ULSumfl4/ferritecore-6.0.0-forge.jar",
+              "filename": "ferritecore-6.0.0-forge.jar",
+              "primary": true,
+              "size": 122786,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.19.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "zI3uKvrU",
+          "project_id": "uXXizFIs",
+          "author_id": "cXzLZ8YY",
+          "featured": false,
+          "name": "5.2.0 (Forge)",
+          "version_number": "5.2.0-forge",
+          "changelog": "- Update to Minecraft 1.19.4\n- Reduce memory overhead of quad lists in simple models\n- Deduplicate `faceSturdy` arrays in blockstate cache (KJP12)",
+          "changelog_url": null,
+          "date_published": "2023-03-17T07:27:17.489870Z",
+          "downloads": 99501,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "DiGq2vui",
+              "hashes": {
+                "sha1": "713989537a8533f758133627ee21e5f46bf3ca43",
+                "sha512": "29ed1c3cd8a3e95b4891d958a5d2399fe05a505d90c9f4d44d845852da26d03b4161c2d3322a172b0815117fbbc024d9df13f20ff171aaa80bf1a9d0672ce5be"
+              },
+              "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/zI3uKvrU/ferritecore-5.2.0-forge.jar",
+              "filename": "ferritecore-5.2.0-forge.jar",
+              "primary": true,
+              "size": 122799,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "5ZwdcRci",
+        "slug": "immediatelyfast",
+        "title": "ImmediatelyFast",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.4"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "VBfpe6hZ",
+        "project_id": "5ZwdcRci",
+        "author_id": "XEedK03N",
+        "featured": false,
+        "name": "ImmediatelyFast 1.8.2",
+        "version_number": "1.8.2+1.21.4-forge",
+        "changelog": "* Fixed crash when rendering outlined entities with a certain combination of mods.\r\n",
+        "changelog_url": null,
+        "date_published": "2025-09-25T15:08:36.573967Z",
+        "downloads": 3791,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "AcW6asf1",
+            "hashes": {
+              "sha512": "be4f3b386595d90528511ff5d7390df829a03a82cd186f1ae0f512c0f46766f994047887aeb9b7f62fa9d7c741fcbc569f81c502222e4a7b82571ea628ad8533",
+              "sha1": "07eaa0ea550c12dbd67f75b0f27f475a056e4c84"
+            },
+            "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/VBfpe6hZ/ImmediatelyFast-Forge-1.8.2%2B1.21.4.jar",
+            "filename": "ImmediatelyFast-Forge-1.8.2+1.21.4.jar",
+            "primary": true,
+            "size": 428930,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "VBfpe6hZ",
+          "project_id": "5ZwdcRci",
+          "author_id": "XEedK03N",
+          "featured": false,
+          "name": "ImmediatelyFast 1.8.2",
+          "version_number": "1.8.2+1.21.4-forge",
+          "changelog": "* Fixed crash when rendering outlined entities with a certain combination of mods.\r\n",
+          "changelog_url": null,
+          "date_published": "2025-09-25T15:08:36.573967Z",
+          "downloads": 3791,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "AcW6asf1",
+              "hashes": {
+                "sha512": "be4f3b386595d90528511ff5d7390df829a03a82cd186f1ae0f512c0f46766f994047887aeb9b7f62fa9d7c741fcbc569f81c502222e4a7b82571ea628ad8533",
+                "sha1": "07eaa0ea550c12dbd67f75b0f27f475a056e4c84"
+              },
+              "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/VBfpe6hZ/ImmediatelyFast-Forge-1.8.2%2B1.21.4.jar",
+              "filename": "ImmediatelyFast-Forge-1.8.2+1.21.4.jar",
+              "primary": true,
+              "size": 428930,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.2",
+            "1.21.3"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "oJhhVc3a",
+          "project_id": "5ZwdcRci",
+          "author_id": "XEedK03N",
+          "featured": false,
+          "name": "ImmediatelyFast 1.7.2",
+          "version_number": "1.7.2+1.21.3-forge",
+          "changelog": "* Fixed crash when rendering outlined entities with a certain combination of mods.\r\n",
+          "changelog_url": null,
+          "date_published": "2025-09-25T15:07:48.801057Z",
+          "downloads": 1315,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "TW8kNwam",
+              "hashes": {
+                "sha512": "25f03904af0391234c9eda9082de44916bc1d2b27b719038f7c45e1e895ef8a88bb2539a636cd2887d43d40e3f44582cdf107749df989629a19fb7a9f469a860",
+                "sha1": "661f21b41e41e1965f7887887ccc0d87a85af9b8"
+              },
+              "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/oJhhVc3a/ImmediatelyFast-Forge-1.7.2%2B1.21.3.jar",
+              "filename": "ImmediatelyFast-Forge-1.7.2+1.21.3.jar",
+              "primary": true,
+              "size": 429083,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "70fY7ZKu",
+          "project_id": "5ZwdcRci",
+          "author_id": "XEedK03N",
+          "featured": false,
+          "name": "ImmediatelyFast 1.6.7",
+          "version_number": "1.6.7+1.21.1-forge",
+          "changelog": "* Fixed crash when rendering outlined entities with a certain combination of mods.\r\n",
+          "changelog_url": null,
+          "date_published": "2025-09-25T15:06:44.482087Z",
+          "downloads": 13367,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "q5eeB3DH",
+              "hashes": {
+                "sha512": "52f8c3947c09c4c4cbc5a84e401c1a048ff9e45eba555beeba1ce07813518aa16af031c73a651b8ed44761521de27724218da98f8fd63c1e4f2e5c07623b8844",
+                "sha1": "83bd8e25238690a512e052c2fa294ee6330c3ea7"
+              },
+              "url": "https://cdn.modrinth.com/data/5ZwdcRci/versions/70fY7ZKu/ImmediatelyFast-Forge-1.6.7%2B1.21.1.jar",
+              "filename": "ImmediatelyFast-Forge-1.6.7+1.21.1.jar",
+              "primary": true,
+              "size": 432519,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "nmDcB62a",
+        "slug": "modernfix",
+        "title": "ModernFix",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.20.1"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "CixO1IdG",
+        "project_id": "nmDcB62a",
+        "author_id": "6bGskxLV",
+        "featured": false,
+        "name": "5.24.4+mc1.20.1",
+        "version_number": "5.24.4+mc1.20.1",
+        "changelog": "Depending on the size of this release, there may be a human-readable changelog available on [the wiki page](https://github.com/embeddedt/ModernFix/wiki/Changelog).\n\n## Changes since 5.24.3+1.20.1\n\n  * [Patch concurrency issue in ForgeRegistryTagManager](https://github.com/embeddedt/ModernFix/commit/87c977a3e6e3bfbda45a805642d94ebffb29ce14) - embeddedt\n",
+        "changelog_url": null,
+        "date_published": "2025-08-01T23:00:08.205986Z",
+        "downloads": 1994115,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "E2NaWWoA",
+            "hashes": {
+              "sha1": "daeccb1fbe1d67d426fcc8135cfff463ff0f7e1d",
+              "sha512": "8feb0282084196571489b6c1005c32ce4a3f03a6bff05c2cfe448677e4e36d6580f5f0eb428ef839de1dd9c307bfbd15567fd508fb405d2ae7eaec90796e9b14"
+            },
+            "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/CixO1IdG/modernfix-forge-5.24.4%2Bmc1.20.1.jar",
+            "filename": "modernfix-forge-5.24.4+mc1.20.1.jar",
+            "primary": true,
+            "size": 880557,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "CixO1IdG",
+          "project_id": "nmDcB62a",
+          "author_id": "6bGskxLV",
+          "featured": false,
+          "name": "5.24.4+mc1.20.1",
+          "version_number": "5.24.4+mc1.20.1",
+          "changelog": "Depending on the size of this release, there may be a human-readable changelog available on [the wiki page](https://github.com/embeddedt/ModernFix/wiki/Changelog).\n\n## Changes since 5.24.3+1.20.1\n\n  * [Patch concurrency issue in ForgeRegistryTagManager](https://github.com/embeddedt/ModernFix/commit/87c977a3e6e3bfbda45a805642d94ebffb29ce14) - embeddedt\n",
+          "changelog_url": null,
+          "date_published": "2025-08-01T23:00:08.205986Z",
+          "downloads": 1994115,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "E2NaWWoA",
+              "hashes": {
+                "sha1": "daeccb1fbe1d67d426fcc8135cfff463ff0f7e1d",
+                "sha512": "8feb0282084196571489b6c1005c32ce4a3f03a6bff05c2cfe448677e4e36d6580f5f0eb428ef839de1dd9c307bfbd15567fd508fb405d2ae7eaec90796e9b14"
+              },
+              "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/CixO1IdG/modernfix-forge-5.24.4%2Bmc1.20.1.jar",
+              "filename": "modernfix-forge-5.24.4+mc1.20.1.jar",
+              "primary": true,
+              "size": 880557,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "EAQLVtM2",
+          "project_id": "nmDcB62a",
+          "author_id": "6bGskxLV",
+          "featured": false,
+          "name": "5.24.3+mc1.20.1",
+          "version_number": "5.24.3+mc1.20.1",
+          "changelog": "Depending on the size of this release, there may be a human-readable changelog available on [the wiki page](https://github.com/embeddedt/ModernFix/wiki/Changelog).\n\n## Changes since 5.24.2+1.20.1\n\n  * [Don't specify ordering for JEI dependency](https://github.com/embeddedt/ModernFix/commit/54e55e7534521f8a503087c7052d196517d92544) - embeddedt\n",
+          "changelog_url": null,
+          "date_published": "2025-07-13T23:27:09.627766Z",
+          "downloads": 406355,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "Pa7tAj7C",
+              "hashes": {
+                "sha512": "da085b988b270450b3606705c50da504d6f04d5c357521d9acf888c1dbe8b267a5a342e2be555919471ce4aa105268a176e41f801adad991f27e495b3c3c354c",
+                "sha1": "53a839bb1b72a72a01f8906873173808d56a72b7"
+              },
+              "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/EAQLVtM2/modernfix-forge-5.24.3%2Bmc1.20.1.jar",
+              "filename": "modernfix-forge-5.24.3+mc1.20.1.jar",
+              "primary": true,
+              "size": 879295,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "1duKwUE0",
+          "project_id": "nmDcB62a",
+          "author_id": "6bGskxLV",
+          "featured": false,
+          "name": "5.24.2+mc1.20.1",
+          "version_number": "5.24.2+mc1.20.1",
+          "changelog": "Depending on the size of this release, there may be a human-readable changelog available on [the wiki page](https://github.com/embeddedt/ModernFix/wiki/Changelog).\n\n## Changes since 5.24.1+1.20.1\n\n  * [Fix reobfuscation issue](https://github.com/embeddedt/ModernFix/commit/65ab37b819de85a7ee7021782c5951a3f6966d4a) - embeddedt\n  * [Fix race condition when mods create tags on different threads](https://github.com/embeddedt/ModernFix/commit/873e3bd67654c0efe8a24237eeb90dea94a3de77) - embeddedt\n  * [Fix faster_ingredients bypassing defensive copy of ItemValue](https://github.com/embeddedt/ModernFix/commit/6b37051980f8d5cb148a975c3f57183fb4e0d38e) - embeddedt\n",
+          "changelog_url": null,
+          "date_published": "2025-07-13T18:55:48.286123Z",
+          "downloads": 11510,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "kVYvo2pX",
+              "hashes": {
+                "sha1": "3b1cd9e057e61bc61250d348ece1e94a684cdda5",
+                "sha512": "3dd2934f28c1814757e9030edc85c8ef30c81f33c31381d850b3c03df5cdbb72470143fbe58d74749d1c71384ae8c3d788e019fae6fde465761d56057232c075"
+              },
+              "url": "https://cdn.modrinth.com/data/nmDcB62a/versions/1duKwUE0/modernfix-forge-5.24.2%2Bmc1.20.1.jar",
+              "filename": "modernfix-forge-5.24.2+mc1.20.1.jar",
+              "primary": true,
+              "size": 879298,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "u6dRKJwZ",
+        "slug": "jei",
+        "title": "Just Enough Items (JEI)",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21",
+          "1.21.1"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "SEVIZmND",
+        "project_id": "u6dRKJwZ",
+        "author_id": "nMXRSbhF",
+        "featured": false,
+        "name": "19.25.0.323 for Forge 1.21.1",
+        "version_number": "19.25.0.323",
+        "changelog": "  * [Fix #4035 Collate various potion reagents into single recipe (#4116)](https://github.com/mezz/JustEnoughItems/commit/52724b095661e4a3c754fcfad2cba5d1a01e1770) - Jon\n",
+        "changelog_url": null,
+        "date_published": "2025-10-20T12:37:14.498742Z",
+        "downloads": 5748,
+        "version_type": "beta",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "8k7jlMOT",
+            "hashes": {
+              "sha1": "fb89c553e6a1c565885eaafafc7957ca17ad43cd",
+              "sha512": "7c636ede36a2895dafe0586d5cfe0de530588eec61963d6e41a9cae15ac5849790fc5e70dc59eaf28f10986c493dd12bdce43429d18ad197242eeaf5fb724d1a"
+            },
+            "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/SEVIZmND/jei-1.21.1-forge-19.25.0.323.jar",
+            "filename": "jei-1.21.1-forge-19.25.0.323.jar",
+            "primary": true,
+            "size": 1505889,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "SEVIZmND",
+          "project_id": "u6dRKJwZ",
+          "author_id": "nMXRSbhF",
+          "featured": false,
+          "name": "19.25.0.323 for Forge 1.21.1",
+          "version_number": "19.25.0.323",
+          "changelog": "  * [Fix #4035 Collate various potion reagents into single recipe (#4116)](https://github.com/mezz/JustEnoughItems/commit/52724b095661e4a3c754fcfad2cba5d1a01e1770) - Jon\n",
+          "changelog_url": null,
+          "date_published": "2025-10-20T12:37:14.498742Z",
+          "downloads": 5748,
+          "version_type": "beta",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "8k7jlMOT",
+              "hashes": {
+                "sha1": "fb89c553e6a1c565885eaafafc7957ca17ad43cd",
+                "sha512": "7c636ede36a2895dafe0586d5cfe0de530588eec61963d6e41a9cae15ac5849790fc5e70dc59eaf28f10986c493dd12bdce43429d18ad197242eeaf5fb724d1a"
+              },
+              "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/SEVIZmND/jei-1.21.1-forge-19.25.0.323.jar",
+              "filename": "jei-1.21.1-forge-19.25.0.323.jar",
+              "primary": true,
+              "size": 1505889,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "HT0Td1kh",
+          "project_id": "u6dRKJwZ",
+          "author_id": "nMXRSbhF",
+          "featured": false,
+          "name": "19.25.0.322 for Forge 1.21.1",
+          "version_number": "19.25.0.322",
+          "changelog": "  * [Allow null ingredient codec for custom ingredients](https://github.com/mezz/JustEnoughItems/commit/96a390d4a64c6e39a605829c217743466d07fc37) - mezz\n",
+          "changelog_url": null,
+          "date_published": "2025-10-02T11:36:12.101025Z",
+          "downloads": 8613,
+          "version_type": "beta",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "fVY3PmbK",
+              "hashes": {
+                "sha1": "665f4c28f4d92a53595d352adc50d02d4c2d0ae0",
+                "sha512": "ccfa3a6494b1f285f6263d0efa92c32393c68bca461263b493cdf7908c5883a53301a42560601dbf016e9384e85ad259be7e4a5101459418b84aa54e0dfa0382"
+              },
+              "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/HT0Td1kh/jei-1.21.1-forge-19.25.0.322.jar",
+              "filename": "jei-1.21.1-forge-19.25.0.322.jar",
+              "primary": true,
+              "size": 1505379,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "zzpNSbJZ",
+          "project_id": "u6dRKJwZ",
+          "author_id": "nMXRSbhF",
+          "featured": false,
+          "name": "15.20.0.116 for Forge 1.20.1",
+          "version_number": "15.20.0.116",
+          "changelog": "  * [use RecipeIngredientRole for bookmark's display](https://github.com/mezz/JustEnoughItems/commit/ae338ae3318527cc3bdc14acfc4ecf62f2281b71) - mezz\n",
+          "changelog_url": null,
+          "date_published": "2025-09-27T01:04:56.593434Z",
+          "downloads": 1588110,
+          "version_type": "beta",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "2qjc5oF1",
+              "hashes": {
+                "sha1": "ebb8d9033c29538824281b3ac651c49135aba78e",
+                "sha512": "4a5337e8f8234e7053c8ad9c9f4f4aaf08ee03f66fea8146e9b5b2e357a8b892540b3b1dfefc73b618b9fa485c7c025481f9d17fb9f522a76839e499f8816741"
+              },
+              "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/zzpNSbJZ/jei-1.20.1-forge-15.20.0.116.jar",
+              "filename": "jei-1.20.1-forge-15.20.0.116.jar",
+              "primary": true,
+              "size": 1387236,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "J81TRJWm",
+        "slug": "konkrete",
+        "title": "Konkrete",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.6",
+          "1.21.7",
+          "1.21.8"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "AqQgkM2M",
+        "project_id": "J81TRJWm",
+        "author_id": "k0LcYHWE",
+        "featured": false,
+        "name": "[Forge] v1.9.12 MC 1.21.6",
+        "version_number": "1.9.12-1.21.6-forge",
+        "changelog": "CHANGELOG: https://github.com/Keksuccino/Konkrete/blob/main/changelog.txt",
+        "changelog_url": null,
+        "date_published": "2025-06-18T23:15:53.130184Z",
+        "downloads": 15148,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "ZlAQlgt8",
+            "hashes": {
+              "sha512": "35865e870c92393af3040f0b1c31d099631bc8b33863248f20996dfc8cdfe1585e66257c5fadc967674bfae59d545aabd8c3a5cf6e92b39020c88a76ee2d4c85",
+              "sha1": "a25cde43f6b43271ecfc5f71d436002ffe607315"
+            },
+            "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/AqQgkM2M/konkrete_forge_1.9.12_MC_1.21.6.jar",
+            "filename": "konkrete_forge_1.9.12_MC_1.21.6.jar",
+            "primary": true,
+            "size": 653423,
+            "file_type": null
+          },
+          {
+            "id": "vywdeUr8",
+            "hashes": {
+              "sha1": "ce564b4ca5b47dfb9d4c7a66e8a25262176104b8",
+              "sha512": "de712dac913b43407568bc0cde4410fb0cc952261c57029b857a7bc14b935c318c3faa923afa31826ab9e57150fca87512ff2a6e10d5b9482979456949c3eb6d"
+            },
+            "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/AqQgkM2M/sources_konkrete_forge_1.9.12_MC_1.21.6.jar",
+            "filename": "sources_konkrete_forge_1.9.12_MC_1.21.6.jar",
+            "primary": false,
+            "size": 270530,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "AqQgkM2M",
+          "project_id": "J81TRJWm",
+          "author_id": "k0LcYHWE",
+          "featured": false,
+          "name": "[Forge] v1.9.12 MC 1.21.6",
+          "version_number": "1.9.12-1.21.6-forge",
+          "changelog": "CHANGELOG: https://github.com/Keksuccino/Konkrete/blob/main/changelog.txt",
+          "changelog_url": null,
+          "date_published": "2025-06-18T23:15:53.130184Z",
+          "downloads": 15148,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "ZlAQlgt8",
+              "hashes": {
+                "sha512": "35865e870c92393af3040f0b1c31d099631bc8b33863248f20996dfc8cdfe1585e66257c5fadc967674bfae59d545aabd8c3a5cf6e92b39020c88a76ee2d4c85",
+                "sha1": "a25cde43f6b43271ecfc5f71d436002ffe607315"
+              },
+              "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/AqQgkM2M/konkrete_forge_1.9.12_MC_1.21.6.jar",
+              "filename": "konkrete_forge_1.9.12_MC_1.21.6.jar",
+              "primary": true,
+              "size": 653423,
+              "file_type": null
+            },
+            {
+              "id": "vywdeUr8",
+              "hashes": {
+                "sha1": "ce564b4ca5b47dfb9d4c7a66e8a25262176104b8",
+                "sha512": "de712dac913b43407568bc0cde4410fb0cc952261c57029b857a7bc14b935c318c3faa923afa31826ab9e57150fca87512ff2a6e10d5b9482979456949c3eb6d"
+              },
+              "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/AqQgkM2M/sources_konkrete_forge_1.9.12_MC_1.21.6.jar",
+              "filename": "sources_konkrete_forge_1.9.12_MC_1.21.6.jar",
+              "primary": false,
+              "size": 270530,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.5"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "n8MthHBl",
+          "project_id": "J81TRJWm",
+          "author_id": "k0LcYHWE",
+          "featured": false,
+          "name": "[Forge] v1.9.11 MC 1.21.5",
+          "version_number": "1.9.11-1.21.5-forge",
+          "changelog": "CHANGELOG: https://github.com/Keksuccino/Konkrete/blob/main/changelog.txt",
+          "changelog_url": null,
+          "date_published": "2025-04-25T20:37:46.199161Z",
+          "downloads": 7045,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "6WDxIaFS",
+              "hashes": {
+                "sha1": "bfc17cac051104f9681f5a2c3303728ce84dc74b",
+                "sha512": "1e2585bd345d0e2eb5735d0d5fff152af7d1107b4618e4386d9d7094ce7401fdd0b0b7680410ccf057b8f96c7d63c79c7e74db0e35283f626c02180e9d003c72"
+              },
+              "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/n8MthHBl/konkrete_forge_1.9.11_MC_1.21.5.jar",
+              "filename": "konkrete_forge_1.9.11_MC_1.21.5.jar",
+              "primary": true,
+              "size": 654175,
+              "file_type": null
+            },
+            {
+              "id": "zIrOp2Wb",
+              "hashes": {
+                "sha512": "3b845f6107b7c519b086938d16167af649fa5f7416b671204231ba10075fc3e04938f16bd4c02537811e479baea3e690d5189ecccae8db741a486d76e3887702",
+                "sha1": "61d2a59eef64d8826a6028c249efadc3ac1cac32"
+              },
+              "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/n8MthHBl/sources_konkrete_forge_1.9.11_MC_1.21.5.jar",
+              "filename": "sources_konkrete_forge_1.9.11_MC_1.21.5.jar",
+              "primary": false,
+              "size": 271050,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "c0wZm04t",
+          "project_id": "J81TRJWm",
+          "author_id": "k0LcYHWE",
+          "featured": false,
+          "name": "[Forge] v1.9.10 MC 1.21.4",
+          "version_number": "1.9.10-1.21.4-forge",
+          "changelog": "\n<br>CHANGELOG: https://github.com/Keksuccino/Konkrete/blob/main/changelog.txt\n\n<br>",
+          "changelog_url": null,
+          "date_published": "2024-12-15T18:38:51.922956Z",
+          "downloads": 16888,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "s9Mj3iJY",
+              "hashes": {
+                "sha512": "c3a90afa730bb2ce85275ccdef4a3dd0c143d55cbbb32124ec17cd0de535e3cf8d4012e014aa75e918715d688c79e9d20a1ff48af7119a1c27c3b0bd0247c509",
+                "sha1": "45b94c0d44a38cf571adbb78b89cd87e1bb8812a"
+              },
+              "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/c0wZm04t/konkrete_forge_1.9.10_MC_1.21.4.jar",
+              "filename": "konkrete_forge_1.9.10_MC_1.21.4.jar",
+              "primary": true,
+              "size": 773897,
+              "file_type": null
+            },
+            {
+              "id": "vYVSFfid",
+              "hashes": {
+                "sha512": "d8bbaad38d10dc1ffa35fdd82d880653b14bc66de9ef4d7b06d06a55e0fe33ca312a5b75b115c6d267d81b170b4c9189f0d464a62144f0051364be3208b52322",
+                "sha1": "9a8905826b49eabb4c3eefc7bfc421f508f82890"
+              },
+              "url": "https://cdn.modrinth.com/data/J81TRJWm/versions/c0wZm04t/sources_konkrete_forge_1.9.10_MC_1.21.4.jar",
+              "filename": "sources_konkrete_forge_1.9.10_MC_1.21.4.jar",
+              "primary": false,
+              "size": 328676,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "9s6osm5g",
+        "slug": "cloth-config",
+        "title": "Cloth Config API",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.2",
+          "1.21.3"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "i6G5WG2W",
+        "project_id": "9s6osm5g",
+        "author_id": "1Hsaf75m",
+        "featured": false,
+        "name": "[MinecraftForge 1.21.4] v17.0.144",
+        "version_number": "17.0.144+forge",
+        "changelog": "",
+        "changelog_url": null,
+        "date_published": "2024-12-13T06:36:03.791526Z",
+        "downloads": 20919,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "3ZC4RJYh",
+            "hashes": {
+              "sha1": "55c14d92765fe42ba465eb2c27ca26006c795533",
+              "sha512": "38ec2bfe269bc8014c5ba280f399ef85975926170d8f756e4150e45b6d95b700341a99e7cbca92d0801305b9b596801cd3d5cee5354412a21d7178ca272031fc"
+            },
+            "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/i6G5WG2W/cloth-config-17.0.144-forge.jar",
+            "filename": "cloth-config-17.0.144-forge.jar",
+            "primary": true,
+            "size": 1160575,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.2",
+            "1.21.3"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "i6G5WG2W",
+          "project_id": "9s6osm5g",
+          "author_id": "1Hsaf75m",
+          "featured": false,
+          "name": "[MinecraftForge 1.21.4] v17.0.144",
+          "version_number": "17.0.144+forge",
+          "changelog": "",
+          "changelog_url": null,
+          "date_published": "2024-12-13T06:36:03.791526Z",
+          "downloads": 20919,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "3ZC4RJYh",
+              "hashes": {
+                "sha1": "55c14d92765fe42ba465eb2c27ca26006c795533",
+                "sha512": "38ec2bfe269bc8014c5ba280f399ef85975926170d8f756e4150e45b6d95b700341a99e7cbca92d0801305b9b596801cd3d5cee5354412a21d7178ca272031fc"
+              },
+              "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/i6G5WG2W/cloth-config-17.0.144-forge.jar",
+              "filename": "cloth-config-17.0.144-forge.jar",
+              "primary": true,
+              "size": 1160575,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.2",
+            "1.21.3"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "wJT939f6",
+          "project_id": "9s6osm5g",
+          "author_id": "1Hsaf75m",
+          "featured": false,
+          "name": "[MinecraftForge 1.21.2/3] v16.0.143",
+          "version_number": "16.0.143+forge",
+          "changelog": "",
+          "changelog_url": null,
+          "date_published": "2024-12-13T05:50:34.309113Z",
+          "downloads": 867,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "yhkyJL0n",
+              "hashes": {
+                "sha512": "6503212fa6c3f8de630959bd0671188e1781be2d022e0d712022b0aa2f30626db377c31d619b836383c7a3566a91ff321a34058fca2ce05237fecb42be1c8a55",
+                "sha1": "96aa5c3b348d815bfea6dac0b6b56b9a19430762"
+              },
+              "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/wJT939f6/cloth-config-16.0.143-forge.jar",
+              "filename": "cloth-config-16.0.143-forge.jar",
+              "primary": true,
+              "size": 1158126,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.3",
+            "1.20.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "YTNEzkHf",
+          "project_id": "9s6osm5g",
+          "author_id": "1Hsaf75m",
+          "featured": false,
+          "name": "[MinecraftForge 1.20.4] v13.0.138",
+          "version_number": "13.0.138+forge",
+          "changelog": "",
+          "changelog_url": null,
+          "date_published": "2024-09-16T17:20:42.679760Z",
+          "downloads": 37616,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "XVCGTOv3",
+              "hashes": {
+                "sha512": "c862a07ae666e9e78957bb07bcaa0c86cd7f461c6a5d33125dbb0d0c1e0f7be807891039609a1e7ec5233e672a816f6170eb3921d27075c7a2ff5cb5ba8e533b",
+                "sha1": "af8204707218c30460ee5013a9e16127faf08f59"
+              },
+              "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/YTNEzkHf/cloth-config-13.0.138-forge.jar",
+              "filename": "cloth-config-13.0.138-forge.jar",
+              "primary": true,
+              "size": 1163848,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "BVzZfTc1",
+        "slug": "entitytexturefeatures",
+        "title": "[ETF] Entity Texture Features",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.9",
+          "1.21.10"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "rjfUqfdm",
+        "project_id": "BVzZfTc1",
+        "author_id": "rLbuLV6t",
+        "featured": false,
+        "name": "[ETF] Entity Texture Features 7.0.4",
+        "version_number": "7.0.4",
+        "changelog": "- fixed an issue where the game would freeze with \"player skin features\" enabled",
+        "changelog_url": null,
+        "date_published": "2025-10-09T12:33:57.320907Z",
+        "downloads": 13249,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "9fsJPIBk",
+            "hashes": {
+              "sha512": "65589a6ec8c83e8f905c634cd69c0e04389f98c4c78e84ea86f1fd0a10bb782f40b46b14177b914cd4c106cccdeb4b4cc8c69b889262024536c410a2243c22b7",
+              "sha1": "4b5c346fe88b3a8c81e5e8009d3cdf84c6ec18d8"
+            },
+            "url": "https://cdn.modrinth.com/data/BVzZfTc1/versions/rjfUqfdm/entity_texture_features-7.0.4-1.21.9-forge.jar",
+            "filename": "entity_texture_features-7.0.4-1.21.9-forge.jar",
+            "primary": true,
+            "size": 882662,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.9",
+            "1.21.10"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "rjfUqfdm",
+          "project_id": "BVzZfTc1",
+          "author_id": "rLbuLV6t",
+          "featured": false,
+          "name": "[ETF] Entity Texture Features 7.0.4",
+          "version_number": "7.0.4",
+          "changelog": "- fixed an issue where the game would freeze with \"player skin features\" enabled",
+          "changelog_url": null,
+          "date_published": "2025-10-09T12:33:57.320907Z",
+          "downloads": 13249,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "9fsJPIBk",
+              "hashes": {
+                "sha512": "65589a6ec8c83e8f905c634cd69c0e04389f98c4c78e84ea86f1fd0a10bb782f40b46b14177b914cd4c106cccdeb4b4cc8c69b889262024536c410a2243c22b7",
+                "sha1": "4b5c346fe88b3a8c81e5e8009d3cdf84c6ec18d8"
+              },
+              "url": "https://cdn.modrinth.com/data/BVzZfTc1/versions/rjfUqfdm/entity_texture_features-7.0.4-1.21.9-forge.jar",
+              "filename": "entity_texture_features-7.0.4-1.21.9-forge.jar",
+              "primary": true,
+              "size": 882662,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.9",
+            "1.21.10"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "OqoNwbay",
+          "project_id": "BVzZfTc1",
+          "author_id": "rLbuLV6t",
+          "featured": false,
+          "name": "Forge - 1.21.9",
+          "version_number": "7.0.3",
+          "changelog": "- 1.21.9\n- some crash fixes",
+          "changelog_url": null,
+          "date_published": "2025-10-07T10:12:32.661266Z",
+          "downloads": 762,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "DrDkX0LZ",
+              "hashes": {
+                "sha512": "59b894262df564913f07a64769f2a1956536dc67ef5d5fcd18ee281bfac7deaa46abbb156f9312023226762aec21c5c006a8278aaa0662acf1b9e439cef25073",
+                "sha1": "2318fb47d0ec220f2caf7a02a0e8b5a6de22ac59"
+              },
+              "url": "https://cdn.modrinth.com/data/BVzZfTc1/versions/OqoNwbay/entity_texture_features_1.21.9-forge-7.0.3.jar",
+              "filename": "entity_texture_features_1.21.9-forge-7.0.3.jar",
+              "primary": true,
+              "size": 882228,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "dmCwjtRB",
+          "project_id": "BVzZfTc1",
+          "author_id": "rLbuLV6t",
+          "featured": false,
+          "name": "Forge - 1.21.6",
+          "version_number": "7.0.2",
+          "changelog": "- fixed parrots on shoulders crashing the game\n- fixed ArrayIndexOutOfBoundsException crash",
+          "changelog_url": null,
+          "date_published": "2025-09-02T03:05:17.427487Z",
+          "downloads": 19065,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "BftqGCUm",
+              "hashes": {
+                "sha512": "0539a147a01d68f28e6f2ca2602bbf30e3cc8268b9f5eb5cd06c9ac6fc1edad49f748209ef34dae0e320ee98f5f0d5a2e2283b899cd598b521274b6d663949a4",
+                "sha1": "73596d93e78509aecbdff9a992d25f57fecb4d83"
+              },
+              "url": "https://cdn.modrinth.com/data/BVzZfTc1/versions/dmCwjtRB/entity_texture_features_1.21.6-forge-7.0.2.jar",
+              "filename": "entity_texture_features_1.21.6-forge-7.0.2.jar",
+              "primary": true,
+              "size": 882298,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "4I1XuqiY",
+        "slug": "entity-model-features",
+        "title": "[EMF] Entity Model Features",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.9",
+          "1.21.10"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "5gboKxBM",
+        "project_id": "4I1XuqiY",
+        "author_id": "rLbuLV6t",
+        "featured": false,
+        "name": "Forge - 1.21.9",
+        "version_number": "3.0.3",
+        "changelog": "- 1.21.9\n- some crash fixes relating to parrots",
+        "changelog_url": null,
+        "date_published": "2025-10-07T10:12:50.468250Z",
+        "downloads": 3553,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "rQMJLolT",
+            "hashes": {
+              "sha512": "6121d88c4cd08c43a39af2bd02f161da93cf483b6b1e8ebd1931254ab350c92e47027aabdbb66cbde0669798ab59c957a4da7e8c250596784c75c9e5f420ba62",
+              "sha1": "8e062d745fd9f9171400313175233ac1ce2509e0"
+            },
+            "url": "https://cdn.modrinth.com/data/4I1XuqiY/versions/5gboKxBM/entity_model_features_1.21.9-forge-3.0.3.jar",
+            "filename": "entity_model_features_1.21.9-forge-3.0.3.jar",
+            "primary": true,
+            "size": 656591,
+            "file_type": null
+          }
+        ],
+        "dependencies": [
+          {
+            "version_id": null,
+            "project_id": "BVzZfTc1",
+            "file_name": null,
+            "dependency_type": "required"
+          }
+        ]
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.9",
+            "1.21.10"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "5gboKxBM",
+          "project_id": "4I1XuqiY",
+          "author_id": "rLbuLV6t",
+          "featured": false,
+          "name": "Forge - 1.21.9",
+          "version_number": "3.0.3",
+          "changelog": "- 1.21.9\n- some crash fixes relating to parrots",
+          "changelog_url": null,
+          "date_published": "2025-10-07T10:12:50.468250Z",
+          "downloads": 3553,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "rQMJLolT",
+              "hashes": {
+                "sha512": "6121d88c4cd08c43a39af2bd02f161da93cf483b6b1e8ebd1931254ab350c92e47027aabdbb66cbde0669798ab59c957a4da7e8c250596784c75c9e5f420ba62",
+                "sha1": "8e062d745fd9f9171400313175233ac1ce2509e0"
+              },
+              "url": "https://cdn.modrinth.com/data/4I1XuqiY/versions/5gboKxBM/entity_model_features_1.21.9-forge-3.0.3.jar",
+              "filename": "entity_model_features_1.21.9-forge-3.0.3.jar",
+              "primary": true,
+              "size": 656591,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "BVzZfTc1",
+              "file_name": null,
+              "dependency_type": "required"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "fS4wBzwe",
+          "project_id": "4I1XuqiY",
+          "author_id": "rLbuLV6t",
+          "featured": false,
+          "name": "Forge - 1.21.6",
+          "version_number": "3.0.1",
+          "changelog": "- fixed the temperate_cow/pig/chicken override models in 1.21.5+ not working correctly\n- fixed optifine part name mappings breaking with some override / fallback models\n- fixed properties reading incorrectly with some fallback and override models\n- fixed the debug right click chat printout fallback models display\n- bumped the animation api version for 3.0.0",
+          "changelog_url": null,
+          "date_published": "2025-08-24T13:41:35.059153Z",
+          "downloads": 22483,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "1vppWUhe",
+              "hashes": {
+                "sha1": "226f071dd5f7f98aec0f57cb73af5f59649bbfe1",
+                "sha512": "78bde12026e77fac8b89d2a1173ee2fdf42436043b79a73a7aef20f0c59ada20dfc2f17fc07d6db6ff06da3b60ff2e07f11ff404b37937911b48bd6f55fba6b9"
+              },
+              "url": "https://cdn.modrinth.com/data/4I1XuqiY/versions/fS4wBzwe/entity_model_features_1.21.6-forge-3.0.1.jar",
+              "filename": "entity_model_features_1.21.6-forge-3.0.1.jar",
+              "primary": true,
+              "size": 657711,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "BVzZfTc1",
+              "file_name": null,
+              "dependency_type": "required"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.21.5"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "VAwAhc19",
+          "project_id": "4I1XuqiY",
+          "author_id": "rLbuLV6t",
+          "featured": false,
+          "name": "Forge - 1.21.5",
+          "version_number": "3.0.1",
+          "changelog": "- fixed the temperate_cow/pig/chicken override models in 1.21.5+ not working correctly\n- fixed optifine part name mappings breaking with some override / fallback models\n- fixed properties reading incorrectly with some fallback and override models\n- fixed the debug right click chat printout fallback models display\n- bumped the animation api version for 3.0.0",
+          "changelog_url": null,
+          "date_published": "2025-08-24T13:41:26.057412Z",
+          "downloads": 3729,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "PmIqH6Sj",
+              "hashes": {
+                "sha1": "762a29c4b2b94408221b013f012d359add8c5d6f",
+                "sha512": "c179f95518657f490289c6e69957434d6fe50ea7762a16f4365141bc47701cccb697286781b798d69c118a69900726e2b101aa41b5f2d9a2326f69ed83ae3625"
+              },
+              "url": "https://cdn.modrinth.com/data/4I1XuqiY/versions/VAwAhc19/entity_model_features_1.21.5-forge-3.0.1.jar",
+              "filename": "entity_model_features_1.21.5-forge-3.0.1.jar",
+              "primary": true,
+              "size": 657770,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "BVzZfTc1",
+              "file_name": null,
+              "dependency_type": "required"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "1bokaNcj",
+        "slug": "xaeros-minimap",
+        "title": "Xaero's Minimap",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.9",
+          "1.21.10"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "AYcRkYXN",
+        "project_id": "1bokaNcj",
+        "author_id": "ANNqL3WC",
+        "featured": false,
+        "name": "25.2.15",
+        "version_number": "25.2.15_Forge_1.21.9",
+        "changelog": "[Read changelogs](https://chocolateminecraft.com/update.php?mod_id=0)",
+        "changelog_url": null,
+        "date_published": "2025-10-07T10:13:58.891705Z",
+        "downloads": 135116,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "iOFi5Ko3",
+            "hashes": {
+              "sha512": "cb55237dbed7a43b09814d63f7ddeaf8655c1b17c07e289cd79e224fac563b9a19d96a663bbf5b9b902b0862d5c34fc9c90b48ddfc1b08e3164e91d2a7240be0",
+              "sha1": "ee54008571d8e41d21972a529579a9d2a356477c"
+            },
+            "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/AYcRkYXN/Xaeros_Minimap_25.2.15_Forge_1.21.9.jar",
+            "filename": "Xaeros_Minimap_25.2.15_Forge_1.21.9.jar",
+            "primary": true,
+            "size": 1661809,
+            "file_type": null
+          }
+        ],
+        "dependencies": [
+          {
+            "version_id": null,
+            "project_id": "gF3BGWvG",
+            "file_name": null,
+            "dependency_type": "optional"
+          }
+        ]
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.9",
+            "1.21.10"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "AYcRkYXN",
+          "project_id": "1bokaNcj",
+          "author_id": "ANNqL3WC",
+          "featured": false,
+          "name": "25.2.15",
+          "version_number": "25.2.15_Forge_1.21.9",
+          "changelog": "[Read changelogs](https://chocolateminecraft.com/update.php?mod_id=0)",
+          "changelog_url": null,
+          "date_published": "2025-10-07T10:13:58.891705Z",
+          "downloads": 135116,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "iOFi5Ko3",
+              "hashes": {
+                "sha512": "cb55237dbed7a43b09814d63f7ddeaf8655c1b17c07e289cd79e224fac563b9a19d96a663bbf5b9b902b0862d5c34fc9c90b48ddfc1b08e3164e91d2a7240be0",
+                "sha1": "ee54008571d8e41d21972a529579a9d2a356477c"
+              },
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/AYcRkYXN/Xaeros_Minimap_25.2.15_Forge_1.21.9.jar",
+              "filename": "Xaeros_Minimap_25.2.15_Forge_1.21.9.jar",
+              "primary": true,
+              "size": 1661809,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "gF3BGWvG",
+              "file_name": null,
+              "dependency_type": "optional"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.21.8"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "UujdOOqG",
+          "project_id": "1bokaNcj",
+          "author_id": "ANNqL3WC",
+          "featured": false,
+          "name": "25.2.15",
+          "version_number": "25.2.15_Forge_1.21.8",
+          "changelog": "[Read changelogs](https://chocolateminecraft.com/update.php?mod_id=0)",
+          "changelog_url": null,
+          "date_published": "2025-10-07T10:13:05.369494Z",
+          "downloads": 29103,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "AiZoCmWB",
+              "hashes": {
+                "sha512": "7d7d196583c9b6b4e3d6da4aad797709e668689b4cf91da2508e30c7fa9d2c8d3f4be985b202dd435ae7d8c0b0c3626248c73a804bd04c330a66645067907433",
+                "sha1": "6f48076f8d07399926e50ada31131dce97f54094"
+              },
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/UujdOOqG/Xaeros_Minimap_25.2.15_Forge_1.21.8.jar",
+              "filename": "Xaeros_Minimap_25.2.15_Forge_1.21.8.jar",
+              "primary": true,
+              "size": 1657759,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "gF3BGWvG",
+              "file_name": null,
+              "dependency_type": "optional"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.21.5"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "lvLqUpBq",
+          "project_id": "1bokaNcj",
+          "author_id": "ANNqL3WC",
+          "featured": false,
+          "name": "25.2.15",
+          "version_number": "25.2.15_Forge_1.21.5",
+          "changelog": "[Read changelogs](https://chocolateminecraft.com/update.php?mod_id=0)",
+          "changelog_url": null,
+          "date_published": "2025-10-07T10:12:05.314366Z",
+          "downloads": 7332,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "P44Lrilx",
+              "hashes": {
+                "sha1": "1729eef54ce2a0c3674fe34de63f93b67d4d7f16",
+                "sha512": "7bf6ba0d23ab34adce23af4538257a85c4784617ae8f7a6f2ed034dca65a3ef99f82979958953fcb13887694688d1ca4c627714dbf4bbd2f4c2e60130213ff75"
+              },
+              "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/lvLqUpBq/Xaeros_Minimap_25.2.15_Forge_1.21.5.jar",
+              "filename": "Xaeros_Minimap_25.2.15_Forge_1.21.5.jar",
+              "primary": true,
+              "size": 1629710,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "gF3BGWvG",
+              "file_name": null,
+              "dependency_type": "optional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "CVT4pFB2",
+        "slug": "melody",
+        "title": "Melody",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.6",
+          "1.21.7",
+          "1.21.8"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "GdUdtOfw",
+        "project_id": "CVT4pFB2",
+        "author_id": "k0LcYHWE",
+        "featured": false,
+        "name": "[Forge] v1.0.12 MC 1.21.6",
+        "version_number": "1.0.12-1.21.6-forge",
+        "changelog": "Some changelog text.<br>Supports multiline input.",
+        "changelog_url": null,
+        "date_published": "2025-06-18T23:10:24.708190Z",
+        "downloads": 4296,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "JoYufsog",
+            "hashes": {
+              "sha512": "2ae68b5b9ec68c5504801554f7d2aee80d1fa4b96411e69dc0fd7d13556979ee756af1bbfc246a1a19636cb7864e7a22980176277f535a33484f1940503f0de8",
+              "sha1": "60b3bba356ddb63f9cd4071a53b0d2b4343297a9"
+            },
+            "url": "https://cdn.modrinth.com/data/CVT4pFB2/versions/GdUdtOfw/melody_forge_1.0.12_MC_1.21.6.jar",
+            "filename": "melody_forge_1.0.12_MC_1.21.6.jar",
+            "primary": true,
+            "size": 189825,
+            "file_type": null
+          },
+          {
+            "id": "5I4NfB4j",
+            "hashes": {
+              "sha512": "0892ce5673c8a39f83003da70dc349db26bbf6cbb745a52e81da9a06d036d307cea7c006d64af4c9c6774b86936cb4348523cdad837dfaa02e50c03c2ef0bf1c",
+              "sha1": "db013aa22a25532daa71b9a05f1bf0e22c3d7528"
+            },
+            "url": "https://cdn.modrinth.com/data/CVT4pFB2/versions/GdUdtOfw/sources_melody_forge_1.0.12_MC_1.21.6.jar",
+            "filename": "sources_melody_forge_1.0.12_MC_1.21.6.jar",
+            "primary": false,
+            "size": 25309,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.6",
+            "1.21.7",
+            "1.21.8"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "GdUdtOfw",
+          "project_id": "CVT4pFB2",
+          "author_id": "k0LcYHWE",
+          "featured": false,
+          "name": "[Forge] v1.0.12 MC 1.21.6",
+          "version_number": "1.0.12-1.21.6-forge",
+          "changelog": "Some changelog text.<br>Supports multiline input.",
+          "changelog_url": null,
+          "date_published": "2025-06-18T23:10:24.708190Z",
+          "downloads": 4296,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "JoYufsog",
+              "hashes": {
+                "sha512": "2ae68b5b9ec68c5504801554f7d2aee80d1fa4b96411e69dc0fd7d13556979ee756af1bbfc246a1a19636cb7864e7a22980176277f535a33484f1940503f0de8",
+                "sha1": "60b3bba356ddb63f9cd4071a53b0d2b4343297a9"
+              },
+              "url": "https://cdn.modrinth.com/data/CVT4pFB2/versions/GdUdtOfw/melody_forge_1.0.12_MC_1.21.6.jar",
+              "filename": "melody_forge_1.0.12_MC_1.21.6.jar",
+              "primary": true,
+              "size": 189825,
+              "file_type": null
+            },
+            {
+              "id": "5I4NfB4j",
+              "hashes": {
+                "sha512": "0892ce5673c8a39f83003da70dc349db26bbf6cbb745a52e81da9a06d036d307cea7c006d64af4c9c6774b86936cb4348523cdad837dfaa02e50c03c2ef0bf1c",
+                "sha1": "db013aa22a25532daa71b9a05f1bf0e22c3d7528"
+              },
+              "url": "https://cdn.modrinth.com/data/CVT4pFB2/versions/GdUdtOfw/sources_melody_forge_1.0.12_MC_1.21.6.jar",
+              "filename": "sources_melody_forge_1.0.12_MC_1.21.6.jar",
+              "primary": false,
+              "size": 25309,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.5"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "BYSPaMzs",
+          "project_id": "CVT4pFB2",
+          "author_id": "k0LcYHWE",
+          "featured": false,
+          "name": "[Forge] v1.0.11 MC 1.21.5",
+          "version_number": "1.0.11-1.21.5-forge",
+          "changelog": "Some changelog text.<br>Supports multiline input.",
+          "changelog_url": null,
+          "date_published": "2025-04-25T21:24:44.566121Z",
+          "downloads": 2249,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "XecU4bQ9",
+              "hashes": {
+                "sha1": "49d4fedf73ca7b20f0c1b36d5ea92f2bd3b4ba79",
+                "sha512": "4ae1597d4c0a621edaa3a9f1a1fb6148d22dac07847212e53cad43db15cb028423fd26a19992b1a7559df7f1ba530e18a30259cf6e3d0a61fe706f06cf36a584"
+              },
+              "url": "https://cdn.modrinth.com/data/CVT4pFB2/versions/BYSPaMzs/melody_forge_1.0.11_MC_1.21.5.jar",
+              "filename": "melody_forge_1.0.11_MC_1.21.5.jar",
+              "primary": true,
+              "size": 189825,
+              "file_type": null
+            },
+            {
+              "id": "XNQfpuzu",
+              "hashes": {
+                "sha1": "77a7c8bd13ac2ebf37def573396855e473f44e76",
+                "sha512": "43a5f61795a9121ad244df23336f94ece83751de4ee0ba4b961d8434d22882cc16af2e5238641d7c3d532cf1939a6aad48f1dc6ab344829a31d2324a304534ba"
+              },
+              "url": "https://cdn.modrinth.com/data/CVT4pFB2/versions/BYSPaMzs/sources_melody_forge_1.0.11_MC_1.21.5.jar",
+              "filename": "sources_melody_forge_1.0.11_MC_1.21.5.jar",
+              "primary": false,
+              "size": 25309,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21",
+            "1.21.1",
+            "1.21.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "dhnytTnF",
+          "project_id": "CVT4pFB2",
+          "author_id": "k0LcYHWE",
+          "featured": false,
+          "name": "[Forge] v1.0.10 MC 1.21",
+          "version_number": "1.0.10-1.21-forge",
+          "changelog": "\n<br>CHANGELOG: https://github.com/Keksuccino/Melody/blob/main/changelog.txt\n\n<br>",
+          "changelog_url": null,
+          "date_published": "2024-06-15T08:12:07.484406Z",
+          "downloads": 18764,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "QKDJlMLk",
+              "hashes": {
+                "sha1": "b5ba856de68fbf7c5ca26a9d1658e1b0d4d76f5c",
+                "sha512": "ba52437f489662a2847b855b4267ce5a2040808e2efeccf58195566b33bbd360de1342dac4153b401c200e4c740f090f7cb8d988a3334b67f10db21f196f866e"
+              },
+              "url": "https://cdn.modrinth.com/data/CVT4pFB2/versions/dhnytTnF/melody_forge_1.0.10_MC_1.21.jar",
+              "filename": "melody_forge_1.0.10_MC_1.21.jar",
+              "primary": true,
+              "size": 189827,
+              "file_type": null
+            },
+            {
+              "id": "X3O59V7i",
+              "hashes": {
+                "sha512": "68dd35e43f1497b3376c1e85804bd8f8b5b7c7bc377ecdbeb7b38224fa63ce92c285b8856096ed1f8460a6231374ae26bae259d582e10e600520488a783b9799",
+                "sha1": "3b7eba9a05a9dd0ec3b63192e953318387e59add"
+              },
+              "url": "https://cdn.modrinth.com/data/CVT4pFB2/versions/dhnytTnF/sources_melody_forge_1.0.10_MC_1.21.jar",
+              "filename": "sources_melody_forge_1.0.10_MC_1.21.jar",
+              "primary": false,
+              "size": 25309,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "Wq5SjeWM",
+        "slug": "fancymenu",
+        "title": "FancyMenu",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.8"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "JQzNdlxK",
+        "project_id": "Wq5SjeWM",
+        "author_id": "k0LcYHWE",
+        "featured": false,
+        "name": "[Forge] v3.7.1 MC 1.21.8",
+        "version_number": "3.7.1-1.21.8-forge",
+        "changelog": "CHANGELOG: https://github.com/Keksuccino/FancyMenu/blob/master/changelog.txt",
+        "changelog_url": null,
+        "date_published": "2025-08-31T20:23:29.638070Z",
+        "downloads": 2298,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "rNj9fVXD",
+            "hashes": {
+              "sha512": "fb1bea5fa36a3ec6e585ba5089f44b2cd9eb24ed09ea4312ba5478108f9e2ddba453523ce11085cd0a66ed90abc1e6e81e01b29149aaddd5a6cfc6180be5a014",
+              "sha1": "e0a0432075106e2a8892269c40e1f807106348af"
+            },
+            "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/JQzNdlxK/fancymenu_forge_3.7.1_MC_1.21.8.jar",
+            "filename": "fancymenu_forge_3.7.1_MC_1.21.8.jar",
+            "primary": true,
+            "size": 3627309,
+            "file_type": null
+          },
+          {
+            "id": "P86gYC4i",
+            "hashes": {
+              "sha512": "6c53496503b15ed7ce1d27b7a1f1faf90ad7d109d3ee980acc1b91d49bb67fc19619127d6cd3a6fcdff82cd7685715e98b83b40e813dea1b797c338ce30a0fcc",
+              "sha1": "89f1149b2ede647430e42169f2ce497bfd87fcb6"
+            },
+            "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/JQzNdlxK/sources_fancymenu_forge_3.7.1_MC_1.21.8.jar",
+            "filename": "sources_fancymenu_forge_3.7.1_MC_1.21.8.jar",
+            "primary": false,
+            "size": 1935804,
+            "file_type": null
+          }
+        ],
+        "dependencies": [
+          {
+            "version_id": null,
+            "project_id": "CVT4pFB2",
+            "file_name": null,
+            "dependency_type": "required"
+          },
+          {
+            "version_id": null,
+            "project_id": "J81TRJWm",
+            "file_name": null,
+            "dependency_type": "required"
+          }
+        ]
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.8"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "JQzNdlxK",
+          "project_id": "Wq5SjeWM",
+          "author_id": "k0LcYHWE",
+          "featured": false,
+          "name": "[Forge] v3.7.1 MC 1.21.8",
+          "version_number": "3.7.1-1.21.8-forge",
+          "changelog": "CHANGELOG: https://github.com/Keksuccino/FancyMenu/blob/master/changelog.txt",
+          "changelog_url": null,
+          "date_published": "2025-08-31T20:23:29.638070Z",
+          "downloads": 2298,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "rNj9fVXD",
+              "hashes": {
+                "sha512": "fb1bea5fa36a3ec6e585ba5089f44b2cd9eb24ed09ea4312ba5478108f9e2ddba453523ce11085cd0a66ed90abc1e6e81e01b29149aaddd5a6cfc6180be5a014",
+                "sha1": "e0a0432075106e2a8892269c40e1f807106348af"
+              },
+              "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/JQzNdlxK/fancymenu_forge_3.7.1_MC_1.21.8.jar",
+              "filename": "fancymenu_forge_3.7.1_MC_1.21.8.jar",
+              "primary": true,
+              "size": 3627309,
+              "file_type": null
+            },
+            {
+              "id": "P86gYC4i",
+              "hashes": {
+                "sha512": "6c53496503b15ed7ce1d27b7a1f1faf90ad7d109d3ee980acc1b91d49bb67fc19619127d6cd3a6fcdff82cd7685715e98b83b40e813dea1b797c338ce30a0fcc",
+                "sha1": "89f1149b2ede647430e42169f2ce497bfd87fcb6"
+              },
+              "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/JQzNdlxK/sources_fancymenu_forge_3.7.1_MC_1.21.8.jar",
+              "filename": "sources_fancymenu_forge_3.7.1_MC_1.21.8.jar",
+              "primary": false,
+              "size": 1935804,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "CVT4pFB2",
+              "file_name": null,
+              "dependency_type": "required"
+            },
+            {
+              "version_id": null,
+              "project_id": "J81TRJWm",
+              "file_name": null,
+              "dependency_type": "required"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.21.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "8Jq0Trp6",
+          "project_id": "Wq5SjeWM",
+          "author_id": "k0LcYHWE",
+          "featured": false,
+          "name": "[Forge] v3.7.1 MC 1.21.4",
+          "version_number": "3.7.1-1.21.4-forge",
+          "changelog": "CHANGELOG: https://github.com/Keksuccino/FancyMenu/blob/master/changelog.txt",
+          "changelog_url": null,
+          "date_published": "2025-08-31T20:20:31.056589Z",
+          "downloads": 1211,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "1NebtyZL",
+              "hashes": {
+                "sha512": "b94e820de9a43d9921f0bb080c26f3d2e94d2fc7f4673e878e04080aa823a47fe1704c2bad06e2693a2d66690611d0c759d9334e2487b1b0d8ec405430ad72da",
+                "sha1": "42d5e7f1591c21520469c21a80d02225a84f19c9"
+              },
+              "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/8Jq0Trp6/fancymenu_forge_3.7.1_MC_1.21.4.jar",
+              "filename": "fancymenu_forge_3.7.1_MC_1.21.4.jar",
+              "primary": true,
+              "size": 3622459,
+              "file_type": null
+            },
+            {
+              "id": "VxzFdRaV",
+              "hashes": {
+                "sha1": "26140fa69610c323875e7444c4079ee3b1e58ee7",
+                "sha512": "086813de2025ddf34d62ea011b18606827faf33d1549a5704d8367f3b61c97636656703e26c4a77cb2548ddd703ee118fd3eccab532f29af7bca2f5d03cd31b3"
+              },
+              "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/8Jq0Trp6/sources_fancymenu_forge_3.7.1_MC_1.21.4.jar",
+              "filename": "sources_fancymenu_forge_3.7.1_MC_1.21.4.jar",
+              "primary": false,
+              "size": 1926074,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "CVT4pFB2",
+              "file_name": null,
+              "dependency_type": "required"
+            },
+            {
+              "version_id": null,
+              "project_id": "J81TRJWm",
+              "file_name": null,
+              "dependency_type": "required"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.21.8"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "j9tGfeQH",
+          "project_id": "Wq5SjeWM",
+          "author_id": "k0LcYHWE",
+          "featured": false,
+          "name": "[Forge] v3.7.0 MC 1.21.8",
+          "version_number": "3.7.0-1.21.8-forge",
+          "changelog": "CHANGELOG: https://github.com/Keksuccino/FancyMenu/blob/master/changelog.txt",
+          "changelog_url": null,
+          "date_published": "2025-08-23T15:08:50.685202Z",
+          "downloads": 363,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "inLooWRa",
+              "hashes": {
+                "sha1": "5e554020602f74cc15c9b0a8334c2be025fbd238",
+                "sha512": "fbf301dab22165e074a05340192f5a73e5ad749215d94fb256d8343e9e618620185375c990bd503a3064e911f59b35e93adb0881b58b4164ef9e2ff104a2c667"
+              },
+              "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/j9tGfeQH/fancymenu_forge_3.7.0_MC_1.21.8.jar",
+              "filename": "fancymenu_forge_3.7.0_MC_1.21.8.jar",
+              "primary": true,
+              "size": 3627391,
+              "file_type": null
+            },
+            {
+              "id": "Dmzy3kSN",
+              "hashes": {
+                "sha1": "3e6a35e85286dce5aff2bae416750ee0eebef3ad",
+                "sha512": "385a885a2adbee7add94bd61a63c4bec311033ebaa22c62e7311c45e215547e929577e4c3a35a089b3aa10470389fcb0c0a778b049553a8a098c71f1391c3a63"
+              },
+              "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/j9tGfeQH/sources_fancymenu_forge_3.7.0_MC_1.21.8.jar",
+              "filename": "sources_fancymenu_forge_3.7.0_MC_1.21.8.jar",
+              "primary": false,
+              "size": 1935832,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "CVT4pFB2",
+              "file_name": null,
+              "dependency_type": "required"
+            },
+            {
+              "version_id": null,
+              "project_id": "J81TRJWm",
+              "file_name": null,
+              "dependency_type": "required"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "nvQzSEkH",
+        "slug": "jade",
+        "title": "Jade 🔍",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.20",
+          "1.20.1"
+        ],
+        "loaders": [
+          "forge",
+          "neoforge"
+        ],
+        "id": "LecuGude",
+        "project_id": "nvQzSEkH",
+        "author_id": "UxbEV316",
+        "featured": false,
+        "name": "[Forge 1.20.1] 11.13.2",
+        "version_number": "11.13.2+forge",
+        "changelog": "## 11.13.2\n\n- fix: modded bossbar offset ([#645](https://github.com/Snownee/Jade/issues/645))\n- fix: MobSpawnerProvider CCE (close [#605](https://github.com/Snownee/Jade/issues/605))\n- improve: suppress getDestroyProgress errors (close [#637](https://github.com/Snownee/Jade/issues/637))\n- Update uk_ua.json ([#609](https://github.com/Snownee/Jade/issues/609))\n- fix: Jade cannot be built locally (close [#540](https://github.com/Snownee/Jade/issues/540))\n\n## 11.13.1\n\n- fix: workaround to blame jade addons\n\n## 11.13.0\n\n- feat: filter large bitmap glyphs (close: [#502](https://github.com/Snownee/Jade/issues/502))\n- improve: blame the correct mod 2.0\n\n## 11.12.3\n\n- fix: extension provider lookup (close [#523](https://github.com/Snownee/Jade/issues/523))\n\n## 11.12.2\n\n- fix: CME when registering keybinds (close [#497](https://github.com/Snownee/Jade/issues/497))\n\n## 11.12.1\n\n- fix: remove appending mod name code that seems pointless (close: [#480](https://github.com/Snownee/Jade/issues/480))\n- fix: incompatibility with Leawind's Third Person (close: [#387](https://github.com/Snownee/Jade/issues/387))\n",
+        "changelog_url": null,
+        "date_published": "2025-08-06T14:20:00.809085Z",
+        "downloads": 5556566,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "UlRk7kNg",
+            "hashes": {
+              "sha1": "1997e5fe2db3a0575ca79bfe4720019f01fd2b8c",
+              "sha512": "612c7535d28ae0cb336f31b790770b3dcb5173d496fb74eabcb28d06e3b88e72733128060cefc4ae4147cce528a8e8c09688a36d8f9e11dbf77e93d89b743560"
+            },
+            "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/LecuGude/Jade-1.20.1-Forge-11.13.2.jar",
+            "filename": "Jade-1.20.1-Forge-11.13.2.jar",
+            "primary": true,
+            "size": 552486,
+            "file_type": null
+          }
+        ],
+        "dependencies": [
+          {
+            "version_id": null,
+            "project_id": "u6dRKJwZ",
+            "file_name": null,
+            "dependency_type": "optional"
+          }
+        ]
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.20",
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge",
+            "neoforge"
+          ],
+          "id": "LecuGude",
+          "project_id": "nvQzSEkH",
+          "author_id": "UxbEV316",
+          "featured": false,
+          "name": "[Forge 1.20.1] 11.13.2",
+          "version_number": "11.13.2+forge",
+          "changelog": "## 11.13.2\n\n- fix: modded bossbar offset ([#645](https://github.com/Snownee/Jade/issues/645))\n- fix: MobSpawnerProvider CCE (close [#605](https://github.com/Snownee/Jade/issues/605))\n- improve: suppress getDestroyProgress errors (close [#637](https://github.com/Snownee/Jade/issues/637))\n- Update uk_ua.json ([#609](https://github.com/Snownee/Jade/issues/609))\n- fix: Jade cannot be built locally (close [#540](https://github.com/Snownee/Jade/issues/540))\n\n## 11.13.1\n\n- fix: workaround to blame jade addons\n\n## 11.13.0\n\n- feat: filter large bitmap glyphs (close: [#502](https://github.com/Snownee/Jade/issues/502))\n- improve: blame the correct mod 2.0\n\n## 11.12.3\n\n- fix: extension provider lookup (close [#523](https://github.com/Snownee/Jade/issues/523))\n\n## 11.12.2\n\n- fix: CME when registering keybinds (close [#497](https://github.com/Snownee/Jade/issues/497))\n\n## 11.12.1\n\n- fix: remove appending mod name code that seems pointless (close: [#480](https://github.com/Snownee/Jade/issues/480))\n- fix: incompatibility with Leawind's Third Person (close: [#387](https://github.com/Snownee/Jade/issues/387))\n",
+          "changelog_url": null,
+          "date_published": "2025-08-06T14:20:00.809085Z",
+          "downloads": 5556566,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "UlRk7kNg",
+              "hashes": {
+                "sha1": "1997e5fe2db3a0575ca79bfe4720019f01fd2b8c",
+                "sha512": "612c7535d28ae0cb336f31b790770b3dcb5173d496fb74eabcb28d06e3b88e72733128060cefc4ae4147cce528a8e8c09688a36d8f9e11dbf77e93d89b743560"
+              },
+              "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/LecuGude/Jade-1.20.1-Forge-11.13.2.jar",
+              "filename": "Jade-1.20.1-Forge-11.13.2.jar",
+              "primary": true,
+              "size": 552486,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "u6dRKJwZ",
+              "file_name": null,
+              "dependency_type": "optional"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.20",
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge",
+            "neoforge"
+          ],
+          "id": "9gf6jOO0",
+          "project_id": "nvQzSEkH",
+          "author_id": "UxbEV316",
+          "featured": false,
+          "name": "[Forge 1.20.1] 11.13.1",
+          "version_number": "11.13.1+forge",
+          "changelog": "## 11.13.1\n\n- fix: workaround to blame jade addons\n\n## 11.13.0\n\n- feat: filter large bitmap glyphs (close: [#502](https://github.com/Snownee/Jade/issues/502))\n- improve: blame the correct mod 2.0\n\n## 11.12.3\n\n- fix: extension provider lookup (close [#523](https://github.com/Snownee/Jade/issues/523))\n\n## 11.12.2\n\n- fix: CME when registering keybinds (close [#497](https://github.com/Snownee/Jade/issues/497))\n\n## 11.12.1\n\n- fix: remove appending mod name code that seems pointless (close: [#480](https://github.com/Snownee/Jade/issues/480))\n- fix: incompatibility with Leawind's Third Person (close: [#387](https://github.com/Snownee/Jade/issues/387))\n\n## 11.11.1\n\n- feat: show hints in chat instead of toast\n- feat: indicate if signs have wax applied or not ([#336](https://github.com/Snownee/Jade/issues/336))\n- fix: server data for beehive blocks being cleared\n- feat: show villager mod name according to its profession\n- feat: print error stack trace in console log\n- fix: minor porting oversight\n- fix: incompatibility with Wilder Wild (close [#458](https://github.com/Snownee/Jade/issues/458))\n- fix: \"Loot not generated yet\" not showing (close [#454](https://github.com/Snownee/Jade/issues/454))\n",
+          "changelog_url": null,
+          "date_published": "2025-03-06T16:47:31.546464Z",
+          "downloads": 4247908,
+          "version_type": "beta",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "F6fpScc4",
+              "hashes": {
+                "sha512": "3b8c4e273b70c30781accb27b3c307e9a8f676c2f3e6987fb9864588c4c0b93cbfd20bbcbe697dada6474b4d652ce686f98d3f72346d4946e573c0435674d8cf",
+                "sha1": "0e5af2bdca3a600d3f0cf28cc9f735542d19e7fc"
+              },
+              "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/9gf6jOO0/Jade-1.20.1-Forge-11.13.1.jar",
+              "filename": "Jade-1.20.1-Forge-11.13.1.jar",
+              "primary": true,
+              "size": 550551,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "u6dRKJwZ",
+              "file_name": null,
+              "dependency_type": "optional"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.20",
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge",
+            "neoforge"
+          ],
+          "id": "eyV1NG7g",
+          "project_id": "nvQzSEkH",
+          "author_id": "UxbEV316",
+          "featured": false,
+          "name": "[Forge 1.20.1] 11.13.0",
+          "version_number": "11.13.0+forge",
+          "changelog": "## 11.13.0\n\n- feat: filter large bitmap glyphs (close: [#502](https://github.com/Snownee/Jade/issues/502))\n- improve: blame the correct mod 2.0\n\n## 11.12.3\n\n- fix: extension provider lookup (close [#523](https://github.com/Snownee/Jade/issues/523))\n\n## 11.12.2\n\n- fix: CME when registering keybinds (close [#497](https://github.com/Snownee/Jade/issues/497))\n\n## 11.12.1\n\n- fix: remove appending mod name code that seems pointless (close: [#480](https://github.com/Snownee/Jade/issues/480))\n- fix: incompatibility with Leawind's Third Person (close: [#387](https://github.com/Snownee/Jade/issues/387))\n\n## 11.11.1\n\n- feat: show hints in chat instead of toast\n- feat: indicate if signs have wax applied or not ([#336](https://github.com/Snownee/Jade/issues/336))\n- fix: server data for beehive blocks being cleared\n- feat: show villager mod name according to its profession\n- feat: print error stack trace in console log\n- fix: minor porting oversight\n- fix: incompatibility with Wilder Wild (close [#458](https://github.com/Snownee/Jade/issues/458))\n- fix: \"Loot not generated yet\" not showing (close [#454](https://github.com/Snownee/Jade/issues/454))\n\n## 11.10.1\n\n- feat: hiding more modded trapped chests\n- fix: allow empty view groups (close: [#448](https://github.com/Snownee/Jade/issues/448))\n- fix: incorrect tool indicated for Bamboo (close [#429](https://github.com/Snownee/Jade/issues/429))\n",
+          "changelog_url": null,
+          "date_published": "2025-03-06T15:46:39.851390Z",
+          "downloads": 3818,
+          "version_type": "beta",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "QVjlArAQ",
+              "hashes": {
+                "sha1": "652668b018f09d61ae57131b2b563958c5beda95",
+                "sha512": "58b25198d4f22f99477f184e030910cc3d75d798d5b89da4527010f5b7cc8e8cc5ea13693e95eee7f99bd121c028d81e5a8c0c1a16d635a31ea6e02a2975295d"
+              },
+              "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/eyV1NG7g/Jade-1.20.1-Forge-11.13.0.jar",
+              "filename": "Jade-1.20.1-Forge-11.13.0.jar",
+              "primary": true,
+              "size": 550492,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "u6dRKJwZ",
+              "file_name": null,
+              "dependency_type": "optional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "8BmcQJ2H",
+        "slug": "geckolib",
+        "title": "Geckolib",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.10"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "EoWykEGU",
+        "project_id": "8BmcQJ2H",
+        "author_id": "GIhCykJ9",
+        "featured": false,
+        "name": "Forge 1.21.10",
+        "version_number": "5.3-alpha-1",
+        "changelog": "## GeckoLib v5.3-alpha-1\n\n## Changes\n* Port to 1.21.10\n  * NOTE: This is an ALPHA build, and may be subject to breaking changes until the alpha tag is removed.\n  * The PACKED_LIGHT DataTicket is no longer filled for most GeoRenderers, as the base RenderState classes contain `lightCoords` now by default\n  * Added `GeoRenderState#getPackedLight`\n  * `GeoRenderer#defaultRender` has been renamed to `#submitRenderTasks` to better represent its function now that we're not actually rendering at the time of that call\n  * `GeoRenderer#actuallyRender` has been renamed to `#buildRenderTask` to better represent its function\n  * `GeoLayer#render` has been renamed to `#buildRenderTask` to better represent its function\n  * `GeoRenderer#reRender` has been removed. Instead, render layers or renderers should submit another render task via `GeoRenderer#buildRenderTask`. Consequently, you no longer need to check for `isReRender` in renderer methods\n  * `preRender`, `scaleModelForRender`, and `adjustPositionForRender` have all been moved to _after_ the preRender event check\n  * Added `GeoRenderer#createRenderState`\n  * Removed `GeoEntityRenderer#createBaseRenderState` - Use `#createRenderState` instead \n  * Removed various DataTickets from the default setup, where they're just a blatant clone of existing vanilla properties, to eliminate multiple sources of truth and improve performance\n  * The various Matrix4f variables in GeckoLib renderers has been moved to DataTickets\n  * Removed `GeoRenderer#doPostRenderCleanup`\n  * Added the associated HumanoidModel to `GeoArmorLayer.RenderData`\n* Rewrote `GeoArmorRenderer` - it should now be significantly easier to use and understand\n* Change DefaultedEntityGeoModel to take a customisable bone name instead of a flat boolean\n* Added `#withRenderLayer` to the various `GeoRenderer`s to allow for a functional instantiation\n* `GeoObjectRenderer` now uses a generic for its `GeoRenderState`, allowing for generic extensibility\n* Directly pass the partialTick to `GeoRenderer#addRenderData`, `GeoRenderLayer#addRenderData`, `GeoModel#prepareForRenderPass`, and the various `CompileRenderState` events/hooks (#762)\n* Renamed `GeoRenderer#adjustPositionForRender` to `#adjustRenderPose` to better reflect its intended usage\n* `ItemArmorGeoLayer.RenderData` now uses `GeoArmorRenderer.ArmorSegment`s instead of manual slots and part getters\n* Made `GeoRenderEvent` and its various sub-events multiloader compatible\n* All platform-specific GeckoLib events are now split into their own individual classes to make it easier to find and manage them. E.G. `CompileBlockRenderLayersEvent`\n\n## Additions\n* Added \"Stateless\" animatables. These are an alternate way of handling animations for GeckoLib animatables.\n  * See: https://github.com/bernie-g/geckolib/wiki/Stateless-Animatable-Handling-(Geckolib5)\n  * Added:\n    * `StatelessGeoBlockEntity`\n    * `StatelessGeoEntity`\n    * `StatelessGeoObject`\n    * `StatelessGeoReplacedEntity`\n    * `StatelessGeoSingletonAnimatable`\n    * `StatelessAnimationController`\n* Added `attack.punch` DefaultAnimation constant\n* Added `misc.idle.flying` DefaultAnimation constant\n* Added `move.dive` DefaultAnimation constant\n* Added `DefaultAnimations#triggerOnlyController` for creating a controller specifically for arbitrary triggered animations\n* Added `RawAnimation#getStageCount`\n* Added `AnimationController#getStateHandler`\n* Added `DefaultAnimations#genericWalkFlyIdleController`\n* Added a constructor overload for various GeckoLib renderers that takes the item directly and creates a defaulted instance using the object's registered ID for quick and easy handling\n    * E.G. `new GeoEntityRenderer(ModEntities.MY_ENTITY);`\n* Added `GeoRenderEvent#hasData`\n* Added `RenderUtil#getReplacedEntityRenderer`\n* Added `RenderUtil#getGeckoLibItemRenderer`\n* Added `RenderUtil#getGeckoLibEntityRenderer`\n* Added `RenderUtil#getGeckoLibBlockRenderer`\n* Added `RenderUtil#getGeckoLibArmorRenderer`\n\n## Bug Fixes\n* Add double-depth bedrock keyframe parsing because I have no idea why Blockbench is exporting that\n* Fixed triggered animations not visually working on brand-new stacks in multiplayer for other players\n* Fixed some incorrect javadocs in AnimationController\n* Ensure the `EntityRenderState` is properly extracted before passing to `GeoArmorRenderer` for extraction\n\n## Internal Changes\n* Reorganised GeckoLib's packets into folders\n* Added a StreamCodec implementation for `Animation.Stage`\n* Added a StreamCodec implementation for `RawAnimation`\n* Added javadocs to more internal methods and all of the mixins, for clarity\n* Improved the Javadoc on `GeoRenderEvent#getRenderData`\n* Removed `RenderUtil#getCurrentSystemTick`\n* Removed `RenderUtil#booleanToFloat`\n* Removed `RenderUtil#getGeoModelForEntityType`\n* Removed `RenderUtil#getGeoModelForEntity`\n* Removed `RenderUtil#getGeoModelForItem`\n* Removed `RenderUtil#getGeoModelForBlock`\n* Removed `RenderUtil#getGeoModelForArmor`\n* Moved `RenderUtil#getCurrentTick` to `ClientUtil`\n* Moved `RenderUtil#arrayToVec` to `JsonUtil`\n* Removed some superfluous parameters from `GeoRenderProvider#getGeoArmorRenderer`\n* Renamed `ItemArmorGeoLayer#prepHumanoidModelForRender` to `#positionModelPartFromBone`",
+        "changelog_url": null,
+        "date_published": "2025-10-12T01:55:18.488973Z",
+        "downloads": 1834,
+        "version_type": "alpha",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "tqebTcjX",
+            "hashes": {
+              "sha1": "b183b65a44adf5385f71d2b0c20508fb2e15e3f3",
+              "sha512": "77fbd0fba9567f8b69dde4ee04932f0c5fc7c2e7162241fcf5f67b2ff31f9cbdf457efd97b03b7e280839ee3776efc12614b1e3372ca960d9227625c5b6c38cb"
+            },
+            "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/EoWykEGU/geckolib-forge-1.21.10-5.3-alpha-1.jar",
+            "filename": "geckolib-forge-1.21.10-5.3-alpha-1.jar",
+            "primary": true,
+            "size": 1330203,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.10"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "EoWykEGU",
+          "project_id": "8BmcQJ2H",
+          "author_id": "GIhCykJ9",
+          "featured": false,
+          "name": "Forge 1.21.10",
+          "version_number": "5.3-alpha-1",
+          "changelog": "## GeckoLib v5.3-alpha-1\n\n## Changes\n* Port to 1.21.10\n  * NOTE: This is an ALPHA build, and may be subject to breaking changes until the alpha tag is removed.\n  * The PACKED_LIGHT DataTicket is no longer filled for most GeoRenderers, as the base RenderState classes contain `lightCoords` now by default\n  * Added `GeoRenderState#getPackedLight`\n  * `GeoRenderer#defaultRender` has been renamed to `#submitRenderTasks` to better represent its function now that we're not actually rendering at the time of that call\n  * `GeoRenderer#actuallyRender` has been renamed to `#buildRenderTask` to better represent its function\n  * `GeoLayer#render` has been renamed to `#buildRenderTask` to better represent its function\n  * `GeoRenderer#reRender` has been removed. Instead, render layers or renderers should submit another render task via `GeoRenderer#buildRenderTask`. Consequently, you no longer need to check for `isReRender` in renderer methods\n  * `preRender`, `scaleModelForRender`, and `adjustPositionForRender` have all been moved to _after_ the preRender event check\n  * Added `GeoRenderer#createRenderState`\n  * Removed `GeoEntityRenderer#createBaseRenderState` - Use `#createRenderState` instead \n  * Removed various DataTickets from the default setup, where they're just a blatant clone of existing vanilla properties, to eliminate multiple sources of truth and improve performance\n  * The various Matrix4f variables in GeckoLib renderers has been moved to DataTickets\n  * Removed `GeoRenderer#doPostRenderCleanup`\n  * Added the associated HumanoidModel to `GeoArmorLayer.RenderData`\n* Rewrote `GeoArmorRenderer` - it should now be significantly easier to use and understand\n* Change DefaultedEntityGeoModel to take a customisable bone name instead of a flat boolean\n* Added `#withRenderLayer` to the various `GeoRenderer`s to allow for a functional instantiation\n* `GeoObjectRenderer` now uses a generic for its `GeoRenderState`, allowing for generic extensibility\n* Directly pass the partialTick to `GeoRenderer#addRenderData`, `GeoRenderLayer#addRenderData`, `GeoModel#prepareForRenderPass`, and the various `CompileRenderState` events/hooks (#762)\n* Renamed `GeoRenderer#adjustPositionForRender` to `#adjustRenderPose` to better reflect its intended usage\n* `ItemArmorGeoLayer.RenderData` now uses `GeoArmorRenderer.ArmorSegment`s instead of manual slots and part getters\n* Made `GeoRenderEvent` and its various sub-events multiloader compatible\n* All platform-specific GeckoLib events are now split into their own individual classes to make it easier to find and manage them. E.G. `CompileBlockRenderLayersEvent`\n\n## Additions\n* Added \"Stateless\" animatables. These are an alternate way of handling animations for GeckoLib animatables.\n  * See: https://github.com/bernie-g/geckolib/wiki/Stateless-Animatable-Handling-(Geckolib5)\n  * Added:\n    * `StatelessGeoBlockEntity`\n    * `StatelessGeoEntity`\n    * `StatelessGeoObject`\n    * `StatelessGeoReplacedEntity`\n    * `StatelessGeoSingletonAnimatable`\n    * `StatelessAnimationController`\n* Added `attack.punch` DefaultAnimation constant\n* Added `misc.idle.flying` DefaultAnimation constant\n* Added `move.dive` DefaultAnimation constant\n* Added `DefaultAnimations#triggerOnlyController` for creating a controller specifically for arbitrary triggered animations\n* Added `RawAnimation#getStageCount`\n* Added `AnimationController#getStateHandler`\n* Added `DefaultAnimations#genericWalkFlyIdleController`\n* Added a constructor overload for various GeckoLib renderers that takes the item directly and creates a defaulted instance using the object's registered ID for quick and easy handling\n    * E.G. `new GeoEntityRenderer(ModEntities.MY_ENTITY);`\n* Added `GeoRenderEvent#hasData`\n* Added `RenderUtil#getReplacedEntityRenderer`\n* Added `RenderUtil#getGeckoLibItemRenderer`\n* Added `RenderUtil#getGeckoLibEntityRenderer`\n* Added `RenderUtil#getGeckoLibBlockRenderer`\n* Added `RenderUtil#getGeckoLibArmorRenderer`\n\n## Bug Fixes\n* Add double-depth bedrock keyframe parsing because I have no idea why Blockbench is exporting that\n* Fixed triggered animations not visually working on brand-new stacks in multiplayer for other players\n* Fixed some incorrect javadocs in AnimationController\n* Ensure the `EntityRenderState` is properly extracted before passing to `GeoArmorRenderer` for extraction\n\n## Internal Changes\n* Reorganised GeckoLib's packets into folders\n* Added a StreamCodec implementation for `Animation.Stage`\n* Added a StreamCodec implementation for `RawAnimation`\n* Added javadocs to more internal methods and all of the mixins, for clarity\n* Improved the Javadoc on `GeoRenderEvent#getRenderData`\n* Removed `RenderUtil#getCurrentSystemTick`\n* Removed `RenderUtil#booleanToFloat`\n* Removed `RenderUtil#getGeoModelForEntityType`\n* Removed `RenderUtil#getGeoModelForEntity`\n* Removed `RenderUtil#getGeoModelForItem`\n* Removed `RenderUtil#getGeoModelForBlock`\n* Removed `RenderUtil#getGeoModelForArmor`\n* Moved `RenderUtil#getCurrentTick` to `ClientUtil`\n* Moved `RenderUtil#arrayToVec` to `JsonUtil`\n* Removed some superfluous parameters from `GeoRenderProvider#getGeoArmorRenderer`\n* Renamed `ItemArmorGeoLayer#prepHumanoidModelForRender` to `#positionModelPartFromBone`",
+          "changelog_url": null,
+          "date_published": "2025-10-12T01:55:18.488973Z",
+          "downloads": 1834,
+          "version_type": "alpha",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "tqebTcjX",
+              "hashes": {
+                "sha1": "b183b65a44adf5385f71d2b0c20508fb2e15e3f3",
+                "sha512": "77fbd0fba9567f8b69dde4ee04932f0c5fc7c2e7162241fcf5f67b2ff31f9cbdf457efd97b03b7e280839ee3776efc12614b1e3372ca960d9227625c5b6c38cb"
+              },
+              "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/EoWykEGU/geckolib-forge-1.21.10-5.3-alpha-1.jar",
+              "filename": "geckolib-forge-1.21.10-5.3-alpha-1.jar",
+              "primary": true,
+              "size": 1330203,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "aVW7Z5da",
+          "project_id": "8BmcQJ2H",
+          "author_id": "GIhCykJ9",
+          "featured": false,
+          "name": "Forge 1.20.1",
+          "version_number": "4.8.2",
+          "changelog": "v4.8.2\n\n- Fix triggered animations not applying on Singleton animatables when first used in multiplayer for other players (on Fabric)",
+          "changelog_url": null,
+          "date_published": "2025-09-23T10:09:01.034935Z",
+          "downloads": 4946203,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "qEdZ1eEh",
+              "hashes": {
+                "sha512": "8d8cb1f2d60c885b3b312aca63b94e3942e50ca40e96514f35fb74a39367afa07e4986640a66c66b035da9ea60cb6d8ff602e9c0b6b298e5ce584ad9f46a2f45",
+                "sha1": "395a9f21a36dc8466d67c2af67a904e7013460d1"
+              },
+              "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/aVW7Z5da/geckolib-forge-1.20.1-4.8.2.jar",
+              "filename": "geckolib-forge-1.20.1-4.8.2.jar",
+              "primary": true,
+              "size": 1038979,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "IC1LrNId",
+          "project_id": "8BmcQJ2H",
+          "author_id": "GIhCykJ9",
+          "featured": false,
+          "name": "Forge 1.21.1",
+          "version_number": "4.8.2",
+          "changelog": "v4.8.2\n\n- Fix a double-space in DynamicGeoBlockRenderer's javadocs\n- Fix an incorrect link in StatelessAnimatable\n- Clean up an ugly javadoc entry in GeoReplacedEntity\n- Clean up some javadocs in GeoModel\n- Clean up some javadocs in GeoAnimatable\n- Clean up some javadocs in ContextAwareAnimatableManager\n- Clean up some javadocs in AnimatableManager\n- Fixed Singleton Geo animatables not showing a triggered anim when newly created for other players in multiplayer",
+          "changelog_url": null,
+          "date_published": "2025-09-22T19:51:05.789230Z",
+          "downloads": 20233,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "pcCytLS2",
+              "hashes": {
+                "sha512": "875bf4a1a847326866fd3a3fa3162e0c4bbfe1f27601cad39efe106f4d4bd51521adcb4209d21ed379e50070c6f1e18c47928aab55c752eec0bead35179e429c",
+                "sha1": "191148f604dccd9cac8dfa6bd593ba61848bd7d9"
+              },
+              "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/IC1LrNId/geckolib-forge-1.21.1-4.8.2.jar",
+              "filename": "geckolib-forge-1.21.1-4.8.2.jar",
+              "primary": true,
+              "size": 805529,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "NcUtCpym",
+        "slug": "xaeros-world-map",
+        "title": "Xaero's World Map",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.9",
+          "1.21.10"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "bMLq86wD",
+        "project_id": "NcUtCpym",
+        "author_id": "ANNqL3WC",
+        "featured": false,
+        "name": "1.39.18",
+        "version_number": "1.39.18_Forge_1.21.9",
+        "changelog": "[Read changelogs](https://chocolateminecraft.com/update.php?mod_id=2)",
+        "changelog_url": null,
+        "date_published": "2025-10-07T16:09:42.487264Z",
+        "downloads": 104882,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "USN85qnc",
+            "hashes": {
+              "sha512": "eff01536f8a36f2641ac0806f6b02b4bfb03a0b793dc6a65c279ad817af2c5461bea07b320c132b269f81515d1a2db51100e98db729bbf48cea27460875e043f",
+              "sha1": "24dde930f9d17626b2edc6230bf1e687d4efc07e"
+            },
+            "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/bMLq86wD/XaerosWorldMap_1.39.18_Forge_1.21.9.jar",
+            "filename": "XaerosWorldMap_1.39.18_Forge_1.21.9.jar",
+            "primary": true,
+            "size": 972442,
+            "file_type": null
+          }
+        ],
+        "dependencies": [
+          {
+            "version_id": null,
+            "project_id": "gF3BGWvG",
+            "file_name": null,
+            "dependency_type": "optional"
+          }
+        ]
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.9",
+            "1.21.10"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "bMLq86wD",
+          "project_id": "NcUtCpym",
+          "author_id": "ANNqL3WC",
+          "featured": false,
+          "name": "1.39.18",
+          "version_number": "1.39.18_Forge_1.21.9",
+          "changelog": "[Read changelogs](https://chocolateminecraft.com/update.php?mod_id=2)",
+          "changelog_url": null,
+          "date_published": "2025-10-07T16:09:42.487264Z",
+          "downloads": 104882,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "USN85qnc",
+              "hashes": {
+                "sha512": "eff01536f8a36f2641ac0806f6b02b4bfb03a0b793dc6a65c279ad817af2c5461bea07b320c132b269f81515d1a2db51100e98db729bbf48cea27460875e043f",
+                "sha1": "24dde930f9d17626b2edc6230bf1e687d4efc07e"
+              },
+              "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/bMLq86wD/XaerosWorldMap_1.39.18_Forge_1.21.9.jar",
+              "filename": "XaerosWorldMap_1.39.18_Forge_1.21.9.jar",
+              "primary": true,
+              "size": 972442,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "gF3BGWvG",
+              "file_name": null,
+              "dependency_type": "optional"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.21.9"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "1rQl25Pe",
+          "project_id": "NcUtCpym",
+          "author_id": "ANNqL3WC",
+          "featured": false,
+          "name": "1.39.17",
+          "version_number": "1.39.17_Forge_1.21.9",
+          "changelog": "[Read changelogs](https://chocolateminecraft.com/update.php?mod_id=2)",
+          "changelog_url": null,
+          "date_published": "2025-10-03T10:23:03.773244Z",
+          "downloads": 4265,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "4bEXpEr2",
+              "hashes": {
+                "sha1": "65aa9763845a7c6c951bfad34e86e97e7ca91079",
+                "sha512": "60d0c11006232faeecbfe506874aabbad2add607173cda9d1ffeb57e67a7362d4a9e1c5ea1417c0728bff3dd04a433f82bd4cd486b93f6add4c92fa5d0eec086"
+              },
+              "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/1rQl25Pe/XaerosWorldMap_1.39.17_Forge_1.21.9.jar",
+              "filename": "XaerosWorldMap_1.39.17_Forge_1.21.9.jar",
+              "primary": true,
+              "size": 972783,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "gF3BGWvG",
+              "file_name": null,
+              "dependency_type": "optional"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.20.5",
+            "1.20.6"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "lwdXY9pL",
+          "project_id": "NcUtCpym",
+          "author_id": "ANNqL3WC",
+          "featured": false,
+          "name": "1.39.12",
+          "version_number": "1.39.12_Forge_1.20.6",
+          "changelog": "Fixed the file not working.",
+          "changelog_url": null,
+          "date_published": "2025-08-08T08:43:52.799647Z",
+          "downloads": 15564,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "Fd9n1TLL",
+              "hashes": {
+                "sha512": "7122a4973cc952c735b56d14c53a46425b897b65870fc4cba90bb635f955b292f7d7435ce5dd260164247bb962debab263a75dca7d8e4561da866a183c25eb50",
+                "sha1": "fb847a41e1574d464f9dabd08d63c83fbefa9a32"
+              },
+              "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/lwdXY9pL/XaerosWorldMap_1.39.12_Forge_1.20.6.jar",
+              "filename": "XaerosWorldMap_1.39.12_Forge_1.20.6.jar",
+              "primary": true,
+              "size": 955288,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "gF3BGWvG",
+              "file_name": null,
+              "dependency_type": "optional"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "GchcoXML",
+        "slug": "oculus",
+        "title": "Oculus",
+        "loaders": [
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.19.2"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "Mw8aFpWF",
+        "project_id": "GchcoXML",
+        "author_id": "OGBzw79h",
+        "featured": false,
+        "name": "Oculus mc1.19.2-1.6.9a",
+        "version_number": "1.19.2-1.6.9a",
+        "changelog": "### **Fixed renderer of MekaSuit from Mekanism**",
+        "changelog_url": null,
+        "date_published": "2024-12-24T23:47:00.856809Z",
+        "downloads": 892088,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "Nx4DH2Nt",
+            "hashes": {
+              "sha1": "be4e14cb03ba5c931f8b73323ee8893ff5a2dd4b",
+              "sha512": "b59fad480777d0d4d9f51f9eb0d148a9a0776c76069b1e6211371c266ab3ac516d8f2c4e0bb223bce73e73c983072c700a241bde82be2cffcb9252b1db598c8a"
+            },
+            "url": "https://cdn.modrinth.com/data/GchcoXML/versions/Mw8aFpWF/oculus-mc1.19.2-1.6.9a.jar",
+            "filename": "oculus-mc1.19.2-1.6.9a.jar",
+            "primary": true,
+            "size": 3503720,
+            "file_type": null
+          }
+        ],
+        "dependencies": [
+          {
+            "version_id": null,
+            "project_id": "4ZqxOvjD",
+            "file_name": null,
+            "dependency_type": "required"
+          }
+        ]
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.19.2"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "Mw8aFpWF",
+          "project_id": "GchcoXML",
+          "author_id": "OGBzw79h",
+          "featured": false,
+          "name": "Oculus mc1.19.2-1.6.9a",
+          "version_number": "1.19.2-1.6.9a",
+          "changelog": "### **Fixed renderer of MekaSuit from Mekanism**",
+          "changelog_url": null,
+          "date_published": "2024-12-24T23:47:00.856809Z",
+          "downloads": 892088,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "Nx4DH2Nt",
+              "hashes": {
+                "sha1": "be4e14cb03ba5c931f8b73323ee8893ff5a2dd4b",
+                "sha512": "b59fad480777d0d4d9f51f9eb0d148a9a0776c76069b1e6211371c266ab3ac516d8f2c4e0bb223bce73e73c983072c700a241bde82be2cffcb9252b1db598c8a"
+              },
+              "url": "https://cdn.modrinth.com/data/GchcoXML/versions/Mw8aFpWF/oculus-mc1.19.2-1.6.9a.jar",
+              "filename": "oculus-mc1.19.2-1.6.9a.jar",
+              "primary": true,
+              "size": 3503720,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "4ZqxOvjD",
+              "file_name": null,
+              "dependency_type": "required"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge",
+            "neoforge"
+          ],
+          "id": "iQ1SwGc3",
+          "project_id": "GchcoXML",
+          "author_id": "OGBzw79h",
+          "featured": false,
+          "name": "Oculus mc1.20.1-1.8.0",
+          "version_number": "1.20.1-1.8.0",
+          "changelog": "### **Fixed compatibility with Distant Horizons 2.2+**\n### **Fixed renderer of MekaSuit from Mekanism**",
+          "changelog_url": null,
+          "date_published": "2024-12-24T23:33:42.216148Z",
+          "downloads": 15328472,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "7aacZyV2",
+              "hashes": {
+                "sha1": "984f774e71790deaec674c7587bd24e0711871b2",
+                "sha512": "1bb4ac77400d6684347988ed298a692c2cb15cf7923693607eb8739b171a20fef7412259e9e157111d9ce21779badab386029956f7d2283a9e611722a373e9d5"
+              },
+              "url": "https://cdn.modrinth.com/data/GchcoXML/versions/iQ1SwGc3/oculus-mc1.20.1-1.8.0.jar",
+              "filename": "oculus-mc1.20.1-1.8.0.jar",
+              "primary": true,
+              "size": 2851119,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "sk9rgfiA",
+              "file_name": null,
+              "dependency_type": "required"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge",
+            "neoforge"
+          ],
+          "id": "vVuYfukI",
+          "project_id": "GchcoXML",
+          "author_id": "OGBzw79h",
+          "featured": false,
+          "name": "Oculus mc1.20.1-1.7.0",
+          "version_number": "1.20.1-1.7.0",
+          "changelog": "### Upstream to Iris 1.7.0 (Main feature is Distant Horizon 2.0.4+ support, _which is not released yet_)",
+          "changelog_url": null,
+          "date_published": "2024-04-28T21:22:46.942307Z",
+          "downloads": 3435490,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "WHNJI6DP",
+              "hashes": {
+                "sha512": "8f7e56e65a12c7cfa4719c69e1de552dc8651ab202ff9bf78ff180c4bf81a82f3e569641046b1915b6f9e60f54451ae4b8b0d9a688a0c966473b91de9cefb923",
+                "sha1": "27410903d3af950378776106b76503cfebe7ea3a"
+              },
+              "url": "https://cdn.modrinth.com/data/GchcoXML/versions/vVuYfukI/oculus-mc1.20.1-1.7.0.jar",
+              "filename": "oculus-mc1.20.1-1.7.0.jar",
+              "primary": true,
+              "size": 2831148,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "sk9rgfiA",
+              "file_name": null,
+              "dependency_type": "required"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "lhGA9TYQ",
+        "slug": "architectury-api",
+        "title": "Architectury API",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.20.2"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "uo9eXNGR",
+        "project_id": "lhGA9TYQ",
+        "author_id": "OQodw31Z",
+        "featured": false,
+        "name": "[MinecraftForge 1.20.2] v10.1.20",
+        "version_number": "10.1.20+minecraftforge",
+        "changelog": "## Architectury v10.1.20 for 1.20.2\nUpdated at **2024-03-19 07:32**.\n[Click here for changelog](https://www.github.com/architectury/architectury/commits/1.20.2)\n- Backported fluid stack fix to 1.20.2 (#485)",
+        "changelog_url": null,
+        "date_published": "2024-03-19T07:33:25.093939Z",
+        "downloads": 47548,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "nTCxv8rR",
+            "hashes": {
+              "sha1": "bdf153892ecce71a22b98ba0e71e46397c2c3b9b",
+              "sha512": "62500e22ac510c61844c827090770ebb4e55d8657201991043786b6974c46dcc7a45ee66b64fc70dffb121a5f11ca914896b29389eb1accb7eb460713fe307ea"
+            },
+            "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/uo9eXNGR/architectury-10.1.20-minecraftforge.jar",
+            "filename": "architectury-10.1.20-minecraftforge.jar",
+            "primary": true,
+            "size": 594194,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.20.2"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "uo9eXNGR",
+          "project_id": "lhGA9TYQ",
+          "author_id": "OQodw31Z",
+          "featured": false,
+          "name": "[MinecraftForge 1.20.2] v10.1.20",
+          "version_number": "10.1.20+minecraftforge",
+          "changelog": "## Architectury v10.1.20 for 1.20.2\nUpdated at **2024-03-19 07:32**.\n[Click here for changelog](https://www.github.com/architectury/architectury/commits/1.20.2)\n- Backported fluid stack fix to 1.20.2 (#485)",
+          "changelog_url": null,
+          "date_published": "2024-03-19T07:33:25.093939Z",
+          "downloads": 47548,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "nTCxv8rR",
+              "hashes": {
+                "sha1": "bdf153892ecce71a22b98ba0e71e46397c2c3b9b",
+                "sha512": "62500e22ac510c61844c827090770ebb4e55d8657201991043786b6974c46dcc7a45ee66b64fc70dffb121a5f11ca914896b29389eb1accb7eb460713fe307ea"
+              },
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/uo9eXNGR/architectury-10.1.20-minecraftforge.jar",
+              "filename": "architectury-10.1.20-minecraftforge.jar",
+              "primary": true,
+              "size": 594194,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "ZFDazCA3",
+          "project_id": "lhGA9TYQ",
+          "author_id": "OQodw31Z",
+          "featured": false,
+          "name": "[MinecraftForge 1.20.4] v11.1.17",
+          "version_number": "11.1.17+minecraftforge",
+          "changelog": "## Architectury v11.1.17 for 1.20.4\nUpdated at **2024-03-11 11:25**.\n[Click here for changelog](https://www.github.com/architectury/architectury/commits/1.20.4)",
+          "changelog_url": null,
+          "date_published": "2024-03-11T11:27:08.153417Z",
+          "downloads": 48933,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "GpWmM493",
+              "hashes": {
+                "sha1": "07a9aaa965a7749390090a73753caf13e3d14035",
+                "sha512": "7bf9ab6110d73a7eb849b3e3ecea7d234d49c7763fdff4dfc58b8349ecd47c7d5cd52ee8af3a8b589cb562369b3381b63e60cce8a873006d71014465ac2dd60a"
+              },
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ZFDazCA3/architectury-11.1.17-minecraftforge.jar",
+              "filename": "architectury-11.1.17-minecraftforge.jar",
+              "primary": true,
+              "size": 597386,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "ZBYAOSc6",
+          "project_id": "lhGA9TYQ",
+          "author_id": "OQodw31Z",
+          "featured": false,
+          "name": "[MinecraftForge 1.20.4] v11.1.13",
+          "version_number": "11.1.13+minecraftforge",
+          "changelog": "## Architectury v11.1.13 for 1.20.4\nUpdated at **2024-02-26 13:24**.\n[Click here for changelog](https://www.github.com/architectury/architectury/commits/1.20.4)",
+          "changelog_url": null,
+          "date_published": "2024-02-26T13:26:00.480984Z",
+          "downloads": 2546,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "4fhF6Qzv",
+              "hashes": {
+                "sha512": "48c9ccdf52581b038a93fcd6e4e94bcaba95782db5faf0cd45c26967838c3614e56d1332b72301731dceabaac98ada01ead9f6baec25dbc0daf66ffc62d756a4",
+                "sha1": "cd8cb54ab66a0427f889c2e75529ec15e860d675"
+              },
+              "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ZBYAOSc6/architectury-11.1.13-minecraftforge.jar",
+              "filename": "architectury-11.1.13-minecraftforge.jar",
+              "primary": true,
+              "size": 597138,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "MBAkmtvl",
+        "slug": "balm",
+        "title": "Balm",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.10"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "mlID7l8Y",
+        "project_id": "MBAkmtvl",
+        "author_id": "WE4nCeiO",
+        "featured": false,
+        "name": "21.10.4+forge-1.21.10",
+        "version_number": "21.10.4+forge-1.21.10",
+        "changelog": "- Fixed crash on Forge when renderer events are used",
+        "changelog_url": null,
+        "date_published": "2025-10-10T18:19:13.243551Z",
+        "downloads": 13572,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "9tMEusNZ",
+            "hashes": {
+              "sha1": "7c6362ee761ad98d06d952e07602a83355efb838",
+              "sha512": "c4e834870b69c682f3aa5843f9af6b76aa803916e6919c3930731d47421efdcc51524b345ba9b8bf9940afdd61767a136b9eb3188e58ca23f784e3b6cd821d6f"
+            },
+            "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/mlID7l8Y/balm-forge-1.21.10-21.10.4-all.jar",
+            "filename": "balm-forge-1.21.10-21.10.4-all.jar",
+            "primary": true,
+            "size": 494478,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.10"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "mlID7l8Y",
+          "project_id": "MBAkmtvl",
+          "author_id": "WE4nCeiO",
+          "featured": false,
+          "name": "21.10.4+forge-1.21.10",
+          "version_number": "21.10.4+forge-1.21.10",
+          "changelog": "- Fixed crash on Forge when renderer events are used",
+          "changelog_url": null,
+          "date_published": "2025-10-10T18:19:13.243551Z",
+          "downloads": 13572,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "9tMEusNZ",
+              "hashes": {
+                "sha1": "7c6362ee761ad98d06d952e07602a83355efb838",
+                "sha512": "c4e834870b69c682f3aa5843f9af6b76aa803916e6919c3930731d47421efdcc51524b345ba9b8bf9940afdd61767a136b9eb3188e58ca23f784e3b6cd821d6f"
+              },
+              "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/mlID7l8Y/balm-forge-1.21.10-21.10.4-all.jar",
+              "filename": "balm-forge-1.21.10-21.10.4-all.jar",
+              "primary": true,
+              "size": 494478,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.7",
+            "1.21.8"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "JNR5WexW",
+          "project_id": "MBAkmtvl",
+          "author_id": "WE4nCeiO",
+          "featured": false,
+          "name": "21.8.10+forge-1.21.8",
+          "version_number": "21.8.10+forge-1.21.8",
+          "changelog": "- Fixed possible race condition crash during config loading on NeoForge\n- Fixed NoSuchFileExceptions in lookupAllModPaths/lookupModPath",
+          "changelog_url": null,
+          "date_published": "2025-10-09T17:26:48.974789Z",
+          "downloads": 6704,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "ALPzgCaO",
+              "hashes": {
+                "sha512": "11ec1755680c84f754a2ee856f4a14cacff0f8e1977dc3a7f4de833d51bb6ef0f1e7a0226415c89700c8a01e4e238049c793f422184f84b68aae230f98c94f47",
+                "sha1": "10e996ba473301cf1b74f525eb9278a9ee4337e0"
+              },
+              "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/JNR5WexW/balm-forge-1.21.8-21.8.10-all.jar",
+              "filename": "balm-forge-1.21.8-21.8.10-all.jar",
+              "primary": true,
+              "size": 492291,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "21Zk8ppT",
+          "project_id": "MBAkmtvl",
+          "author_id": "WE4nCeiO",
+          "featured": false,
+          "name": "21.4.41+forge-1.21.4",
+          "version_number": "21.4.41+forge-1.21.4",
+          "changelog": "- Fixed NoSuchFileExceptions in lookupAllModPaths/lookupModPath",
+          "changelog_url": null,
+          "date_published": "2025-10-09T16:51:20.768063Z",
+          "downloads": 3552,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "htXdN748",
+              "hashes": {
+                "sha512": "9d0701efd88402d7ed76bd43eb485357104273a09caa9b77d5d970d43fd27dc6558edcb3a51f0f6bb9efedc836779371fbf266d33ce8cc5b93de43e0593b7535",
+                "sha1": "83ebfbf5523b1d436bcd8ff582ef015870edd4a0"
+              },
+              "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/21Zk8ppT/balm-forge-1.21.4-21.4.41-all.jar",
+              "filename": "balm-forge-1.21.4-21.4.41-all.jar",
+              "primary": true,
+              "size": 572301,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "iRfIGC1s",
+        "slug": "starlight-forge",
+        "title": "Starlight (Forge)",
+        "loaders": [
+          "forge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.20.2"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "SPQfFKXA",
+        "project_id": "iRfIGC1s",
+        "author_id": "fYyU5YhM",
+        "featured": true,
+        "name": "Starlight 1.1.3 1.20.2 (Forge)",
+        "version_number": "1.1.3+1.20.2",
+        "changelog": "Use forge version 48.0.33+ on 1.20.2, older versions may not work\n\nVarious improvements for mod compatibility:\n- https://github.com/PaperMC/Starlight/commit/5867eae3b82abe3ef1387e60bc86752d9cda63fb\n- https://github.com/PaperMC/Starlight/commit/d532896efa0cafe23a7e59310d4be959d12292e2\n\n \n\nFix mushrooms not generating properly:\n- https://github.com/PaperMC/Starlight/commit/bd2839f773cdd084b4cf452406e86bb3739de8ae\n",
+        "changelog_url": null,
+        "date_published": "2023-10-27T08:19:50.680742Z",
+        "downloads": 13747,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "HIwry4ac",
+            "hashes": {
+              "sha1": "714b441f1672efef020016f87fb4ca6f927c2eff",
+              "sha512": "a1b2ad5bbe6b173832e33931fae9621ecd4d96185b2d0dcebd3d7e12c10a80435b009e044a711859b10cbda67795e856b94d515e602c6890e4110cfa1569ebc8"
+            },
+            "url": "https://cdn.modrinth.com/data/iRfIGC1s/versions/SPQfFKXA/starlight-1.1.3%2Bforge.c562a3a.jar",
+            "filename": "starlight-1.1.3+forge.c562a3a.jar",
+            "primary": true,
+            "size": 112287,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.20.2"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "SPQfFKXA",
+          "project_id": "iRfIGC1s",
+          "author_id": "fYyU5YhM",
+          "featured": true,
+          "name": "Starlight 1.1.3 1.20.2 (Forge)",
+          "version_number": "1.1.3+1.20.2",
+          "changelog": "Use forge version 48.0.33+ on 1.20.2, older versions may not work\n\nVarious improvements for mod compatibility:\n- https://github.com/PaperMC/Starlight/commit/5867eae3b82abe3ef1387e60bc86752d9cda63fb\n- https://github.com/PaperMC/Starlight/commit/d532896efa0cafe23a7e59310d4be959d12292e2\n\n \n\nFix mushrooms not generating properly:\n- https://github.com/PaperMC/Starlight/commit/bd2839f773cdd084b4cf452406e86bb3739de8ae\n",
+          "changelog_url": null,
+          "date_published": "2023-10-27T08:19:50.680742Z",
+          "downloads": 13747,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "HIwry4ac",
+              "hashes": {
+                "sha1": "714b441f1672efef020016f87fb4ca6f927c2eff",
+                "sha512": "a1b2ad5bbe6b173832e33931fae9621ecd4d96185b2d0dcebd3d7e12c10a80435b009e044a711859b10cbda67795e856b94d515e602c6890e4110cfa1569ebc8"
+              },
+              "url": "https://cdn.modrinth.com/data/iRfIGC1s/versions/SPQfFKXA/starlight-1.1.3%2Bforge.c562a3a.jar",
+              "filename": "starlight-1.1.3+forge.c562a3a.jar",
+              "primary": true,
+              "size": 112287,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20",
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "cNa0vkNj",
+          "project_id": "iRfIGC1s",
+          "author_id": "fYyU5YhM",
+          "featured": true,
+          "name": "Starlight 1.1.2 1.20 - 1.20.1 (Forge)",
+          "version_number": "1.1.2+1.20",
+          "changelog": "Update to 1.20",
+          "changelog_url": null,
+          "date_published": "2023-07-08T06:10:54.244596Z",
+          "downloads": 8378926,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "zGk1fWJy",
+              "hashes": {
+                "sha512": "cc89c6b2dd0db709586028c7732a57a3e6184f19cc2b98b25964c720c3ab434031e62de23e0dab022575d637b5e4a34b5813164d32ec356d56588da400e7d026",
+                "sha1": "a915880c7834a0b0f9f300f0e3053deaa9a3205a"
+              },
+              "url": "https://cdn.modrinth.com/data/iRfIGC1s/versions/cNa0vkNj/starlight-1.1.2%2Bforge.1cda73c.jar",
+              "filename": "starlight-1.1.2+forge.1cda73c.jar",
+              "primary": true,
+              "size": 110583,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.19",
+            "1.19.1",
+            "1.19.2",
+            "1.19.3"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "eUgPCLKt",
+          "project_id": "iRfIGC1s",
+          "author_id": "fYyU5YhM",
+          "featured": true,
+          "name": "Starlight 1.1.1 1.19 (Forge)",
+          "version_number": "1.1.1+1.19",
+          "changelog": "Forge version: 41.0.35+, MC 1.19",
+          "changelog_url": null,
+          "date_published": "2022-06-17T13:56:15.939644Z",
+          "downloads": 2198638,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "KD0VOD0Z",
+              "hashes": {
+                "sha1": "3d80b848c966841deeeba70305e38a29b7e3788d",
+                "sha512": "679598564accbf0b9adb9bf947fe1c2b4dd9a90a6ce3f5013ab52d5f9411ea9f0c5865c20e94f59c4a02d83b5ab8b9368eb26c13da996960074c9688f8d24f56"
+              },
+              "url": "https://cdn.modrinth.com/data/iRfIGC1s/versions/1.1.1%2B1.19/starlight-1.1.1%2Bforge.cf5b10b.jar",
+              "filename": "starlight-1.1.1+forge.cf5b10b.jar",
+              "primary": true,
+              "size": 110720,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "kkmrDlKT",
+        "slug": "terrablender",
+        "title": "TerraBlender",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.10"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "atwhfdQJ",
+        "project_id": "kkmrDlKT",
+        "author_id": "oB0UcvPI",
+        "featured": false,
+        "name": "21.10.0.0 for Forge 1.21.10",
+        "version_number": "21.10.0.0",
+        "changelog": "```\nUpdated to Minecraft 1.21.10\n\n21.9.0\n======\n",
+        "changelog_url": null,
+        "date_published": "2025-10-12T12:01:16.161496Z",
+        "downloads": 14500,
+        "version_type": "beta",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "mH967pK5",
+            "hashes": {
+              "sha512": "d627bae5bc22918f6f107b7ed7f9176b837a2a4a0d9abfbf200bc2d675342806501d744cb324c50d89d54e7ea4259175504329e4dd40574256f7ee279640932f",
+              "sha1": "157d8f2619488ac2dfd7608de957e326dfcba7f4"
+            },
+            "url": "https://cdn.modrinth.com/data/kkmrDlKT/versions/atwhfdQJ/TerraBlender-forge-1.21.10-21.10.0.0.jar",
+            "filename": "TerraBlender-forge-1.21.10-21.10.0.0.jar",
+            "primary": true,
+            "size": 124486,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.10"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "atwhfdQJ",
+          "project_id": "kkmrDlKT",
+          "author_id": "oB0UcvPI",
+          "featured": false,
+          "name": "21.10.0.0 for Forge 1.21.10",
+          "version_number": "21.10.0.0",
+          "changelog": "```\nUpdated to Minecraft 1.21.10\n\n21.9.0\n======\n",
+          "changelog_url": null,
+          "date_published": "2025-10-12T12:01:16.161496Z",
+          "downloads": 14500,
+          "version_type": "beta",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "mH967pK5",
+              "hashes": {
+                "sha512": "d627bae5bc22918f6f107b7ed7f9176b837a2a4a0d9abfbf200bc2d675342806501d744cb324c50d89d54e7ea4259175504329e4dd40574256f7ee279640932f",
+                "sha1": "157d8f2619488ac2dfd7608de957e326dfcba7f4"
+              },
+              "url": "https://cdn.modrinth.com/data/kkmrDlKT/versions/atwhfdQJ/TerraBlender-forge-1.21.10-21.10.0.0.jar",
+              "filename": "TerraBlender-forge-1.21.10-21.10.0.0.jar",
+              "primary": true,
+              "size": 124486,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.9"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "CFTLTXJH",
+          "project_id": "kkmrDlKT",
+          "author_id": "oB0UcvPI",
+          "featured": false,
+          "name": "21.9.0.1 for Forge 1.21.9",
+          "version_number": "21.9.0.1",
+          "changelog": "```\nAdd Turkish localization (#224)\n",
+          "changelog_url": null,
+          "date_published": "2025-10-04T01:42:45.812773Z",
+          "downloads": 1693,
+          "version_type": "beta",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "L4BITk8m",
+              "hashes": {
+                "sha512": "6d20cd912baf0246487b0a9effe588c070b27277abdfd28a313ba48888681a8f4f4abad9ab1d81033af5705d1dec5aacb2983f4d905fac37e9627c04a3437f78",
+                "sha1": "45c6d11615e6e6d7998e856101fff55d26a251cb"
+              },
+              "url": "https://cdn.modrinth.com/data/kkmrDlKT/versions/CFTLTXJH/TerraBlender-forge-1.21.9-21.9.0.1.jar",
+              "filename": "TerraBlender-forge-1.21.9-21.9.0.1.jar",
+              "primary": true,
+              "size": 124487,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.9"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "ic99rf6l",
+          "project_id": "kkmrDlKT",
+          "author_id": "oB0UcvPI",
+          "featured": false,
+          "name": "21.9.0.0 for Forge 1.21.9",
+          "version_number": "21.9.0.0",
+          "changelog": "```\nUpdated to Minecraft 1.21.9\n\n6.0.0\n=====\n",
+          "changelog_url": null,
+          "date_published": "2025-10-04T01:37:50.457537Z",
+          "downloads": 80,
+          "version_type": "beta",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "69wLI0vc",
+              "hashes": {
+                "sha1": "c927a593b96a98d3e6f1cc50e67d1c18fa56c69b",
+                "sha512": "b856441f38a302f0d366c62164c895866da0322b770ad180944c65fea097d9b24c8df69f97dffa46f6d898d25ac4d0b2813eeecc0eb5b630407d7914edbfb053"
+              },
+              "url": "https://cdn.modrinth.com/data/kkmrDlKT/versions/ic99rf6l/TerraBlender-forge-1.21.9-21.9.0.0.jar",
+              "filename": "TerraBlender-forge-1.21.9-21.9.0.0.jar",
+              "primary": true,
+              "size": 124233,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "EsAfCjCV",
+        "slug": "appleskin",
+        "title": "AppleSkin",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.20.2",
+          "1.20.3",
+          "1.20.4"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "pyRMqaEV",
+        "project_id": "EsAfCjCV",
+        "author_id": "qB1TNdUc",
+        "featured": true,
+        "name": "appleskin-forge-mc1.20.2-2.5.1",
+        "version_number": "2.5.1+mc1.20.2",
+        "changelog": "- Fixed potential crash from unexpectedly large health/absorption values ([#266](https://github.com/squeek502/AppleSkin/issues/266))\n- Fixed large hunger/saturation text being drawn on top of the icon in tooltips ([#262](https://github.com/squeek502/AppleSkin/issues/262))\n- Updated for Minecraft 1.20.2",
+        "changelog_url": null,
+        "date_published": "2023-09-27T05:12:12.106465Z",
+        "downloads": 82601,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "1wAjkGLY",
+            "hashes": {
+              "sha512": "1072c8f3ca4ecc9ec5d0469694d517ce55c72c1ccbfae38e6f3820385d746cc51aa9b5f541e9dbff6601afc4fb65677101f1658e583d5d12c7abd9c3d38efef2",
+              "sha1": "a4cd0cf82349d8c68cb100d4e2d9788969ee1397"
+            },
+            "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/pyRMqaEV/appleskin-forge-mc1.20.2-2.5.1.jar",
+            "filename": "appleskin-forge-mc1.20.2-2.5.1.jar",
+            "primary": true,
+            "size": 52572,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.20.2",
+            "1.20.3",
+            "1.20.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "pyRMqaEV",
+          "project_id": "EsAfCjCV",
+          "author_id": "qB1TNdUc",
+          "featured": true,
+          "name": "appleskin-forge-mc1.20.2-2.5.1",
+          "version_number": "2.5.1+mc1.20.2",
+          "changelog": "- Fixed potential crash from unexpectedly large health/absorption values ([#266](https://github.com/squeek502/AppleSkin/issues/266))\n- Fixed large hunger/saturation text being drawn on top of the icon in tooltips ([#262](https://github.com/squeek502/AppleSkin/issues/262))\n- Updated for Minecraft 1.20.2",
+          "changelog_url": null,
+          "date_published": "2023-09-27T05:12:12.106465Z",
+          "downloads": 82601,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "1wAjkGLY",
+              "hashes": {
+                "sha512": "1072c8f3ca4ecc9ec5d0469694d517ce55c72c1ccbfae38e6f3820385d746cc51aa9b5f541e9dbff6601afc4fb65677101f1658e583d5d12c7abd9c3d38efef2",
+                "sha1": "a4cd0cf82349d8c68cb100d4e2d9788969ee1397"
+              },
+              "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/pyRMqaEV/appleskin-forge-mc1.20.2-2.5.1.jar",
+              "filename": "appleskin-forge-mc1.20.2-2.5.1.jar",
+              "primary": true,
+              "size": 52572,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "XdXDExVF",
+          "project_id": "EsAfCjCV",
+          "author_id": "qB1TNdUc",
+          "featured": true,
+          "name": "appleskin-forge-mc1.20.1-2.5.1",
+          "version_number": "2.5.1+mc1.20.1",
+          "changelog": "- Fixed potential crash from unexpectedly large health/absorption values ([#266](https://github.com/squeek502/AppleSkin/issues/266))\n- Fixed large hunger/saturation text being drawn on top of the icon in tooltips ([#262](https://github.com/squeek502/AppleSkin/issues/262))",
+          "changelog_url": null,
+          "date_published": "2023-09-27T05:07:37.394825Z",
+          "downloads": 14570127,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "ARbRIxPg",
+              "hashes": {
+                "sha512": "3176f928fb6c60d27f5edb610ca4ab0236175404eebf32797a1ec6cdd794bb294a260231579578536d03571377e43c6181adc75d8dd2c0733f17fce4f7e636b9",
+                "sha1": "81919356f84eab14258db98924b66c3c38e372b1"
+              },
+              "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/XdXDExVF/appleskin-forge-mc1.20.1-2.5.1.jar",
+              "filename": "appleskin-forge-mc1.20.1-2.5.1.jar",
+              "primary": true,
+              "size": 47428,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.19.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "LAwakjdi",
+          "project_id": "EsAfCjCV",
+          "author_id": "qB1TNdUc",
+          "featured": true,
+          "name": "appleskin-forge-mc1.19.4-2.5.1",
+          "version_number": "2.5.1+mc1.19.4",
+          "changelog": "- Fixed potential crash from unexpectedly large health/absorption values ([#266](https://github.com/squeek502/AppleSkin/issues/266))",
+          "changelog_url": null,
+          "date_published": "2023-09-27T05:05:53.682900Z",
+          "downloads": 37234,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "FYMxCHJE",
+              "hashes": {
+                "sha1": "b6ba5c492030d43e2b30dcc949d533d4bd5d0c16",
+                "sha512": "87f928fc0fa416a748c6b47f1bf79ad3340da5397de02754f9a1037d774edfaa7c15d5742cac9b18d0c027f23acb1e9037205e6d3cd13858bad5cd5d84323a36"
+              },
+              "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/LAwakjdi/appleskin-forge-mc1.19.4-2.5.1.jar",
+              "filename": "appleskin-forge-mc1.19.4-2.5.1.jar",
+              "primary": true,
+              "size": 46960,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "MPCX6s5C",
+        "slug": "not-enough-animations",
+        "title": "Not Enough Animations",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.8"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "cRk01hsM",
+        "project_id": "MPCX6s5C",
+        "author_id": "Qnt13hO8",
+        "featured": false,
+        "name": "1.10.6-1.21.8 - Forge",
+        "version_number": "1.10.6",
+        "changelog": "## 1.10.6 hotfix\r\n* Fix Holdup animation not working correctly\r\n\r\n## What's Changed\r\n* Added Forge 1.21.10 build that was missing by accident\r\n* Fixed mod not loading on 1.21.9 Forge/NeoForge as intended\r\n* Fixed log lines about ``Couldn't load ... pack metadata`` in 1.21.9+\r\n* fix & feat: add fallbacks for bow/crossbow item hiding & add crossbow animation clamping option by @elenawinters in https://github.com/tr7zw/NotEnoughAnimations/pull/297\r\n* fix: inconsistent item hiding by @elenawinters in https://github.com/tr7zw/NotEnoughAnimations/pull/299\r\n* Added option to clamp the crossbow animation\r\n\r\n\r\n**Full Changelog**: https://github.com/tr7zw/NotEnoughAnimations/compare/1.10.4...1.10.6\n",
+        "changelog_url": null,
+        "date_published": "2025-10-20T12:41:55.499820Z",
+        "downloads": 3307,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "EP3GFS5N",
+            "hashes": {
+              "sha512": "98ad02b8c23283c9fba7423821de494b5247c9b5c806cf6f1749ac0dcc4ba9ed6569dcd3b67f68e39436a905a2f3c3887e57897dd657b7701a14d23d8b6f076c",
+              "sha1": "e159001d3105fe482e2014221dba395aaf4a8fec"
+            },
+            "url": "https://cdn.modrinth.com/data/MPCX6s5C/versions/cRk01hsM/notenoughanimations-forge-1.10.6-mc1.21.8.jar",
+            "filename": "notenoughanimations-forge-1.10.6-mc1.21.8.jar",
+            "primary": true,
+            "size": 845038,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.8"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "cRk01hsM",
+          "project_id": "MPCX6s5C",
+          "author_id": "Qnt13hO8",
+          "featured": false,
+          "name": "1.10.6-1.21.8 - Forge",
+          "version_number": "1.10.6",
+          "changelog": "## 1.10.6 hotfix\r\n* Fix Holdup animation not working correctly\r\n\r\n## What's Changed\r\n* Added Forge 1.21.10 build that was missing by accident\r\n* Fixed mod not loading on 1.21.9 Forge/NeoForge as intended\r\n* Fixed log lines about ``Couldn't load ... pack metadata`` in 1.21.9+\r\n* fix & feat: add fallbacks for bow/crossbow item hiding & add crossbow animation clamping option by @elenawinters in https://github.com/tr7zw/NotEnoughAnimations/pull/297\r\n* fix: inconsistent item hiding by @elenawinters in https://github.com/tr7zw/NotEnoughAnimations/pull/299\r\n* Added option to clamp the crossbow animation\r\n\r\n\r\n**Full Changelog**: https://github.com/tr7zw/NotEnoughAnimations/compare/1.10.4...1.10.6\n",
+          "changelog_url": null,
+          "date_published": "2025-10-20T12:41:55.499820Z",
+          "downloads": 3307,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "EP3GFS5N",
+              "hashes": {
+                "sha512": "98ad02b8c23283c9fba7423821de494b5247c9b5c806cf6f1749ac0dcc4ba9ed6569dcd3b67f68e39436a905a2f3c3887e57897dd657b7701a14d23d8b6f076c",
+                "sha1": "e159001d3105fe482e2014221dba395aaf4a8fec"
+              },
+              "url": "https://cdn.modrinth.com/data/MPCX6s5C/versions/cRk01hsM/notenoughanimations-forge-1.10.6-mc1.21.8.jar",
+              "filename": "notenoughanimations-forge-1.10.6-mc1.21.8.jar",
+              "primary": true,
+              "size": 845038,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.5"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "WlGXkNiw",
+          "project_id": "MPCX6s5C",
+          "author_id": "Qnt13hO8",
+          "featured": false,
+          "name": "1.10.6-1.21.5 - Forge",
+          "version_number": "1.10.6",
+          "changelog": "## 1.10.6 hotfix\r\n* Fix Holdup animation not working correctly\r\n\r\n## What's Changed\r\n* Added Forge 1.21.10 build that was missing by accident\r\n* Fixed mod not loading on 1.21.9 Forge/NeoForge as intended\r\n* Fixed log lines about ``Couldn't load ... pack metadata`` in 1.21.9+\r\n* fix & feat: add fallbacks for bow/crossbow item hiding & add crossbow animation clamping option by @elenawinters in https://github.com/tr7zw/NotEnoughAnimations/pull/297\r\n* fix: inconsistent item hiding by @elenawinters in https://github.com/tr7zw/NotEnoughAnimations/pull/299\r\n* Added option to clamp the crossbow animation\r\n\r\n\r\n**Full Changelog**: https://github.com/tr7zw/NotEnoughAnimations/compare/1.10.4...1.10.6\n",
+          "changelog_url": null,
+          "date_published": "2025-10-20T12:41:53.354330Z",
+          "downloads": 1092,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "UbuU6Scl",
+              "hashes": {
+                "sha1": "b1a11255c025ceb6cf27fd1335a95f9aba586e11",
+                "sha512": "2dd742c348814a7a8b0619979e8ddf17722ecbd8c043b5395e4feaeeacd6b94639baf18012035abc847fa6b59c83b6baa697cecdcaa33f6e285659479ad33dc1"
+              },
+              "url": "https://cdn.modrinth.com/data/MPCX6s5C/versions/WlGXkNiw/notenoughanimations-forge-1.10.6-mc1.21.5.jar",
+              "filename": "notenoughanimations-forge-1.10.6-mc1.21.5.jar",
+              "primary": true,
+              "size": 843850,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "PD7MEqyI",
+          "project_id": "MPCX6s5C",
+          "author_id": "Qnt13hO8",
+          "featured": false,
+          "name": "1.10.6-1.21.4 - Forge",
+          "version_number": "1.10.6",
+          "changelog": "## 1.10.6 hotfix\r\n* Fix Holdup animation not working correctly\r\n\r\n## What's Changed\r\n* Added Forge 1.21.10 build that was missing by accident\r\n* Fixed mod not loading on 1.21.9 Forge/NeoForge as intended\r\n* Fixed log lines about ``Couldn't load ... pack metadata`` in 1.21.9+\r\n* fix & feat: add fallbacks for bow/crossbow item hiding & add crossbow animation clamping option by @elenawinters in https://github.com/tr7zw/NotEnoughAnimations/pull/297\r\n* fix: inconsistent item hiding by @elenawinters in https://github.com/tr7zw/NotEnoughAnimations/pull/299\r\n* Added option to clamp the crossbow animation\r\n\r\n\r\n**Full Changelog**: https://github.com/tr7zw/NotEnoughAnimations/compare/1.10.4...1.10.6\n",
+          "changelog_url": null,
+          "date_published": "2025-10-20T12:41:51.661231Z",
+          "downloads": 1608,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "3ZWG3KxX",
+              "hashes": {
+                "sha1": "1505677f0c2931f104d6b480a079a8f75cc7d7c6",
+                "sha512": "8181a8966db01cf434913e772ff8768d9a98d2e610ca47c2e9d6e9236fa2ce426a671441aa4667ff9fed469503761afa4630b250b3fc4673103118a16d399330"
+              },
+              "url": "https://cdn.modrinth.com/data/MPCX6s5C/versions/PD7MEqyI/notenoughanimations-forge-1.10.6-mc1.21.4.jar",
+              "filename": "notenoughanimations-forge-1.10.6-mc1.21.4.jar",
+              "primary": true,
+              "size": 845179,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "e0M1UDsY",
+        "slug": "collective",
+        "title": "Collective",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.21.10"
+        ],
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge",
+          "quilt"
+        ],
+        "id": "Gi3mtnzR",
+        "project_id": "e0M1UDsY",
+        "author_id": "NIbuUGD2",
+        "featured": false,
+        "name": "[Fabric/Forge/Neo] 1.21.10-8.11",
+        "version_number": "1.21.10-8.11-fabric+forge+neo",
+        "changelog": "<p>Scheduled client tasks now don't increase their tick count when the game is paused.</p><p>The complete changelog with previous versions can be found at: <br>&nbsp; <a href=\"https://serilum.com/mods?changelog=collective\" target=\"_blank\">https://serilum.com/mods?changelog=collective</a></p>",
+        "changelog_url": null,
+        "date_published": "2025-10-19T21:09:03.579366Z",
+        "downloads": 25916,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "W2z7sbEe",
+            "hashes": {
+              "sha512": "391ce30547c2fc3886d917333a4ea813296ae02497186783d6474084e5638e0447b28a68e8d2160cce1fecc394b2a08fb6bcfb94e0ba6ff8009db781425eecf8",
+              "sha1": "1b3407f8187ac635e9d79e28c1cf6be93fb570d2"
+            },
+            "url": "https://cdn.modrinth.com/data/e0M1UDsY/versions/Gi3mtnzR/collective-1.21.10-8.11.jar",
+            "filename": "collective-1.21.10-8.11.jar",
+            "primary": true,
+            "size": 961264,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.21.10"
+          ],
+          "loaders": [
+            "fabric",
+            "forge",
+            "neoforge",
+            "quilt"
+          ],
+          "id": "Gi3mtnzR",
+          "project_id": "e0M1UDsY",
+          "author_id": "NIbuUGD2",
+          "featured": false,
+          "name": "[Fabric/Forge/Neo] 1.21.10-8.11",
+          "version_number": "1.21.10-8.11-fabric+forge+neo",
+          "changelog": "<p>Scheduled client tasks now don't increase their tick count when the game is paused.</p><p>The complete changelog with previous versions can be found at: <br>&nbsp; <a href=\"https://serilum.com/mods?changelog=collective\" target=\"_blank\">https://serilum.com/mods?changelog=collective</a></p>",
+          "changelog_url": null,
+          "date_published": "2025-10-19T21:09:03.579366Z",
+          "downloads": 25916,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "W2z7sbEe",
+              "hashes": {
+                "sha512": "391ce30547c2fc3886d917333a4ea813296ae02497186783d6474084e5638e0447b28a68e8d2160cce1fecc394b2a08fb6bcfb94e0ba6ff8009db781425eecf8",
+                "sha1": "1b3407f8187ac635e9d79e28c1cf6be93fb570d2"
+              },
+              "url": "https://cdn.modrinth.com/data/e0M1UDsY/versions/Gi3mtnzR/collective-1.21.10-8.11.jar",
+              "filename": "collective-1.21.10-8.11.jar",
+              "primary": true,
+              "size": 961264,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21.8"
+          ],
+          "loaders": [
+            "fabric",
+            "forge",
+            "neoforge",
+            "quilt"
+          ],
+          "id": "8tJ3qV5y",
+          "project_id": "e0M1UDsY",
+          "author_id": "NIbuUGD2",
+          "featured": false,
+          "name": "[Fabric/Forge/Neo] 1.21.8-8.11",
+          "version_number": "1.21.8-8.11-fabric+forge+neo",
+          "changelog": "<p>Scheduled client tasks now don't increase their tick count when the game is paused.</p><p>The complete changelog with previous versions can be found at: <br>&nbsp; <a href=\"https://serilum.com/mods?changelog=collective\" target=\"_blank\">https://serilum.com/mods?changelog=collective</a></p>",
+          "changelog_url": null,
+          "date_published": "2025-10-19T21:08:39.453916Z",
+          "downloads": 312522,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "xOWdrK05",
+              "hashes": {
+                "sha1": "1d741532105531d89397328da064fae1a8d0ee83",
+                "sha512": "3fcff2556303ebbb9495fbe3b13d42cb22a284323828520ecfae846b1695eda6c0a9f8b187815a0b128fb9a1e809510d7aabf60ab4555bf0ad22510dcfdd8dee"
+              },
+              "url": "https://cdn.modrinth.com/data/e0M1UDsY/versions/8tJ3qV5y/collective-1.21.8-8.11.jar",
+              "filename": "collective-1.21.8-8.11.jar",
+              "primary": true,
+              "size": 959178,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.21",
+            "1.21.1"
+          ],
+          "loaders": [
+            "fabric",
+            "forge",
+            "neoforge",
+            "quilt"
+          ],
+          "id": "VgvgzdVi",
+          "project_id": "e0M1UDsY",
+          "author_id": "NIbuUGD2",
+          "featured": false,
+          "name": "[Fabric/Forge/Neo] 1.21.1-8.11",
+          "version_number": "1.21.1-8.11-fabric+forge+neo",
+          "changelog": "<p>Scheduled client tasks now don't increase their tick count when the game is paused.</p><p>The complete changelog with previous versions can be found at: <br>&nbsp; <a href=\"https://serilum.com/mods?changelog=collective\" target=\"_blank\">https://serilum.com/mods?changelog=collective</a></p>",
+          "changelog_url": null,
+          "date_published": "2025-10-19T21:08:13.943103Z",
+          "downloads": 19536,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "JEKkqVEZ",
+              "hashes": {
+                "sha1": "e4bb68157c1d8bad46c6d615f05b76cff20df6dd",
+                "sha512": "e4ff1f316142883de0591eaa61b66ccf923eb9665143835c99a7ed74c91ca0ba601abc95fa43f29278138dd39daef37add684c02cf1ecac54f33bdd9e42f72fc"
+              },
+              "url": "https://cdn.modrinth.com/data/e0M1UDsY/versions/VgvgzdVi/collective-1.21.1-8.11.jar",
+              "filename": "collective-1.21.1-8.11.jar",
+              "primary": true,
+              "size": 941941,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "HaaH232J",
+        "slug": "yeetus-experimentus",
+        "title": "Yeetus Experimentus",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.20.4"
+        ],
+        "loaders": [
+          "forge"
+        ],
+        "id": "iYlJrkQI",
+        "project_id": "HaaH232J",
+        "author_id": "2meoiAYJ",
+        "featured": false,
+        "name": "[FORGE][1.20.4] YeetusExperimentus 84.0.3",
+        "version_number": "84.0.3",
+        "changelog": "## [84.0.3]\n\n### Fixed\n\n- Fixed the mod not working on NeoForge and Forge\n\n## [84.0.2]\n\n### Fixed\n\n- Simplified mixins which should fix the mod not working on NeoForge and Forge \n",
+        "changelog_url": null,
+        "date_published": "2024-06-19T14:51:21.326194Z",
+        "downloads": 437,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "swSFRCWh",
+            "hashes": {
+              "sha512": "a5863b4bb3baec889124b31229066c5dc79dc34c4d7a3491fbecc33f82a28ec553d79eb41c96a8e46f071c6431fc55200e6d49d1cdd768f714ee054790fecd83",
+              "sha1": "ce680e989e90cbe1d9684df71bfac609806de6ad"
+            },
+            "url": "https://cdn.modrinth.com/data/HaaH232J/versions/iYlJrkQI/yeetusexperimentus-forge-84.0.3.jar",
+            "filename": "yeetusexperimentus-forge-84.0.3.jar",
+            "primary": true,
+            "size": 569994,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.20.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "iYlJrkQI",
+          "project_id": "HaaH232J",
+          "author_id": "2meoiAYJ",
+          "featured": false,
+          "name": "[FORGE][1.20.4] YeetusExperimentus 84.0.3",
+          "version_number": "84.0.3",
+          "changelog": "## [84.0.3]\n\n### Fixed\n\n- Fixed the mod not working on NeoForge and Forge\n\n## [84.0.2]\n\n### Fixed\n\n- Simplified mixins which should fix the mod not working on NeoForge and Forge \n",
+          "changelog_url": null,
+          "date_published": "2024-06-19T14:51:21.326194Z",
+          "downloads": 437,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "swSFRCWh",
+              "hashes": {
+                "sha512": "a5863b4bb3baec889124b31229066c5dc79dc34c4d7a3491fbecc33f82a28ec553d79eb41c96a8e46f071c6431fc55200e6d49d1cdd768f714ee054790fecd83",
+                "sha1": "ce680e989e90cbe1d9684df71bfac609806de6ad"
+              },
+              "url": "https://cdn.modrinth.com/data/HaaH232J/versions/iYlJrkQI/yeetusexperimentus-forge-84.0.3.jar",
+              "filename": "yeetusexperimentus-forge-84.0.3.jar",
+              "primary": true,
+              "size": 569994,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "8LYghnRA",
+          "project_id": "HaaH232J",
+          "author_id": "2meoiAYJ",
+          "featured": false,
+          "name": "[FORGE][1.20.4] YeetusExperimentus 84.0.2",
+          "version_number": "84.0.2",
+          "changelog": "## [84.0.2]\n\n### Fixed\n\n- Simplified mixins which should fix the mod not working on NeoForge and Forge \n",
+          "changelog_url": null,
+          "date_published": "2024-06-10T11:23:54.353080Z",
+          "downloads": 115,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "3EtGoqZm",
+              "hashes": {
+                "sha1": "ef80a7fd6bf7b27f32c3c2b0937387beb33cca10",
+                "sha512": "de9e4a1572461309c01102c68f42a32fe4a3803350de9891b4c6d4d067dd342703d132d5facf6274747d76e19809c3fec395ce1433cffe2f6ef869f37a801f4f"
+              },
+              "url": "https://cdn.modrinth.com/data/HaaH232J/versions/8LYghnRA/yeetusexperimentus-forge-84.0.2.jar",
+              "filename": "yeetusexperimentus-forge-84.0.2.jar",
+              "primary": true,
+              "size": 570212,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.4"
+          ],
+          "loaders": [
+            "forge"
+          ],
+          "id": "200BN52k",
+          "project_id": "HaaH232J",
+          "author_id": "2meoiAYJ",
+          "featured": false,
+          "name": "[FORGE][1.20.4] YeetusExperimentus 84.0.1",
+          "version_number": "84.0.1",
+          "changelog": "## [84.0.1]\n### Fixed\n- not being able existing world",
+          "changelog_url": null,
+          "date_published": "2024-02-06T08:53:43.324580Z",
+          "downloads": 210,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "JOVfz7Rs",
+              "hashes": {
+                "sha512": "479703a0f14a278bd4500dad1727720f4300287202feef46313ea734db0b72ecce6d2b582ea136df40131cf569c68d3b56acda33d7e5f6c73b2c5b9e370f72ce",
+                "sha1": "785e770ac4a91ed2b62d590a986f535478884daa"
+              },
+              "url": "https://cdn.modrinth.com/data/HaaH232J/versions/200BN52k/yeetusexperimentus-forge-84.0.1.jar",
+              "filename": "yeetusexperimentus-forge-84.0.1.jar",
+              "primary": true,
+              "size": 567790,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "g96Z4WVZ",
+        "slug": "badoptimizations",
+        "title": "BadOptimizations",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.20.1"
+        ],
+        "loaders": [
+          "fabric",
+          "forge"
+        ],
+        "id": "BKvbnpID",
+        "project_id": "g96Z4WVZ",
+        "author_id": "MtdsrsRk",
+        "featured": false,
+        "name": "2.3.1 (1.20.1)",
+        "version_number": "2.3.1",
+        "changelog": "Version 2.3.1:\n- Fix crashing when installed on a server\n- Port to 1.21.9",
+        "changelog_url": null,
+        "date_published": "2025-10-01T22:17:43.466469Z",
+        "downloads": 625366,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "Xmot0aT5",
+            "hashes": {
+              "sha512": "f8d0e010d7a03112a8f8860971a0358e6c50c40f8f7ed5fc76a8afc07779232916e98d83b753b400a41aa99e7d5515219cb840eef645caf89a21e85f633bed10",
+              "sha1": "05961374fb4e561e063168d058b155f8415c6697"
+            },
+            "url": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/BKvbnpID/BadOptimizations-2.3.1-1.20.1.jar",
+            "filename": "BadOptimizations-2.3.1-1.20.1.jar",
+            "primary": true,
+            "size": 452475,
+            "file_type": null
+          }
+        ],
+        "dependencies": []
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "fabric",
+            "forge"
+          ],
+          "id": "BKvbnpID",
+          "project_id": "g96Z4WVZ",
+          "author_id": "MtdsrsRk",
+          "featured": false,
+          "name": "2.3.1 (1.20.1)",
+          "version_number": "2.3.1",
+          "changelog": "Version 2.3.1:\n- Fix crashing when installed on a server\n- Port to 1.21.9",
+          "changelog_url": null,
+          "date_published": "2025-10-01T22:17:43.466469Z",
+          "downloads": 625366,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "Xmot0aT5",
+              "hashes": {
+                "sha512": "f8d0e010d7a03112a8f8860971a0358e6c50c40f8f7ed5fc76a8afc07779232916e98d83b753b400a41aa99e7d5515219cb840eef645caf89a21e85f633bed10",
+                "sha1": "05961374fb4e561e063168d058b155f8415c6697"
+              },
+              "url": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/BKvbnpID/BadOptimizations-2.3.1-1.20.1.jar",
+              "filename": "BadOptimizations-2.3.1-1.20.1.jar",
+              "primary": true,
+              "size": 452475,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "fabric",
+            "forge"
+          ],
+          "id": "RPOjbIwJ",
+          "project_id": "g96Z4WVZ",
+          "author_id": "MtdsrsRk",
+          "featured": false,
+          "name": "2.3.0 (1.20.1)",
+          "version_number": "2.3.0",
+          "changelog": "Version 2.3.0:\n- Other mods can now mark themselves as incompatible with specific BadOptimizations options. See https://github.com/imthosea/BadOptimizations/wiki/Marking-your-mod-as-incompatible-with-a-BadOptimizations-option\n- Fix an issue where some options would be incorrectly turned off in your config if the config was regenerated after the game booted with one or more incompatible mods\n- Fix Music Toasts not appearing on 1.21.6 and 1.21.7",
+          "changelog_url": null,
+          "date_published": "2025-07-08T01:49:43.608348Z",
+          "downloads": 1345283,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "EgOvXJvK",
+              "hashes": {
+                "sha512": "288638bd5e4d9163205006ddc06eb6d962abcf9c49b602eeef3389e56184deee7844037a7cd41f770d6088a063756380afe1a6c456668356dd56b238834c3c49",
+                "sha1": "b86ce6a5ed4f71a13f6d2976ffe6471cef29beb7"
+              },
+              "url": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/RPOjbIwJ/BadOptimizations-2.3.0-1.20.1.jar",
+              "filename": "BadOptimizations-2.3.0-1.20.1.jar",
+              "primary": true,
+              "size": 452304,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "fabric",
+            "forge"
+          ],
+          "id": "6Js5HJ5e",
+          "project_id": "g96Z4WVZ",
+          "author_id": "MtdsrsRk",
+          "featured": true,
+          "name": "2.2.3 (1.20.1)",
+          "version_number": "2.2.3",
+          "changelog": "Version 2.2.3:\n- Update copyright year\n- Fix an issue where generated configs sometimes have inconsistent indentation\n- Fix an issue where automatic mod incompatibilities wouldn't apply if you didn't have an existing config file\n- Fix an issue where log_config and ignore_mod_incompatibilies wouldn't stay when updating your config\n- Releases are now posted to Github\n- Mark supported for 1.21.6\n\nThe bugs have been [squashed](https://github.com/imthosea/BadOptimizations/issues/87#issuecomment-2989668649).",
+          "changelog_url": null,
+          "date_published": "2025-06-20T03:05:38.116908Z",
+          "downloads": 642109,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "zY325VKw",
+              "hashes": {
+                "sha512": "74020601544eacc77804981173957bdd839a0a4688e237483f5ce80a299a14b893abe11a23f60c44162ea8a4f9f3ac2952d0aade9875f87b4b1ef3ef8a254754",
+                "sha1": "357d2055c510440cdf11cc3102bbcb503a54cac6"
+              },
+              "url": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/6Js5HJ5e/BadOptimizations-2.2.3-1.20.1.jar",
+              "filename": "BadOptimizations-2.2.3-1.20.1.jar",
+              "primary": true,
+              "size": 440404,
+              "file_type": null
+            }
+          ],
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "project": {
+        "id": "sk9rgfiA",
+        "slug": "embeddium",
+        "title": "Embeddium",
+        "loaders": [
+          "fabric",
+          "forge",
+          "neoforge"
+        ]
+      },
+      "version": {
+        "game_versions": [
+          "1.20.1"
+        ],
+        "loaders": [
+          "forge",
+          "neoforge"
+        ],
+        "id": "UTbfe5d1",
+        "project_id": "sk9rgfiA",
+        "author_id": "6bGskxLV",
+        "featured": false,
+        "name": "[1.20.1] Embeddium 0.3.31",
+        "version_number": "0.3.31+mc1.20.1",
+        "changelog": "https://github.com/embeddedt/embeddium/wiki/Changelog",
+        "changelog_url": null,
+        "date_published": "2024-08-31T23:11:49.184634Z",
+        "downloads": 17150174,
+        "version_type": "release",
+        "status": "listed",
+        "requested_status": null,
+        "files": [
+          {
+            "id": "ap13BApr",
+            "hashes": {
+              "sha512": "ffbf2da4685260a4d5c14c621708bd20722563f084f042d3dfb0a7b87f048e39299648c854a93939129da0d23a15a91ec628560d601e76074b08e275f6e132e9",
+              "sha1": "bb2fa8f3e493af16af9160d049f96c614a1faf2f"
+            },
+            "url": "https://cdn.modrinth.com/data/sk9rgfiA/versions/UTbfe5d1/embeddium-0.3.31%2Bmc1.20.1.jar",
+            "filename": "embeddium-0.3.31+mc1.20.1.jar",
+            "primary": true,
+            "size": 1320675,
+            "file_type": null
+          }
+        ],
+        "dependencies": [
+          {
+            "version_id": null,
+            "project_id": "4ZqxOvjD",
+            "file_name": null,
+            "dependency_type": "incompatible"
+          },
+          {
+            "version_id": null,
+            "project_id": "S1tndFDa",
+            "file_name": null,
+            "dependency_type": "incompatible"
+          }
+        ]
+      },
+      "versions": [
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge",
+            "neoforge"
+          ],
+          "id": "UTbfe5d1",
+          "project_id": "sk9rgfiA",
+          "author_id": "6bGskxLV",
+          "featured": false,
+          "name": "[1.20.1] Embeddium 0.3.31",
+          "version_number": "0.3.31+mc1.20.1",
+          "changelog": "https://github.com/embeddedt/embeddium/wiki/Changelog",
+          "changelog_url": null,
+          "date_published": "2024-08-31T23:11:49.184634Z",
+          "downloads": 17150174,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "ap13BApr",
+              "hashes": {
+                "sha512": "ffbf2da4685260a4d5c14c621708bd20722563f084f042d3dfb0a7b87f048e39299648c854a93939129da0d23a15a91ec628560d601e76074b08e275f6e132e9",
+                "sha1": "bb2fa8f3e493af16af9160d049f96c614a1faf2f"
+              },
+              "url": "https://cdn.modrinth.com/data/sk9rgfiA/versions/UTbfe5d1/embeddium-0.3.31%2Bmc1.20.1.jar",
+              "filename": "embeddium-0.3.31+mc1.20.1.jar",
+              "primary": true,
+              "size": 1320675,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "4ZqxOvjD",
+              "file_name": null,
+              "dependency_type": "incompatible"
+            },
+            {
+              "version_id": null,
+              "project_id": "S1tndFDa",
+              "file_name": null,
+              "dependency_type": "incompatible"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge",
+            "neoforge"
+          ],
+          "id": "EKA4u4Uy",
+          "project_id": "sk9rgfiA",
+          "author_id": "6bGskxLV",
+          "featured": false,
+          "name": "[1.20.1] Embeddium 0.3.30",
+          "version_number": "0.3.30+mc1.20.1",
+          "changelog": "https://github.com/embeddedt/embeddium/wiki/Changelog",
+          "changelog_url": null,
+          "date_published": "2024-08-14T22:47:13.074022Z",
+          "downloads": 338472,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "qvbqF9OG",
+              "hashes": {
+                "sha1": "4af9c31e08246e82f53d1d9dc8e91f2f261da6bd",
+                "sha512": "a517e71f6a174e02de2acc635017b8f69e015c26bd6c68b9598923ce25f19e862d78e08d61609ac243bcdb44d3e2c586e84ad8a19694e5391793514df3e47d3f"
+              },
+              "url": "https://cdn.modrinth.com/data/sk9rgfiA/versions/EKA4u4Uy/embeddium-0.3.30%2Bmc1.20.1.jar",
+              "filename": "embeddium-0.3.30+mc1.20.1.jar",
+              "primary": true,
+              "size": 1320429,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "S1tndFDa",
+              "file_name": null,
+              "dependency_type": "incompatible"
+            },
+            {
+              "version_id": null,
+              "project_id": "4ZqxOvjD",
+              "file_name": null,
+              "dependency_type": "incompatible"
+            }
+          ]
+        },
+        {
+          "game_versions": [
+            "1.20.1"
+          ],
+          "loaders": [
+            "forge",
+            "neoforge"
+          ],
+          "id": "vCML9MtQ",
+          "project_id": "sk9rgfiA",
+          "author_id": "6bGskxLV",
+          "featured": false,
+          "name": "[1.20.1] Embeddium 0.3.29",
+          "version_number": "0.3.29+mc1.20.1",
+          "changelog": "https://github.com/embeddedt/embeddium/wiki/Changelog",
+          "changelog_url": null,
+          "date_published": "2024-08-12T23:42:56.284123Z",
+          "downloads": 38311,
+          "version_type": "release",
+          "status": "listed",
+          "requested_status": null,
+          "files": [
+            {
+              "id": "IPaAiunW",
+              "hashes": {
+                "sha1": "39b33e73fd1bff9c7a356e7d115450480f400346",
+                "sha512": "01eb1e817ee080ac9e82badb0661da2f740753d24576fea27c86007f28ccc4724b4c5dd0eac3cb4d3db3922b6da15c918a826df21056067f995e2d9ca512bb02"
+              },
+              "url": "https://cdn.modrinth.com/data/sk9rgfiA/versions/vCML9MtQ/embeddium-0.3.29%2Bmc1.20.1.jar",
+              "filename": "embeddium-0.3.29+mc1.20.1.jar",
+              "primary": true,
+              "size": 1318491,
+              "file_type": null
+            }
+          ],
+          "dependencies": [
+            {
+              "version_id": null,
+              "project_id": "S1tndFDa",
+              "file_name": null,
+              "dependency_type": "incompatible"
+            },
+            {
+              "version_id": null,
+              "project_id": "4ZqxOvjD",
+              "file_name": null,
+              "dependency_type": "incompatible"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

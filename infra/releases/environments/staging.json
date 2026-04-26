@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "environment": "staging",
+  "currentReleaseVersion": null,
+  "previousReleaseVersion": null,
+  "updatedAt": null,
+  "history": [],
+  "deploymentTarget": {
+    "targetId": "staging-kubernetes",
+    "kind": "kubernetes",
+    "environment": "staging",
+    "registryHost": "ghcr.io/modcompat",
+    "manifestsPath": "infra/kubernetes",
+    "namespace": "modcompat-staging",
+    "composeFiles": [
+      "docker-compose.yml",
+      "docker-compose.staging.yml"
+    ],
+    "releaseStatePath": "infra/releases/environments/staging.json"
+  },
+  "currentImageSet": null,
+  "releaseHistory": [],
+  "rollbackCandidates": []
+}

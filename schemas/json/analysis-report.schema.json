@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/analysis-report.schema.json",
+  "title": "AnalysisReport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_id",
+    "analysis",
+    "findings",
+    "recommendations",
+    "decision_summary",
+    "feedback"
+  ],
+  "properties": {
+    "report_id": { "type": "string" },
+    "analysis": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "knowledge_snapshot": {
+      "$ref": "./knowledge-snapshot.schema.json"
+    },
+    "exact_pack_cache_hit": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "supporting_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "supporting_pairwise_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "supporting_technical_signatures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "coverage_scope": {
+      "$ref": "./supported-coverage-scope.schema.json"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "./finding.schema.json"
+      }
+    },
+    "recommendation_set": {
+      "$ref": "./recommendation-set.schema.json"
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "$ref": "./recommendation.schema.json"
+      }
+    },
+    "review_summary": {
+      "$ref": "./pack-review-summary.schema.json"
+    },
+    "simulation_run": {
+      "$ref": "./simulation-run.schema.json"
+    },
+    "release_gate_decision": {
+      "$ref": "./release-gate-decision.schema.json"
+    },
+    "status_check": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "decision_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "minimal_unblock_summary": { "type": "string" },
+        "stability_first_summary": { "type": "string" }
+      }
+    },
+    "feedback": {
+      "type": "array",
+      "items": {
+        "$ref": "./recommendation-feedback.schema.json"
+      }
+    },
+    "latest_outcome": {
+      "$ref": "./recommendation-outcome.schema.json"
+    }
+  }
+}

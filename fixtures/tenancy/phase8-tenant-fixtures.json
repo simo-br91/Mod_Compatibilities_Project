@@ -1,0 +1,18 @@
+{
+  "organizations": [
+    {
+      "organizationId": "org_demo",
+      "actorId": "usr_demo",
+      "actorKind": "user",
+      "role": "owner",
+      "expectedAccess": true
+    },
+    {
+      "organizationId": "org_other",
+      "actorId": "usr_other",
+      "actorKind": "user",
+      "role": "owner",
+      "expectedAccess": false
+    }
+  ]
+}

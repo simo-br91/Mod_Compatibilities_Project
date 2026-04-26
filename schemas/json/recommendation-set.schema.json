@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/recommendation-set.schema.json",
+  "title": "RecommendationSet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "recommendation_set_id",
+    "analysis_id",
+    "generation_strategy",
+    "items",
+    "bundles",
+    "summary",
+    "created_at"
+  ],
+  "properties": {
+    "recommendation_set_id": { "type": "string" },
+    "analysis_id": { "type": "string" },
+    "generation_strategy": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "./recommendation.schema.json"
+      }
+    },
+    "bundles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "bundle_id",
+          "recommendation_set_id",
+          "strategy",
+          "recommendation_ids",
+          "summary",
+          "rationale",
+          "migration_cost",
+          "expected_compatibility_gain",
+          "created_at"
+        ],
+        "properties": {
+          "bundle_id": { "type": "string" },
+          "recommendation_set_id": { "type": "string" },
+          "strategy": {
+            "type": "string",
+            "enum": ["minimal_unblock", "stability_first"]
+          },
+          "recommendation_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "summary": { "type": "string" },
+          "rationale": { "type": "string" },
+          "migration_cost": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "unknown"]
+          },
+          "expected_compatibility_gain": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recommendation_count",
+        "bundle_count",
+        "unresolved_finding_count"
+      ],
+      "properties": {
+        "recommendation_count": { "type": "integer", "minimum": 0 },
+        "bundle_count": { "type": "integer", "minimum": 0 },
+        "unresolved_finding_count": { "type": "integer", "minimum": 0 },
+        "minimal_unblock_bundle_id": { "type": "string" },
+        "stability_first_bundle_id": { "type": "string" }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

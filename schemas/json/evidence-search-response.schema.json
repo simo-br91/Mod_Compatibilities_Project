@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/evidence-search-response.schema.json",
+  "title": "EvidenceSearchResponse",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["total", "hits"],
+  "properties": {
+    "total": { "type": "integer", "minimum": 0 },
+    "hits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["score", "document"],
+        "properties": {
+          "score": { "type": "number", "minimum": 0 },
+          "document": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "index",
+              "id",
+              "document_id",
+              "title",
+              "text",
+              "trust_tier",
+              "trust_score",
+              "recency_score",
+              "relevance",
+              "stance",
+              "related_project_ids",
+              "finding_types",
+              "cluster_id",
+              "source_url",
+              "published_at"
+            ],
+            "properties": {
+              "index": {
+                "type": "string",
+                "enum": ["evidence-documents", "evidence-snippets"]
+              },
+              "id": { "type": "string" },
+              "document_id": { "type": "string" },
+              "snippet_id": { "type": "string" },
+              "title": { "type": "string" },
+              "text": { "type": "string" },
+              "trust_tier": {
+                "type": "string",
+                "enum": ["official", "maintainer", "curated", "community"]
+              },
+              "trust_score": { "type": "number", "minimum": 0, "maximum": 1 },
+              "recency_score": { "type": "number", "minimum": 0, "maximum": 1 },
+              "relevance": {
+                "type": "string",
+                "enum": ["direct", "supporting", "background", "irrelevant"]
+              },
+              "stance": {
+                "type": "string",
+                "enum": ["supports", "contradicts", "neutral"]
+              },
+              "related_project_ids": { "type": "array", "items": { "type": "string" } },
+              "finding_types": { "type": "array", "items": { "type": "string" } },
+              "cluster_id": { "type": "string" },
+              "source_url": { "type": "string" },
+              "published_at": { "type": "string", "format": "date-time" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

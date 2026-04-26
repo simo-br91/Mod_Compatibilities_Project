@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/finding-feature-vector.schema.json",
+  "title": "FindingFeatureVector",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "feature_vector_id",
+    "analysis_id",
+    "finding_id",
+    "feature_namespace",
+    "feature_values",
+    "created_at"
+  ],
+  "properties": {
+    "feature_vector_id": { "type": "string" },
+    "analysis_id": { "type": "string" },
+    "finding_id": { "type": "string" },
+    "feature_namespace": { "type": "string", "const": "finding_risk_v1" },
+    "feature_values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["feature_name", "value_type"],
+        "properties": {
+          "feature_name": { "type": "string" },
+          "value_type": { "type": "string", "enum": ["number", "boolean", "categorical"] },
+          "numeric_value": { "type": "number" },
+          "boolean_value": { "type": "boolean" },
+          "categorical_value": { "type": "string" }
+        }
+      }
+    },
+    "label": { "type": "string", "enum": ["confirmed_risk", "likely_risk", "low_risk"] },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

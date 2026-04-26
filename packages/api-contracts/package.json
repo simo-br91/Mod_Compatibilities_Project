@@ -1,0 +1,16 @@
+{
+  "name": "@modcompat/api-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@modcompat/domain-models": "workspace:*"
+  },
+  "scripts": {
+    "contracts:check": "node ./src/validate-contracts.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  }
+}

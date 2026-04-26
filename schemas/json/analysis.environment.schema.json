@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/analysis.environment.schema.json",
+  "title": "AnalysisEnvironment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "minecraft_version",
+    "loader",
+    "java_version",
+    "side"
+  ],
+  "properties": {
+    "minecraft_version": {
+      "type": "string"
+    },
+    "loader": {
+      "type": "string",
+      "enum": [
+        "forge",
+        "fabric",
+        "quilt",
+        "neoforge",
+        "unknown"
+      ]
+    },
+    "loader_version": {
+      "type": "string"
+    },
+    "java_version": {
+      "type": "string"
+    },
+    "side": {
+      "type": "string",
+      "enum": [
+        "client",
+        "server",
+        "both"
+      ]
+    }
+  }
+}

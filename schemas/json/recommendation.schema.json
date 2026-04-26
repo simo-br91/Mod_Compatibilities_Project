@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/recommendation.schema.json",
+  "title": "Recommendation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "recommendation_id",
+    "kind",
+    "rank",
+    "confidence",
+    "summary"
+  ],
+  "properties": {
+    "recommendation_id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "replacement",
+        "bundle",
+        "remediation_plan"
+      ]
+    },
+    "rank": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "summary": {
+      "type": "string"
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["proposed", "accepted", "dismissed", "applied"]
+    },
+    "finding_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "id"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "rule",
+              "issue",
+              "discussion",
+              "evidence_document",
+              "evidence_snippet",
+              "simulation",
+              "model",
+              "static_analysis",
+              "graph",
+              "catalog"
+            ]
+          },
+          "id": { "type": "string" },
+          "snippet_id": { "type": "string" }
+        }
+      }
+    },
+    "replaces_subjects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["project_id"],
+        "properties": {
+          "project_id": { "type": "string" },
+          "version_id": { "type": "string" },
+          "relation": {
+            "type": "string",
+            "enum": ["primary", "secondary", "alternative", "environment"]
+          }
+        }
+      }
+    },
+    "candidate_projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["project_id"],
+        "properties": {
+          "project_id": { "type": "string" },
+          "version_id": { "type": "string" },
+          "relation": {
+            "type": "string",
+            "enum": ["primary", "secondary", "alternative", "environment"]
+          }
+        }
+      }
+    },
+    "migration_cost": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ]
+    },
+    "expected_compatibility_gain": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "impacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["impact_type", "score", "summary"],
+        "properties": {
+          "impact_type": {
+            "type": "string",
+            "enum": [
+              "compatibility_gain",
+              "stability_gain",
+              "performance_gain",
+              "migration_effort"
+            ]
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "summary": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["step_id", "action", "summary"],
+        "properties": {
+          "step_id": { "type": "string" },
+          "action": {
+            "type": "string",
+            "enum": [
+              "remove_mod",
+              "add_mod",
+              "replace_mod",
+              "pin_version",
+              "verify_pack",
+              "retest_finding"
+            ]
+          },
+          "project_id": { "type": "string" },
+          "version_id": { "type": "string" },
+          "summary": { "type": "string" }
+        }
+      }
+    }
+  }
+}

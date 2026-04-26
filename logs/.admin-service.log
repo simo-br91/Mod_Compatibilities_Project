@@ -1,0 +1,5 @@
+{"level":"info","service":"admin","message":"Admin service initialized","routeCount":3,"workflows":["evidence_curation","verified_rule_promotion"]}
+{"level":"info","service":"admin","message":"Admin HTTP server listening","port":8082,"routeCount":3,"persistence":{"enabled":true,"connectionStringConfigured":true}}
+undefined
+C:\Users\simor\Documents\Mod_Compatibilities_Project\apps\admin:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command failed with exit code 4294967295: tsx src/index.ts

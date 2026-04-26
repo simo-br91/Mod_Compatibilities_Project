@@ -1,0 +1,24 @@
+flowchart LR
+  user[Creators / Teams / Partners] --> web[Web App]
+  partner[Launchers / Hosts / CI] --> api[API Gateway / BFF]
+  web --> api
+  api --> workspace[Workspace & Billing Service]
+  api --> catalog[Catalog Service]
+  api --> orchestrator[Analysis Orchestrator]
+  orchestrator --> resolver[Resolver Service]
+  orchestrator --> static[Static Analysis Service]
+  orchestrator --> graph[Knowledge Graph Service]
+  orchestrator --> recommend[Recommendation Service]
+  orchestrator --> ml[ML / NLP Service]
+  orchestrator --> simulation[Simulation Service]
+  ingest[Evidence Ingestion Service] --> graph
+  ingest --> catalog
+  ingest --> search[OpenSearch]
+  catalog --> postgres[(PostgreSQL)]
+  workspace --> postgres
+  orchestrator --> postgres
+  graph --> neo4j[(Neo4j)]
+  ml --> s3[(Object Storage)]
+  ingest --> kafka[(Kafka)]
+  orchestrator --> kafka
+  notify[Webhook / Notification Service] --> user

@@ -1,0 +1,2119 @@
+openapi: 3.1.0
+info:
+  title: Modpack Compatibility Platform API
+  version: 0.2.0
+  description: Phase 0 implementation-grade contract for the documented public API subset.
+servers:
+  - url: http://localhost:8080
+    description: Local development gateway
+paths:
+  /v1/auth/session:
+    get:
+      summary: Get the authenticated session
+      operationId: getSession
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SessionResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/organizations:
+    post:
+      summary: Create an organization
+      operationId: createOrganization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateOrganizationRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Organization' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/organizations/{organizationId}:
+    get:
+      summary: Get an organization
+      operationId: getOrganization
+      parameters:
+        - { $ref: '#/components/parameters/OrganizationId' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Organization' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/organizations/{organizationId}/memberships:
+    post:
+      summary: Create an organization membership
+      operationId: createOrganizationMembership
+      parameters:
+        - { $ref: '#/components/parameters/OrganizationId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateMembershipRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/OrganizationMembership' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/organizations/{organizationId}/api-keys:
+    post:
+      summary: Create an API key
+      operationId: createApiKey
+      parameters:
+        - { $ref: '#/components/parameters/OrganizationId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateApiKeyRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ApiKey' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/workspaces:
+    post:
+      summary: Create a workspace
+      operationId: createWorkspace
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateWorkspaceRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Workspace' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/workspaces/{workspaceId}:
+    get:
+      summary: Get a workspace
+      operationId: getWorkspace
+      parameters: [{ $ref: '#/components/parameters/WorkspaceId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Workspace' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/workspaces/{workspaceId}/projects:
+    get:
+      summary: List projects for a workspace
+      operationId: listWorkspaceProjects
+      parameters: [{ $ref: '#/components/parameters/WorkspaceId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ProjectListResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects:
+    post:
+      summary: Create a project
+      operationId: createProject
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateProjectRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Project' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}:
+    get:
+      summary: Get a project
+      operationId: getProject
+      parameters: [{ $ref: '#/components/parameters/ProjectId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Project' }
+        default: { $ref: '#/components/responses/Error' }
+    patch:
+      summary: Update a project
+      operationId: updateProject
+      parameters: [{ $ref: '#/components/parameters/ProjectId' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/UpdateProjectRequest' }
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Project' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/imports:
+    post:
+      summary: Create an import job
+      operationId: createImport
+      parameters:
+        - { $ref: '#/components/parameters/ProjectId' }
+        - { $ref: '#/components/parameters/IdempotencyKey' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateImportRequest' }
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CreateImportResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/imports/{importId}:
+    get:
+      summary: Get an import job
+      operationId: getImport
+      parameters:
+        - { $ref: '#/components/parameters/ProjectId' }
+        - { $ref: '#/components/parameters/ImportId' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ImportDetail' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/imports/manifest:
+    post:
+      summary: Import a manifest payload
+      operationId: importManifest
+      parameters: [{ $ref: '#/components/parameters/ProjectId' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ManifestImportRequest' }
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CreateImportResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/imports/mod-list:
+    post:
+      summary: Import a normalized mod list
+      operationId: importModList
+      parameters: [{ $ref: '#/components/parameters/ProjectId' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ModListImportRequest' }
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CreateImportResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/imports/upload-url:
+    post:
+      summary: Create an upload URL for pack artifacts
+      operationId: createImportUploadUrl
+      parameters: [{ $ref: '#/components/parameters/ProjectId' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateUploadUrlRequest' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CreateUploadUrlResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/analyses:
+    post:
+      summary: Create a new analysis job
+      operationId: createAnalysis
+      parameters:
+        - { $ref: '#/components/parameters/ProjectId' }
+        - { $ref: '#/components/parameters/IdempotencyKey' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateAnalysisRequest' }
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CreateAnalysisResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}:
+    get:
+      summary: Get analysis summary
+      operationId: getAnalysis
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisSummary' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/progress:
+    get:
+      summary: Get analysis progress
+      operationId: getAnalysisProgress
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisProgressResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/findings:
+    get:
+      summary: Get findings for an analysis
+      operationId: listAnalysisFindings
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/FindingsResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/artifacts:
+    get:
+      summary: Get artifact analysis outputs for an analysis
+      operationId: listAnalysisArtifacts
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisArtifactsResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/graph:
+    get:
+      summary: Get graph snapshot for an analysis
+      operationId: getAnalysisGraph
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisGraphResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/graph/neighborhood:
+    get:
+      summary: Get a graph neighborhood for an analysis
+      operationId: getAnalysisGraphNeighborhood
+      parameters:
+        - { $ref: '#/components/parameters/AnalysisId' }
+        - in: query
+          name: node_id
+          required: true
+          schema: { type: string }
+        - in: query
+          name: depth
+          required: false
+          schema: { type: integer, minimum: 1, maximum: 5, default: 1 }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/GraphNeighborhoodResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/explanations/{findingId}:
+    get:
+      summary: Get an explanation path for a finding
+      operationId: getFindingExplanation
+      parameters:
+        - { $ref: '#/components/parameters/AnalysisId' }
+        - in: path
+          name: findingId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ExplanationPathResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/findings/{findingId}/evidence:
+    get:
+      summary: Get evidence linked to a finding
+      operationId: getFindingEvidence
+      parameters:
+        - { $ref: '#/components/parameters/AnalysisId' }
+        - in: path
+          name: findingId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/FindingEvidenceResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/evidence/sync:
+    post:
+      summary: Run a deterministic evidence sync
+      operationId: runEvidenceSync
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/TriggerEvidenceSyncRequest' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/EvidenceSyncResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/evidence/search:
+    post:
+      summary: Search evidence indexes
+      operationId: searchEvidence
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/SearchEvidenceRequest' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/EvidenceSearchResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/admin/evidence-curations:
+    post:
+      summary: Create an analyst evidence curation
+      operationId: createEvidenceCuration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateEvidenceCurationRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/EvidenceCurationResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/admin/evidence-curations/{curationId}/promote:
+    post:
+      summary: Promote a curated evidence bundle into a verified rule
+      operationId: promoteVerifiedRule
+      parameters:
+        - in: path
+          name: curationId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PromoteVerifiedRuleRequest' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PromoteVerifiedRuleResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/recommendations:
+    get:
+      summary: Get recommendations for an analysis
+      operationId: listAnalysisRecommendations
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RecommendationsResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/recommendations/{recommendationId}/feedback:
+    post:
+      summary: Submit feedback for a recommendation
+      operationId: submitRecommendationFeedback
+      parameters:
+        - in: path
+          name: recommendationId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/SubmitRecommendationFeedbackRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RecommendationFeedbackResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/recommendation-sets/{recommendationSetId}/outcomes:
+    post:
+      summary: Record a recommendation outcome
+      operationId: recordRecommendationOutcome
+      parameters:
+        - in: path
+          name: recommendationSetId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/RecordRecommendationOutcomeRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RecommendationOutcomeResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/ml/features:
+    get:
+      summary: Get the offline feature dataset and calibrated scores for an analysis
+      operationId: getAnalysisFeatureDataset
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisFeatureDatasetResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/review-summary:
+    get:
+      summary: Get the grounded pack review summary for an analysis
+      operationId: getPackReviewSummary
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PackReviewSummaryResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/simulation:
+    get:
+      summary: Get the deterministic simulation run for an analysis
+      operationId: getSimulationRun
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SimulationRunResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/release-gate:
+    get:
+      summary: Get the release gate decision for an analysis
+      operationId: getReleaseGateDecision
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ReleaseGateDecisionResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/status-check:
+    get:
+      summary: Get the status check result for an analysis
+      operationId: getStatusCheck
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StatusCheckResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/events/stream:
+    get:
+      summary: Stream analysis progress over SSE
+      operationId: streamAnalysisEvents
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: Event stream
+          content:
+            text/event-stream:
+              schema: { type: string }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/catalog/projects/search:
+    get:
+      summary: Search canonical projects
+      operationId: searchCatalogProjects
+      parameters:
+        - in: query
+          name: q
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CatalogSearchResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/catalog/projects/{projectKey}:
+    get:
+      summary: Get a canonical project
+      operationId: getCatalogProject
+      parameters:
+        - in: path
+          name: projectKey
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CatalogProject' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/catalog/versions/{versionId}:
+    get:
+      summary: Get a canonical version
+      operationId: getCatalogVersion
+      parameters:
+        - in: path
+          name: versionId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CatalogVersion' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/catalog/resolve:
+    post:
+      summary: Resolve a project reference to canonical identity
+      operationId: resolveCatalogProject
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CatalogResolveRequest' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CatalogResolveResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/findings/{findingId}:
+    patch:
+      summary: Update a finding state
+      operationId: updateFinding
+      parameters:
+        - in: path
+          name: findingId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/UpdateFindingRequest' }
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Finding' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/findings/{findingId}/feedback:
+    post:
+      summary: Submit feedback for a finding
+      operationId: submitFindingFeedback
+      parameters:
+        - in: path
+          name: findingId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/FindingFeedbackRequest' }
+      responses:
+        '202': { description: Accepted }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/report:
+    get:
+      summary: Get an analysis report
+      operationId: getAnalysisReport
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AnalysisReport' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/report/export:
+    get:
+      summary: Export an analysis report
+      operationId: exportAnalysisReport
+      parameters:
+        - { $ref: '#/components/parameters/AnalysisId' }
+        - in: query
+          name: format
+          required: true
+          schema: { type: string, enum: [json, markdown] }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ExportResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/projects/{projectId}/diffs:
+    post:
+      summary: Create a persisted pack diff
+      operationId: createPackDiff
+      parameters:
+        - { $ref: '#/components/parameters/ProjectId' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreatePackDiffRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PackDiffResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/pack-diffs/{packDiffId}:
+    get:
+      summary: Get a persisted pack diff
+      operationId: getPackDiff
+      parameters:
+        - in: path
+          name: packDiffId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PackDiffResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/integrations/github/installations/{installationId}/link:
+    post:
+      summary: Link a GitHub installation to a project
+      operationId: linkGitHubInstallation
+      parameters:
+        - in: path
+          name: installationId
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/LinkGitHubInstallationRequest' }
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/GitHubInstallationLinkResponse' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/webhooks:
+    post:
+      summary: Register a webhook
+      operationId: createWebhook
+      parameters: [{ $ref: '#/components/parameters/IdempotencyKey' }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CreateWebhookRequest' }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Webhook' }
+        default: { $ref: '#/components/responses/Error' }
+    get:
+      summary: List webhooks
+      operationId: listWebhooks
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items:
+                    type: array
+                    items: { $ref: '#/components/schemas/Webhook' }
+        default: { $ref: '#/components/responses/Error' }
+  /v1/analyses/{analysisId}/webhook-deliveries:
+    get:
+      summary: List webhook deliveries for an analysis
+      operationId: listWebhookDeliveries
+      parameters: [{ $ref: '#/components/parameters/AnalysisId' }]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/WebhookDeliveryListResponse' }
+        default: { $ref: '#/components/responses/Error' }
+components:
+  parameters:
+    OrganizationId: { in: path, name: organizationId, required: true, schema: { type: string } }
+    WorkspaceId: { in: path, name: workspaceId, required: true, schema: { type: string } }
+    ProjectId: { in: path, name: projectId, required: true, schema: { type: string } }
+    ImportId: { in: path, name: importId, required: true, schema: { type: string } }
+    AnalysisId: { in: path, name: analysisId, required: true, schema: { type: string } }
+    IdempotencyKey: { in: header, name: Idempotency-Key, required: false, schema: { type: string } }
+  responses:
+    Error:
+      description: Error response
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/ErrorResponse' }
+  schemas:
+    SessionResponse:
+      type: object
+      required: [token, user, organization, memberships, workspaces, projects, api_keys]
+      properties:
+        token: { type: string }
+        user:
+          type: object
+          required: [user_id, email, display_name]
+          properties:
+            user_id: { type: string }
+            email: { type: string }
+            display_name: { type: string }
+        organization: { $ref: '#/components/schemas/Organization' }
+        memberships:
+          type: array
+          items: { $ref: '#/components/schemas/OrganizationMembership' }
+        workspaces:
+          type: array
+          items: { $ref: '#/components/schemas/Workspace' }
+        projects:
+          type: array
+          items: { $ref: '#/components/schemas/Project' }
+        api_keys:
+          type: array
+          items: { $ref: '#/components/schemas/ApiKey' }
+    Organization:
+      type: object
+      required: [organization_id, name, slug, created_at]
+      properties:
+        organization_id: { type: string }
+        tenant_id: { type: string }
+        name: { type: string }
+        slug: { type: string }
+        created_at: { type: string, format: date-time }
+    CreateOrganizationRequest:
+      type: object
+      required: [name, slug]
+      properties:
+        name: { type: string }
+        slug: { type: string }
+    OrganizationMembership:
+      type: object
+      required: [organization_id, user_id, role, created_at]
+      properties:
+        organization_id: { type: string }
+        user_id: { type: string }
+        role: { type: string, enum: [owner, admin, member, viewer] }
+        created_at: { type: string, format: date-time }
+    CreateMembershipRequest:
+      type: object
+      required: [user_id, role]
+      properties:
+        user_id: { type: string }
+        role: { type: string, enum: [owner, admin, member, viewer] }
+    ApiKey:
+      type: object
+      required: [api_key_id, organization_id, name, key_prefix, scopes, created_at]
+      properties:
+        api_key_id: { type: string }
+        organization_id: { type: string }
+        created_by: { type: string }
+        name: { type: string }
+        key_prefix: { type: string }
+        scopes: { type: array, items: { type: string } }
+        created_at: { type: string, format: date-time }
+        last_used_at: { type: string, format: date-time }
+        revoked_at: { type: string, format: date-time }
+        secret: { type: string }
+    CreateApiKeyRequest:
+      type: object
+      required: [name, scopes]
+      properties:
+        name: { type: string }
+        scopes: { type: array, items: { type: string } }
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: object
+          required: [code, message]
+          properties:
+            code: { type: string }
+            message: { type: string }
+            trace_id: { type: string }
+    Workspace:
+      type: object
+      required: [workspace_id, organization_id, name, slug, created_at]
+      properties:
+        workspace_id: { type: string }
+        organization_id: { type: string }
+        name: { type: string }
+        slug: { type: string }
+        created_at: { type: string, format: date-time }
+    CreateWorkspaceRequest:
+      type: object
+      required: [organization_id, name, slug]
+      properties:
+        organization_id: { type: string }
+        name: { type: string }
+        slug: { type: string }
+    Project:
+      type: object
+      required: [project_id, workspace_id, name, slug, visibility, created_at]
+      properties:
+        project_id: { type: string }
+        workspace_id: { type: string }
+        organization_id: { type: string }
+        name: { type: string }
+        slug: { type: string }
+        visibility: { type: string, enum: [private, organization, public] }
+        created_at: { type: string, format: date-time }
+    ProjectListResponse:
+      type: object
+      required: [items]
+      properties:
+        items: { type: array, items: { $ref: '#/components/schemas/Project' } }
+    CreateProjectRequest:
+      type: object
+      required: [workspace_id, name, slug]
+      properties:
+        workspace_id: { type: string }
+        name: { type: string }
+        slug: { type: string }
+        visibility: { type: string, enum: [private, organization, public] }
+    UpdateProjectRequest:
+      type: object
+      properties:
+        name: { type: string }
+        visibility: { type: string, enum: [private, organization, public] }
+    CreateImportRequest:
+      type: object
+      required: [source_type]
+      properties:
+        source_type: { type: string, enum: [manifest, mod_list, upload, repository] }
+        source_ref: { type: string }
+    ManifestImportRequest:
+      type: object
+      required: [manifest_format, manifest]
+      properties:
+        manifest_format: { type: string, enum: [curseforge, modrinth, prism] }
+        manifest: { type: object, additionalProperties: true }
+    ModListImportRequest:
+      type: object
+      required: [mods, environment]
+      properties:
+        mods:
+          type: array
+          items:
+            type: object
+            required: [name]
+            properties:
+              name: { type: string }
+              version: { type: string }
+              source: { type: string }
+        environment: { $ref: '#/components/schemas/AnalysisEnvironment' }
+    CreateUploadUrlRequest:
+      type: object
+      required: [content_type, filename]
+      properties:
+        content_type: { type: string }
+        filename: { type: string }
+    CreateUploadUrlResponse:
+      type: object
+      required: [upload_url, object_key]
+      properties:
+        upload_url: { type: string, format: uri }
+        object_key: { type: string }
+    CreateImportResponse:
+      type: object
+      required: [import_id, status]
+      properties:
+        import_id: { type: string }
+        pack_snapshot_id: { type: string }
+        status: { type: string, enum: [queued, processing, completed] }
+    ImportDetail:
+      type: object
+      required: [import_id, project_id, organization_id, source_type, status, created_at]
+      properties:
+        import_id: { type: string }
+        project_id: { type: string }
+        organization_id: { type: string }
+        source_type: { type: string, enum: [manifest, mod_list, upload, repository] }
+        status: { type: string, enum: [queued, processing, completed, failed] }
+        source_ref: { type: string }
+        pack_snapshot_id: { type: string }
+        created_at: { type: string, format: date-time }
+        completed_at: { type: string, format: date-time }
+        snapshot:
+          type: object
+          required: [pack_snapshot_id, normalized_hash, environment, mods]
+          properties:
+            pack_snapshot_id: { type: string }
+            normalized_hash: { type: string }
+            environment: { $ref: '#/components/schemas/AnalysisEnvironment' }
+            mods:
+              type: array
+              items:
+                type: object
+                required: [name, resolution_method, confidence]
+                properties:
+                  name: { type: string }
+                  version: { type: string }
+                  source: { type: string }
+                  canonical_project_id: { type: string }
+                  canonical_version_id: { type: string }
+                  resolution_method:
+                    type: string
+                    enum: [source_mapping, slug_match, alias_match, unresolved]
+                  confidence: { type: number, minimum: 0, maximum: 1 }
+    CreateAnalysisRequest:
+      type: object
+      required: [trigger, analysis_mode, input_ref, environment]
+      properties:
+        trigger: { type: string, enum: [manual, webhook, scheduled, api] }
+        analysis_mode: { type: string, enum: [fast, standard, deep] }
+        input_ref:
+          type: object
+          required: [type, id]
+          properties:
+            type: { type: string, enum: [pack_snapshot, import, manifest, uploaded_mods] }
+            id: { type: string }
+        environment: { $ref: '#/components/schemas/AnalysisEnvironment' }
+        options:
+          type: object
+          properties:
+            run_simulation: { type: boolean }
+            include_alternatives: { type: boolean }
+            include_low_confidence: { type: boolean }
+            compare_to_snapshot_id: { type: string }
+            baseline_analysis_id: { type: string }
+    CreateAnalysisResponse:
+      type: object
+      required: [analysis_id, status, progress_stream_url]
+      properties:
+        analysis_id: { type: string }
+        status: { type: string, enum: [queued, running] }
+        queue_position: { type: integer }
+        progress_stream_url: { type: string }
+    AnalysisEnvironment:
+      type: object
+      required: [minecraft_version, loader, java_version, side]
+      properties:
+        minecraft_version: { type: string }
+        loader: { type: string, enum: [forge, fabric, quilt, neoforge, unknown] }
+        loader_version: { type: string }
+        java_version: { type: string }
+        side: { type: string, enum: [client, server, both] }
+    AnalysisSummary:
+      type: object
+      required: [analysis_id, project_id, workspace_id, status, trigger, analysis_mode, created_at]
+      properties:
+        analysis_id: { type: string }
+        project_id: { type: string }
+        workspace_id: { type: string }
+        organization_id: { type: string }
+        pack_snapshot_id: { type: string }
+        status: { type: string, enum: [queued, running, completed, failed, cancelled] }
+        trigger: { type: string, enum: [manual, webhook, scheduled, api] }
+        analysis_mode: { type: string, enum: [fast, standard, deep] }
+        score: { type: number, format: float }
+        verdict: { type: string, enum: [known_incompatible, likely_incompatible, mixed_or_conditional, no_known_issue_found, insufficient_evidence] }
+        confidence:
+          type: object
+          required: [score, band, explanation, primary_drivers]
+          properties:
+            score: { type: number, minimum: 0, maximum: 1 }
+            band: { type: string, enum: [very_high, high, medium, low, very_low] }
+            explanation: { type: string }
+            primary_drivers: { type: array, items: { type: string } }
+        coverage_status: { type: string, enum: [high_confidence_coverage, best_effort_coverage, outside_validated_coverage] }
+        serving_mode: { type: string, enum: [snapshot_exact_pack, snapshot_retrieval_assembly, legacy_live_analysis, offline_benchmark] }
+        knowledge_snapshot_version: { type: string }
+        explanation: { type: string }
+        created_at: { type: string, format: date-time }
+        started_at: { type: string, format: date-time }
+        finished_at: { type: string, format: date-time }
+        counts:
+          type: object
+          properties:
+            critical: { type: integer }
+            high: { type: integer }
+            medium: { type: integer }
+            low: { type: integer }
+            info: { type: integer }
+    AnalysisProgressResponse:
+      type: object
+      required: [analysis, phases, events]
+      properties:
+        analysis: { $ref: '#/components/schemas/AnalysisSummary' }
+        phases:
+          type: array
+          items:
+            type: object
+            required: [phase_id, analysis_id, phase_name, status, duration_ms, started_at, finished_at]
+            properties:
+              phase_id: { type: string }
+              analysis_id: { type: string }
+              phase_name:
+                type: string
+                enum: [normalization, resolution, static_analysis, graph_enrichment, merge_findings, evidence_enrichment, risk_scoring, simulation, pack_diff, rule_evaluation, recommendation, release_gating, reporting]
+              status: { type: string, enum: [completed, skipped, failed] }
+              duration_ms: { type: integer }
+              started_at: { type: string, format: date-time }
+              finished_at: { type: string, format: date-time }
+        events:
+          type: array
+          items:
+            type: object
+            required: [event_id, analysis_id, event_type, message, occurred_at]
+            properties:
+              event_id: { type: string }
+              analysis_id: { type: string }
+              event_type:
+                type: string
+                enum:
+                  - analysis.queued
+                  - analysis.started
+                  - analysis.phase.completed
+                  - analysis.finding.emitted
+                  - analysis.completed
+                  - analysis.failed
+              message: { type: string }
+              occurred_at: { type: string, format: date-time }
+              phase_name:
+                type: string
+                enum: [normalization, resolution, static_analysis, graph_enrichment, merge_findings, evidence_enrichment, risk_scoring, simulation, pack_diff, rule_evaluation, recommendation, release_gating, reporting]
+    FindingsResponse:
+      type: object
+      required: [items]
+      properties:
+        items: { type: array, items: { $ref: '#/components/schemas/Finding' } }
+        next_cursor: { type: string, nullable: true }
+    AnalysisArtifactsResponse:
+      type: object
+      required: [items]
+      properties:
+        items:
+          type: array
+          items: { $ref: '#/components/schemas/ArtifactAnalysis' }
+    Finding:
+      type: object
+      required: [finding_id, type, severity, confidence, reproducibility, title, subjects]
+      properties:
+        finding_id: { type: string }
+        type: { type: string }
+        severity: { type: string, enum: [info, low, medium, high, critical] }
+        confidence: { type: number, minimum: 0, maximum: 1 }
+        confidence_band: { type: string, enum: [very_high, high, medium, low, very_low] }
+        verdict: { type: string, enum: [confirmed_conflict, confirmed_requirement_gap, confirmed_environment_mismatch, reported_conflict, inferred_technical_risk, reported_fixed_in_later_version, unknown] }
+        reproducibility: { type: string, enum: [confirmed, likely, intermittent, not_tested] }
+        title: { type: string }
+        summary: { type: string }
+        explanation: { type: string }
+        freshness_summary: { type: string }
+        coverage_status: { type: string, enum: [high_confidence_coverage, best_effort_coverage, outside_validated_coverage] }
+        knowledge_snapshot_version: { type: string }
+        dedupe_key: { type: string }
+        scope: { $ref: '#/components/schemas/AnalysisEnvironment' }
+        evidence: { type: array, items: { $ref: '#/components/schemas/EvidenceRef' } }
+        subjects: { type: array, items: { $ref: '#/components/schemas/FindingSubject' } }
+        recommended_actions: { type: array, items: { type: string } }
+        provenance:
+          type: array
+          items: { $ref: '#/components/schemas/FindingProvenance' }
+        confidence_inputs:
+          type: array
+          items: { $ref: '#/components/schemas/ConfidenceInput' }
+    EvidenceRef:
+      type: object
+      required: [type, id]
+      properties:
+        type: { type: string, enum: [rule, issue, discussion, evidence_document, evidence_snippet, simulation, model, static_analysis, graph, catalog] }
+        id: { type: string }
+        snippet_id: { type: string }
+    FindingSubject:
+      type: object
+      required: [project_id]
+      properties:
+        project_id: { type: string }
+        version_id: { type: string }
+        relation: { type: string, enum: [primary, secondary, alternative, environment] }
+    FindingProvenance:
+      type: object
+      required: [kind, source_id, source_type]
+      properties:
+        kind: { type: string, enum: [resolver, verified_rule, static_analysis, graph, diff, evidence] }
+        source_id: { type: string }
+        source_type: { type: string }
+        version: { type: string }
+        note: { type: string }
+    ConfidenceInput:
+      type: object
+      required: [source, value, weight, rationale]
+      properties:
+        source: { type: string, enum: [resolver, verified_rule, static_analysis, graph, diff, evidence] }
+        value: { type: number, minimum: 0, maximum: 1 }
+        weight: { type: number, minimum: 0 }
+        rationale: { type: string }
+    AnalysisGraphResponse:
+      type: object
+      required: [graph]
+      properties:
+        graph: { $ref: '#/components/schemas/GraphSnapshot' }
+    GraphNeighborhoodResponse:
+      type: object
+      required: [neighborhood]
+      properties:
+        neighborhood: { $ref: '#/components/schemas/GraphNeighborhood' }
+    ExplanationPathResponse:
+      type: object
+      required: [explanation]
+      properties:
+        explanation: { $ref: '#/components/schemas/ExplanationPath' }
+    GraphSnapshot:
+      type: object
+      required: [graph_id, analysis_id, nodes, edges]
+      properties:
+        graph_id: { type: string }
+        analysis_id: { type: string }
+        nodes:
+          type: array
+          items: { $ref: '#/components/schemas/GraphNode' }
+        edges:
+          type: array
+          items: { $ref: '#/components/schemas/GraphEdge' }
+    GraphNode:
+      type: object
+      required: [node_id, node_type, label, analysis_id]
+      properties:
+        node_id: { type: string }
+        node_type: { type: string }
+        label: { type: string }
+        analysis_id: { type: string }
+        properties: { type: object, additionalProperties: true }
+    GraphEdge:
+      type: object
+      required: [edge_id, analysis_id, edge_type, source_id, target_id]
+      properties:
+        edge_id: { type: string }
+        analysis_id: { type: string }
+        edge_type: { type: string }
+        source_id: { type: string }
+        target_id: { type: string }
+        weight: { type: number, format: float }
+        properties: { type: object, additionalProperties: true }
+    GraphNeighborhood:
+      type: object
+      required: [analysis_id, center_node_id, depth, nodes, edges]
+      properties:
+        analysis_id: { type: string }
+        center_node_id: { type: string }
+        depth: { type: integer }
+        nodes:
+          type: array
+          items: { $ref: '#/components/schemas/GraphNode' }
+        edges:
+          type: array
+          items: { $ref: '#/components/schemas/GraphEdge' }
+    ExplanationPath:
+      type: object
+      required: [path_id, analysis_id, finding_id, summary, nodes, edges, created_at]
+      properties:
+        path_id: { type: string }
+        analysis_id: { type: string }
+        finding_id: { type: string }
+        summary: { type: string }
+        nodes:
+          type: array
+          items: { $ref: '#/components/schemas/GraphNode' }
+        edges:
+          type: array
+          items: { $ref: '#/components/schemas/GraphEdge' }
+        created_at: { type: string, format: date-time }
+    ArtifactAnalysis:
+      type: object
+      required: [artifact_analysis_id, analysis_id, pack_snapshot_id, project_id, metadata, class_targets, resource_targets, mixin_targets, embedded_libraries, fingerprint]
+      properties:
+        artifact_analysis_id: { type: string }
+        analysis_id: { type: string }
+        pack_snapshot_id: { type: string }
+        project_id: { type: string }
+        version_id: { type: string }
+        metadata:
+          type: object
+          required: [artifact_id, name, loader_hints, mixin_config_files]
+          properties:
+            artifact_id: { type: string }
+            name: { type: string }
+            version: { type: string }
+            loader_hints: { type: array, items: { type: string } }
+            mixin_config_files: { type: array, items: { type: string } }
+        class_targets:
+          type: array
+          items: { $ref: '#/components/schemas/ArtifactTarget' }
+        resource_targets:
+          type: array
+          items: { $ref: '#/components/schemas/ArtifactTarget' }
+        mixin_targets:
+          type: array
+          items: { $ref: '#/components/schemas/ArtifactTarget' }
+        embedded_libraries:
+          type: array
+          items: { $ref: '#/components/schemas/EmbeddedLibrary' }
+        fingerprint: { type: string }
+    ArtifactTarget:
+      type: object
+      required: [owner_artifact_id, target]
+      properties:
+        owner_artifact_id: { type: string }
+        target: { type: string }
+    EmbeddedLibrary:
+      type: object
+      required: [owner_artifact_id, coordinates, package_hints]
+      properties:
+        owner_artifact_id: { type: string }
+        coordinates: { type: string }
+        package_hints: { type: array, items: { type: string } }
+    Recommendation:
+      type: object
+      required: [recommendation_id, kind, rank, confidence, summary]
+      properties:
+        recommendation_id: { type: string }
+        kind: { type: string, enum: [replacement, bundle, remediation_plan] }
+        rank: { type: integer, minimum: 1 }
+        confidence: { type: number, minimum: 0, maximum: 1 }
+        summary: { type: string }
+        rationale: { type: string }
+        status: { type: string, enum: [proposed, accepted, dismissed, applied] }
+        finding_ids: { type: array, items: { type: string } }
+        evidence: { type: array, items: { $ref: '#/components/schemas/EvidenceRef' } }
+        replaces_subjects: { type: array, items: { $ref: '#/components/schemas/FindingSubject' } }
+        candidate_projects: { type: array, items: { $ref: '#/components/schemas/FindingSubject' } }
+        migration_cost: { type: string, enum: [low, medium, high, unknown] }
+        expected_compatibility_gain: { type: number, minimum: 0, maximum: 1 }
+        impacts:
+          type: array
+          items: { $ref: '#/components/schemas/RecommendationImpact' }
+        steps:
+          type: array
+          items: { $ref: '#/components/schemas/RecommendationStep' }
+    RecommendationImpact:
+      type: object
+      required: [impact_type, score, summary]
+      properties:
+        impact_type: { type: string, enum: [compatibility_gain, stability_gain, performance_gain, migration_effort] }
+        score: { type: number, minimum: 0, maximum: 1 }
+        summary: { type: string }
+    RecommendationStep:
+      type: object
+      required: [step_id, action, summary]
+      properties:
+        step_id: { type: string }
+        action: { type: string, enum: [remove_mod, add_mod, replace_mod, pin_version, verify_pack, retest_finding] }
+        project_id: { type: string }
+        version_id: { type: string }
+        summary: { type: string }
+    RecommendationBundle:
+      type: object
+      required: [bundle_id, recommendation_set_id, strategy, recommendation_ids, summary, rationale, migration_cost, expected_compatibility_gain, created_at]
+      properties:
+        bundle_id: { type: string }
+        recommendation_set_id: { type: string }
+        strategy: { type: string, enum: [minimal_unblock, stability_first] }
+        recommendation_ids: { type: array, items: { type: string } }
+        summary: { type: string }
+        rationale: { type: string }
+        migration_cost: { type: string, enum: [low, medium, high, unknown] }
+        expected_compatibility_gain: { type: number, minimum: 0, maximum: 1 }
+        created_at: { type: string, format: date-time }
+    RecommendationSet:
+      type: object
+      required: [recommendation_set_id, analysis_id, generation_strategy, items, bundles, summary, created_at]
+      properties:
+        recommendation_set_id: { type: string }
+        analysis_id: { type: string }
+        generation_strategy: { type: string }
+        items: { type: array, items: { $ref: '#/components/schemas/Recommendation' } }
+        bundles: { type: array, items: { $ref: '#/components/schemas/RecommendationBundle' } }
+        summary:
+          type: object
+          required: [recommendation_count, bundle_count, unresolved_finding_count]
+          properties:
+            recommendation_count: { type: integer, minimum: 0 }
+            bundle_count: { type: integer, minimum: 0 }
+            unresolved_finding_count: { type: integer, minimum: 0 }
+            minimal_unblock_bundle_id: { type: string }
+            stability_first_bundle_id: { type: string }
+        created_at: { type: string, format: date-time }
+    RecommendationFeedback:
+      type: object
+      required: [feedback_id, recommendation_set_id, recommendation_id, feedback_type, created_by, created_at]
+      properties:
+        feedback_id: { type: string }
+        recommendation_set_id: { type: string }
+        recommendation_id: { type: string }
+        feedback_type: { type: string, enum: [accepted, dismissed, helpful, not_helpful] }
+        note: { type: string }
+        created_by: { type: string }
+        created_at: { type: string, format: date-time }
+    RecommendationOutcome:
+      type: object
+      required: [outcome_id, recommendation_set_id, status, applied_recommendation_ids, validation_summary, created_by, created_at]
+      properties:
+        outcome_id: { type: string }
+        recommendation_set_id: { type: string }
+        status: { type: string, enum: [pending, validated, rejected, deferred] }
+        applied_recommendation_ids: { type: array, items: { type: string } }
+        validation_summary: { type: string }
+        created_by: { type: string }
+        created_at: { type: string, format: date-time }
+    RecommendationsResponse:
+      type: object
+      required: [recommendation_set_id, items]
+      properties:
+        recommendation_set_id: { type: string }
+        items: { type: array, items: { $ref: '#/components/schemas/Recommendation' } }
+        bundles: { type: array, items: { $ref: '#/components/schemas/RecommendationBundle' } }
+        summary:
+          type: object
+          properties:
+            recommendation_count: { type: integer }
+            bundle_count: { type: integer }
+            unresolved_finding_count: { type: integer }
+            minimal_unblock_bundle_id: { type: string }
+            stability_first_bundle_id: { type: string }
+    CatalogProject:
+      type: object
+      required: [project_id, slug, display_name]
+      properties:
+        project_id: { type: string }
+        slug: { type: string }
+        display_name: { type: string }
+        project_type: { type: string }
+        loaders: { type: array, items: { type: string } }
+        minecraft_versions: { type: array, items: { type: string } }
+    CatalogVersion:
+      type: object
+      required: [version_id, project_id, version_label]
+      properties:
+        version_id: { type: string }
+        project_id: { type: string }
+        version_label: { type: string }
+        release_channel: { type: string }
+        loaders: { type: array, items: { type: string } }
+        minecraft_versions: { type: array, items: { type: string } }
+    CatalogSearchResponse:
+      type: object
+      required: [items]
+      properties:
+        items: { type: array, items: { $ref: '#/components/schemas/CatalogProject' } }
+    CatalogResolveRequest:
+      type: object
+      required: [source_name]
+      properties:
+        source_name: { type: string }
+        source_project_id: { type: string }
+        source_slug: { type: string }
+        artifact_hash: { type: string }
+    CatalogResolveResponse:
+      type: object
+      required: [resolved]
+      properties:
+        resolved: { type: boolean }
+        canonical_project_id: { type: string }
+        confidence: { type: number, minimum: 0, maximum: 1 }
+        resolution_method: { type: string }
+    UpdateFindingRequest:
+      type: object
+      properties:
+        status: { type: string, enum: [open, ignored, muted, resolved] }
+        note: { type: string }
+    FindingFeedbackRequest:
+      type: object
+      required: [feedback_type]
+      properties:
+        feedback_type: { type: string, enum: [correct, incorrect, incomplete, useful] }
+        note: { type: string }
+    SubmitRecommendationFeedbackRequest:
+      type: object
+      required: [feedback_type, created_by]
+      properties:
+        feedback_type: { type: string, enum: [accepted, dismissed, helpful, not_helpful] }
+        note: { type: string }
+        created_by: { type: string }
+    RecommendationFeedbackResponse:
+      type: object
+      required: [feedback]
+      properties:
+        feedback: { $ref: '#/components/schemas/RecommendationFeedback' }
+    RecordRecommendationOutcomeRequest:
+      type: object
+      required: [status, applied_recommendation_ids, validation_summary, created_by]
+      properties:
+        status: { type: string, enum: [pending, validated, rejected, deferred] }
+        applied_recommendation_ids: { type: array, items: { type: string } }
+        validation_summary: { type: string }
+        created_by: { type: string }
+    RecommendationOutcomeResponse:
+      type: object
+      required: [outcome]
+      properties:
+        outcome: { $ref: '#/components/schemas/RecommendationOutcome' }
+    FindingFeatureVector:
+      type: object
+      required: [feature_vector_id, analysis_id, finding_id, feature_namespace, feature_values, created_at]
+      properties:
+        feature_vector_id: { type: string }
+        analysis_id: { type: string }
+        finding_id: { type: string }
+        feature_namespace: { type: string, enum: [finding_risk_v1] }
+        feature_values:
+          type: array
+          items:
+            type: object
+            required: [feature_name, value_type]
+            properties:
+              feature_name: { type: string }
+              value_type: { type: string, enum: [number, boolean, categorical] }
+              numeric_value: { type: number }
+              boolean_value: { type: boolean }
+              categorical_value: { type: string }
+        label: { type: string, enum: [confirmed_risk, likely_risk, low_risk] }
+        created_at: { type: string, format: date-time }
+    OfflineDataset:
+      type: object
+      required: [dataset_id, analysis_id, dataset_kind, feature_vector_ids, summary, created_at]
+      properties:
+        dataset_id: { type: string }
+        analysis_id: { type: string }
+        dataset_kind: { type: string, enum: [finding_risk_training, recommendation_ranking_eval] }
+        feature_vector_ids: { type: array, items: { type: string } }
+        summary:
+          type: object
+          required: [row_count, labeled_row_count, feature_namespaces]
+          properties:
+            row_count: { type: integer, minimum: 0 }
+            labeled_row_count: { type: integer, minimum: 0 }
+            feature_namespaces: { type: array, items: { type: string } }
+        created_at: { type: string, format: date-time }
+    CalibratedFindingScore:
+      type: object
+      required: [calibrated_finding_score_id, analysis_id, finding_id, model_id, original_confidence, calibrated_confidence, predicted_risk_score, rationale, created_at]
+      properties:
+        calibrated_finding_score_id: { type: string }
+        analysis_id: { type: string }
+        finding_id: { type: string }
+        model_id: { type: string }
+        original_confidence: { type: number, minimum: 0, maximum: 1 }
+        calibrated_confidence: { type: number, minimum: 0, maximum: 1 }
+        predicted_risk_score: { type: number, minimum: 0, maximum: 1 }
+        rationale: { type: array, items: { type: string } }
+        created_at: { type: string, format: date-time }
+    PackReviewSummary:
+      type: object
+      required: [review_summary_id, analysis_id, model_id, headline, overview, sections, created_at]
+      properties:
+        review_summary_id: { type: string }
+        analysis_id: { type: string }
+        model_id: { type: string }
+        headline: { type: string }
+        overview: { type: string }
+        sections:
+          type: array
+          items:
+            type: object
+            required: [section_id, title, body, citations]
+            properties:
+              section_id: { type: string }
+              title: { type: string }
+              body: { type: string }
+              citations:
+                type: array
+                items:
+                  type: object
+                  required: [citation_id, citation_type, target_id]
+                  properties:
+                    citation_id: { type: string }
+                    citation_type: { type: string, enum: [finding, evidence_document, evidence_snippet, recommendation] }
+                    target_id: { type: string }
+        created_at: { type: string, format: date-time }
+    AnalysisFeatureDatasetResponse:
+      type: object
+      required: [dataset, feature_vectors, calibrated_scores]
+      properties:
+        dataset: { $ref: '#/components/schemas/OfflineDataset' }
+        feature_vectors: { type: array, items: { $ref: '#/components/schemas/FindingFeatureVector' } }
+        calibrated_scores: { type: array, items: { $ref: '#/components/schemas/CalibratedFindingScore' } }
+    PackReviewSummaryResponse:
+      type: object
+      required: [review_summary]
+      properties:
+        review_summary: { $ref: '#/components/schemas/PackReviewSummary' }
+    SimulationRun:
+      type: object
+      required: [simulation_run_id, analysis_id, pack_snapshot_id, recipe_id, status, summary, observations, created_at]
+      properties:
+        simulation_run_id: { type: string }
+        analysis_id: { type: string }
+        pack_snapshot_id: { type: string }
+        recipe_id: { type: string }
+        status: { type: string, enum: [completed, failed] }
+        summary: { type: string }
+        observations:
+          type: array
+          items:
+            type: object
+            required: [observation_id, kind, status, summary, finding_types]
+            properties:
+              observation_id: { type: string }
+              kind: { type: string, enum: [startup, crash_signature, resource_pressure, smoke_test] }
+              status: { type: string, enum: [passed, failed] }
+              summary: { type: string }
+              finding_types: { type: array, items: { type: string } }
+              crash_signature_id: { type: string }
+        created_at: { type: string, format: date-time }
+    SimulationRunResponse:
+      type: object
+      required: [simulation_run]
+      properties:
+        simulation_run: { $ref: '#/components/schemas/SimulationRun' }
+    ReleaseGateDecision:
+      type: object
+      required: [release_gate_decision_id, analysis_id, policy_key, status, summary, reasons, blocking_finding_ids, created_at]
+      properties:
+        release_gate_decision_id: { type: string }
+        analysis_id: { type: string }
+        policy_key: { type: string }
+        status: { type: string, enum: [pass, warn, block] }
+        summary: { type: string }
+        reasons: { type: array, items: { type: string } }
+        blocking_finding_ids: { type: array, items: { type: string } }
+        simulation_run_id: { type: string }
+        created_at: { type: string, format: date-time }
+    ReleaseGateDecisionResponse:
+      type: object
+      required: [release_gate_decision]
+      properties:
+        release_gate_decision: { $ref: '#/components/schemas/ReleaseGateDecision' }
+    AnalysisReport:
+      type: object
+      required: [report_id, analysis, findings, recommendations, decision_summary, feedback]
+      properties:
+        report_id: { type: string }
+        analysis: { $ref: '#/components/schemas/AnalysisSummary' }
+        knowledge_snapshot: { $ref: '#/components/schemas/KnowledgeSnapshot' }
+        exact_pack_cache_hit:
+          type: object
+          additionalProperties: true
+        supporting_claims:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        supporting_pairwise_records:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        supporting_technical_signatures:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        coverage_scope: { $ref: '#/components/schemas/SupportedCoverageScope' }
+        findings: { type: array, items: { $ref: '#/components/schemas/Finding' } }
+        recommendation_set: { $ref: '#/components/schemas/RecommendationSet' }
+        recommendations: { type: array, items: { $ref: '#/components/schemas/Recommendation' } }
+        review_summary: { $ref: '#/components/schemas/PackReviewSummary' }
+        simulation_run: { $ref: '#/components/schemas/SimulationRun' }
+        release_gate_decision: { $ref: '#/components/schemas/ReleaseGateDecision' }
+        status_check: { $ref: '#/components/schemas/StatusCheckResult' }
+        decision_summary:
+          type: object
+          properties:
+            minimal_unblock_summary: { type: string }
+            stability_first_summary: { type: string }
+        feedback: { type: array, items: { $ref: '#/components/schemas/RecommendationFeedback' } }
+        latest_outcome: { $ref: '#/components/schemas/RecommendationOutcome' }
+    RetrievalAnalysisResponse:
+      type: object
+      required: [analysis, findings, recommendations]
+      properties:
+        analysis: { $ref: '#/components/schemas/AnalysisSummary' }
+        findings: { type: array, items: { $ref: '#/components/schemas/Finding' } }
+        recommendations: { type: array, items: { $ref: '#/components/schemas/Recommendation' } }
+        knowledge_snapshot: { $ref: '#/components/schemas/KnowledgeSnapshot' }
+        exact_pack_cache_hit:
+          type: object
+          additionalProperties: true
+        supporting_claims:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        supporting_pairwise_records:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        supporting_technical_signatures:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        coverage_scope: { $ref: '#/components/schemas/SupportedCoverageScope' }
+        unresolved_entries:
+          type: array
+          items:
+            type: object
+            required: [name, reason]
+            properties:
+              name: { type: string }
+              version: { type: string }
+              reason: { type: string, enum: [unresolved_project, unresolved_version, outside_coverage] }
+        freshness_summary: { type: string }
+    KnowledgeSnapshot:
+      type: object
+      required: [snapshot_id, version, status, created_at, components]
+      properties:
+        snapshot_id: { type: string }
+        version: { type: string }
+        status: { type: string, enum: [draft, validated, approved, promoted, rolled_back] }
+        coverage_scope_id: { type: string }
+        validation_report_id: { type: string }
+        activated_at: { type: string, format: date-time }
+        created_by: { type: string }
+        created_at: { type: string, format: date-time }
+        components:
+          type: array
+          items:
+            type: object
+            required: [component_type, record_count, checksum]
+            properties:
+              component_type:
+                type: string
+                enum: [catalog, verified_rules, promoted_claims, technical_signatures, pairwise_matrix, fragment_cache, exact_pack_cache, coverage_scope]
+              record_count: { type: integer, minimum: 0 }
+              checksum: { type: string }
+    SupportedCoverageScope:
+      type: object
+      required: [coverage_scope_id, snapshot_version, status, supported_minecraft_versions, supported_loaders, supported_project_ids, version_freshness_window_days, created_at]
+      properties:
+        coverage_scope_id: { type: string }
+        snapshot_version: { type: string }
+        status: { type: string, enum: [high_confidence_coverage, best_effort_coverage, outside_validated_coverage] }
+        supported_minecraft_versions: { type: array, items: { type: string } }
+        supported_loaders: { type: array, items: { type: string, enum: [forge, fabric, quilt, neoforge, unknown] } }
+        supported_project_ids: { type: array, items: { type: string } }
+        version_freshness_window_days: { type: integer, minimum: 0 }
+        notes: { type: string }
+        created_at: { type: string, format: date-time }
+    ExportResponse:
+      type: object
+      required: [format, download_url]
+      properties:
+        format: { type: string, enum: [json, markdown] }
+        download_url: { type: string, format: uri }
+        content: { type: string }
+    CreatePackDiffRequest:
+      type: object
+      required: [base_snapshot_id, target_snapshot_id]
+      properties:
+        base_snapshot_id: { type: string }
+        target_snapshot_id: { type: string }
+        baseline_analysis_id: { type: string }
+        target_analysis_id: { type: string }
+    PackDiffResponse:
+      type: object
+      required: [diff]
+      properties:
+        diff: { $ref: '#/components/schemas/PackDiff' }
+    PackDiff:
+      type: object
+      required: [pack_diff_id, project_id, base_snapshot_id, target_snapshot_id, summary, changes]
+      properties:
+        pack_diff_id: { type: string }
+        project_id: { type: string }
+        base_snapshot_id: { type: string }
+        target_snapshot_id: { type: string }
+        baseline_analysis_id: { type: string }
+        target_analysis_id: { type: string }
+        summary:
+          type: object
+          required: [added_mods, removed_mods, changed_versions, finding_adds, finding_resolutions]
+          properties:
+            added_mods: { type: integer }
+            removed_mods: { type: integer }
+            changed_versions: { type: integer }
+            finding_adds: { type: integer }
+            finding_resolutions: { type: integer }
+        changes:
+          type: array
+          items:
+            type: object
+            required: [change_type, summary]
+            properties:
+              change_type: { type: string, enum: [mod_added, mod_removed, version_changed, environment_changed, finding_added, finding_resolved] }
+              project_id: { type: string }
+              before: { type: string }
+              after: { type: string }
+              summary: { type: string }
+    TriggerEvidenceSyncRequest:
+      type: object
+      properties:
+        connector_names: { type: array, items: { type: string } }
+    EvidenceSyncResponse:
+      type: object
+      required: [connectors, runs, raw_payloads, documents, snippets]
+      properties:
+        connectors:
+          type: array
+          items:
+            type: object
+            required: [connector_id, connector_name, source_type, status, trust_tier, created_at, updated_at]
+            properties:
+              connector_id: { type: string }
+              connector_name: { type: string }
+              source_type: { type: string, enum: [github, curated_community] }
+              status: { type: string, enum: [ready, syncing, degraded] }
+              trust_tier: { type: string, enum: [official, maintainer, curated, community] }
+              created_at: { type: string, format: date-time }
+              updated_at: { type: string, format: date-time }
+        runs:
+          type: array
+          items:
+            type: object
+            required: [sync_run_id, connector_id, status, started_at, stats]
+            properties:
+              sync_run_id: { type: string }
+              connector_id: { type: string }
+              status: { type: string, enum: [queued, running, completed, failed] }
+              started_at: { type: string, format: date-time }
+              finished_at: { type: string, format: date-time }
+              stats:
+                type: object
+                required: [raw_payload_count, document_count, snippet_count, contradiction_count, supersession_count]
+                properties:
+                  raw_payload_count: { type: integer }
+                  document_count: { type: integer }
+                  snippet_count: { type: integer }
+                  contradiction_count: { type: integer }
+                  supersession_count: { type: integer }
+        raw_payloads:
+          type: array
+          items:
+            type: object
+            required: [raw_payload_id, connector_id, sync_run_id, external_document_id, content_type, checksum, body, fetched_at, created_at]
+            properties:
+              raw_payload_id: { type: string }
+              connector_id: { type: string }
+              sync_run_id: { type: string }
+              external_document_id: { type: string }
+              content_type: { type: string }
+              checksum: { type: string }
+              body: { type: object, additionalProperties: true }
+              fetched_at: { type: string, format: date-time }
+              created_at: { type: string, format: date-time }
+        documents:
+          type: array
+          items:
+            type: object
+            required: [document_id, connector_id, sync_run_id, raw_payload_id, external_document_id, kind, title, source_url, published_at, trust, recency_score, relevance, stance, summary, content, related_project_ids, related_version_ids, finding_types, cluster_id, duplicate_document_ids, contradicted_by_document_ids, created_at]
+            properties:
+              document_id: { type: string }
+              connector_id: { type: string }
+              sync_run_id: { type: string }
+              raw_payload_id: { type: string }
+              external_document_id: { type: string }
+              kind: { type: string, enum: [github_issue, github_discussion, release_note, curated_post] }
+              title: { type: string }
+              source_url: { type: string }
+              author: { type: string }
+              published_at: { type: string, format: date-time }
+              updated_at: { type: string, format: date-time }
+              harvested_at: { type: string, format: date-time }
+              trust:
+                type: object
+                required: [tier, score, signals]
+                properties:
+                  tier: { type: string, enum: [official, maintainer, curated, community] }
+                  score: { type: number }
+                  signals: { type: array, items: { type: string } }
+              recency_score: { type: number }
+              relevance: { type: string, enum: [direct, supporting, background, irrelevant] }
+              stance: { type: string, enum: [supports, contradicts, neutral] }
+              summary: { type: string }
+              content: { type: string }
+              related_project_ids: { type: array, items: { type: string } }
+              related_version_ids: { type: array, items: { type: string } }
+              finding_types: { type: array, items: { type: string } }
+              cluster_id: { type: string }
+              duplicate_document_ids: { type: array, items: { type: string } }
+              contradicted_by_document_ids: { type: array, items: { type: string } }
+              superseded_by_document_id: { type: string }
+              created_at: { type: string, format: date-time }
+        snippets:
+          type: array
+          items:
+            type: object
+            required: [snippet_id, document_id, kind, text, text_hash, relevance, stance, trust_score, related_project_ids, related_version_ids, contradiction_document_ids, created_at]
+            properties:
+              snippet_id: { type: string }
+              document_id: { type: string }
+              kind: { type: string, enum: [summary, problem_statement, reproduction, resolution, status_update] }
+              text: { type: string }
+              text_hash: { type: string }
+              relevance: { type: string, enum: [direct, supporting, background, irrelevant] }
+              stance: { type: string, enum: [supports, contradicts, neutral] }
+              trust_score: { type: number }
+              related_project_ids: { type: array, items: { type: string } }
+              related_version_ids: { type: array, items: { type: string } }
+              contradiction_document_ids: { type: array, items: { type: string } }
+              superseded_by_document_id: { type: string }
+              created_at: { type: string, format: date-time }
+    SearchEvidenceRequest:
+      type: object
+      properties:
+        query: { type: string }
+        analysis_id: { type: string }
+        finding_id: { type: string }
+        project_ids: { type: array, items: { type: string } }
+        finding_types: { type: array, items: { type: string } }
+        include_contradicted: { type: boolean }
+        include_superseded: { type: boolean }
+        limit: { type: integer, minimum: 1, maximum: 50 }
+    EvidenceSearchResponse:
+      type: object
+      required: [total, hits]
+      properties:
+        total: { type: integer }
+        hits:
+          type: array
+          items:
+            type: object
+            required: [score, document]
+            properties:
+              score: { type: number }
+              document:
+                type: object
+                required: [index, id, document_id, title, text, trust_tier, trust_score, recency_score, relevance, stance, finding_types, related_project_ids, related_version_ids, cluster_id, contradicted_by_document_ids, source_url, published_at]
+                properties:
+                  index: { type: string, enum: [evidence-documents, evidence-snippets] }
+                  id: { type: string }
+                  document_id: { type: string }
+                  snippet_id: { type: string }
+                  title: { type: string }
+                  text: { type: string }
+                  trust_tier: { type: string, enum: [official, maintainer, curated, community] }
+                  trust_score: { type: number }
+                  recency_score: { type: number }
+                  relevance: { type: string, enum: [direct, supporting, background, irrelevant] }
+                  stance: { type: string, enum: [supports, contradicts, neutral] }
+                  finding_types: { type: array, items: { type: string } }
+                  related_project_ids: { type: array, items: { type: string } }
+                  related_version_ids: { type: array, items: { type: string } }
+                  cluster_id: { type: string }
+                  contradicted_by_document_ids: { type: array, items: { type: string } }
+                  superseded_by_document_id: { type: string }
+                  source_url: { type: string }
+                  published_at: { type: string, format: date-time }
+    FindingEvidenceResponse:
+      type: object
+      required: [analysis_id, finding_id, hits]
+      properties:
+        analysis_id: { type: string }
+        finding_id: { type: string }
+        hits:
+          type: array
+          items: { $ref: '#/components/schemas/EvidenceSearchResponse/properties/hits/items' }
+    CreateEvidenceCurationRequest:
+      type: object
+      required: [title, finding_type, severity, summary, subject_project_ids, evidence_document_ids, created_by]
+      properties:
+        title: { type: string }
+        finding_type: { type: string }
+        severity: { type: string, enum: [info, low, medium, high, critical] }
+        summary: { type: string }
+        subject_project_ids: { type: array, items: { type: string } }
+        evidence_document_ids: { type: array, items: { type: string } }
+        evidence_snippet_ids: { type: array, items: { type: string } }
+        created_by: { type: string }
+    EvidenceCurationResponse:
+      type: object
+      required: [curation]
+      properties:
+        curation:
+          type: object
+          required: [curation_id, title, finding_type, severity, summary, subject_project_ids, evidence_document_ids, evidence_snippet_ids, rule_draft, status, created_by, created_at]
+          properties:
+            curation_id: { type: string }
+            title: { type: string }
+            finding_type: { type: string }
+            severity: { type: string, enum: [info, low, medium, high, critical] }
+            summary: { type: string }
+            subject_project_ids: { type: array, items: { type: string } }
+            evidence_document_ids: { type: array, items: { type: string } }
+            evidence_snippet_ids: { type: array, items: { type: string } }
+            rule_draft: { type: object, additionalProperties: true }
+            status: { type: string, enum: [draft, promoted] }
+            created_by: { type: string }
+            promoted_rule_id: { type: string }
+            created_at: { type: string, format: date-time }
+            promoted_at: { type: string, format: date-time }
+    PromoteVerifiedRuleRequest:
+      type: object
+      required: [curation_id, promoted_by]
+      properties:
+        curation_id: { type: string }
+        promoted_by: { type: string }
+    PromoteVerifiedRuleResponse:
+      type: object
+      required: [curation, rule]
+      properties:
+        curation: { $ref: '#/components/schemas/EvidenceCurationResponse/properties/curation' }
+        rule:
+          type: object
+          required: [rule_id, version]
+          properties:
+            rule_id: { type: string }
+            version: { type: integer }
+    LinkGitHubInstallationRequest:
+      type: object
+      required: [project_id, repository_full_name]
+      properties:
+        project_id: { type: string }
+        repository_full_name: { type: string }
+    GitHubInstallationLink:
+      type: object
+      required: [installation_link_id, installation_id, project_id, repository_full_name, status, created_at]
+      properties:
+        installation_link_id: { type: string }
+        installation_id: { type: string }
+        project_id: { type: string }
+        repository_full_name: { type: string }
+        status: { type: string, enum: [linked] }
+        created_at: { type: string, format: date-time }
+    GitHubInstallationLinkResponse:
+      type: object
+      required: [installation_link]
+      properties:
+        installation_link: { $ref: '#/components/schemas/GitHubInstallationLink' }
+    CreateWebhookRequest:
+      type: object
+      required: [target_url, event_types]
+      properties:
+        target_url: { type: string, format: uri }
+        event_types: { type: array, items: { type: string } }
+        secret: { type: string }
+    Webhook:
+      type: object
+      required: [webhook_id, target_url, event_types, status, created_at]
+      properties:
+        webhook_id: { type: string }
+        target_url: { type: string, format: uri }
+        event_types: { type: array, items: { type: string } }
+        status: { type: string, enum: [active, paused] }
+        secret_hint: { type: string }
+        created_at: { type: string, format: date-time }
+    WebhookDeliveryAttempt:
+      type: object
+      required: [delivery_id, webhook_id, analysis_id, event_type, status, payload, created_at]
+      properties:
+        delivery_id: { type: string }
+        webhook_id: { type: string }
+        analysis_id: { type: string }
+        event_type: { type: string }
+        status: { type: string, enum: [pending, delivered] }
+        payload: { type: object }
+        created_at: { type: string, format: date-time }
+    WebhookDeliveryListResponse:
+      type: object
+      required: [items]
+      properties:
+        items: { type: array, items: { $ref: '#/components/schemas/WebhookDeliveryAttempt' } }
+    StatusCheckResult:
+      type: object
+      required: [status_check_id, analysis_id, conclusion, summary, details_url, created_at]
+      properties:
+        status_check_id: { type: string }
+        analysis_id: { type: string }
+        installation_id: { type: string }
+        conclusion: { type: string, enum: [success, neutral, failure] }
+        summary: { type: string }
+        details_url: { type: string }
+        created_at: { type: string, format: date-time }
+    StatusCheckResponse:
+      type: object
+      required: [status_check]
+      properties:
+        status_check: { $ref: '#/components/schemas/StatusCheckResult' }

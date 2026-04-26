@@ -1,0 +1,15 @@
+flowchart TD
+  cf[CurseForge] --> fetch[Connector Workers]
+  mr[Modrinth] --> fetch
+  gh[GitHub] --> fetch
+  comm[Community Sources] --> fetch
+  fetch --> raw[(S3 Raw Zone)]
+  fetch --> kafka[(Kafka)]
+  kafka --> norm[Normalization Workers]
+  norm --> silver[(Normalized Store)]
+  norm --> nlp[NLP Extraction]
+  nlp --> search[(OpenSearch)]
+  nlp --> graph[(Neo4j)]
+  nlp --> features[Feature Store / Derived Tables]
+  features --> models[Risk & Recommendation Models]
+  models --> reports[Analysis Engine / Reports]

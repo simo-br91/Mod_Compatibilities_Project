@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "allowImportingTsExtensions": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@modcompat/api-contracts": [
+        "packages/api-contracts/src/index.ts"
+      ],
+      "@modcompat/auth": [
+        "packages/auth/src/index.ts"
+      ],
+      "@modcompat/config": [
+        "packages/config/src/index.ts"
+      ],
+      "@modcompat/domain-models": [
+        "packages/domain-models/src/index.ts"
+      ],
+      "@modcompat/event-contracts": [
+        "packages/event-contracts/src/index.ts"
+      ],
+      "@modcompat/id-generation": [
+        "packages/id-generation/src/index.ts"
+      ],
+      "@modcompat/observability": [
+        "packages/observability/src/index.ts"
+      ],
+      "@modcompat/platform-core": [
+        "packages/platform-core/src/index.ts"
+      ],
+      "@modcompat/rule-engine-sdk": [
+        "packages/rule-engine-sdk/src/index.ts"
+      ],
+      "@modcompat/testing-fixtures": [
+        "packages/testing-fixtures/src/index.ts"
+      ]
+    }
+  }
+}

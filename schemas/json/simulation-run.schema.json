@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/simulation-run.schema.json",
+  "title": "SimulationRun",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "simulation_run_id",
+    "analysis_id",
+    "pack_snapshot_id",
+    "recipe_id",
+    "status",
+    "summary",
+    "observations",
+    "created_at"
+  ],
+  "properties": {
+    "simulation_run_id": { "type": "string" },
+    "analysis_id": { "type": "string" },
+    "pack_snapshot_id": { "type": "string" },
+    "recipe_id": { "type": "string" },
+    "status": { "type": "string", "enum": ["completed", "failed"] },
+    "summary": { "type": "string" },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["observation_id", "kind", "status", "summary", "finding_types"],
+        "properties": {
+          "observation_id": { "type": "string" },
+          "kind": { "type": "string", "enum": ["startup", "crash_signature", "resource_pressure", "smoke_test"] },
+          "status": { "type": "string", "enum": ["passed", "failed"] },
+          "summary": { "type": "string" },
+          "finding_types": { "type": "array", "items": { "type": "string" } },
+          "crash_signature_id": { "type": "string" }
+        }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

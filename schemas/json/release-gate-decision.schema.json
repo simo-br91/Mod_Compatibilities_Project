@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/release-gate-decision.schema.json",
+  "title": "ReleaseGateDecision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "release_gate_decision_id",
+    "analysis_id",
+    "policy_key",
+    "status",
+    "summary",
+    "reasons",
+    "blocking_finding_ids",
+    "created_at"
+  ],
+  "properties": {
+    "release_gate_decision_id": { "type": "string" },
+    "analysis_id": { "type": "string" },
+    "policy_key": { "type": "string" },
+    "status": { "type": "string", "enum": ["pass", "warn", "block"] },
+    "summary": { "type": "string" },
+    "reasons": { "type": "array", "items": { "type": "string" } },
+    "blocking_finding_ids": { "type": "array", "items": { "type": "string" } },
+    "simulation_run_id": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

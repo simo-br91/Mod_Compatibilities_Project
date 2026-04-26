@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/evidence-document.schema.json",
+  "title": "EvidenceDocument",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "document_id",
+    "connector_id",
+    "sync_run_id",
+    "raw_payload_id",
+    "external_document_id",
+    "kind",
+    "title",
+    "source_url",
+    "published_at",
+    "trust",
+    "recency_score",
+    "relevance",
+    "stance",
+    "summary",
+    "content",
+    "related_project_ids",
+    "finding_types",
+    "cluster_id"
+  ],
+  "properties": {
+    "document_id": { "type": "string" },
+    "connector_id": { "type": "string" },
+    "sync_run_id": { "type": "string" },
+    "raw_payload_id": { "type": "string" },
+    "external_document_id": { "type": "string" },
+    "kind": {
+      "type": "string",
+      "enum": ["github_issue", "github_discussion", "release_note", "curated_post"]
+    },
+    "title": { "type": "string" },
+    "source_url": { "type": "string" },
+    "published_at": { "type": "string", "format": "date-time" },
+    "trust": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tier", "score", "signals"],
+      "properties": {
+        "tier": {
+          "type": "string",
+          "enum": ["official", "maintainer", "curated", "community"]
+        },
+        "score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "signals": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "recency_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "relevance": {
+      "type": "string",
+      "enum": ["direct", "supporting", "background", "irrelevant"]
+    },
+    "stance": {
+      "type": "string",
+      "enum": ["supports", "contradicts", "neutral"]
+    },
+    "summary": { "type": "string" },
+    "content": { "type": "string" },
+    "related_project_ids": { "type": "array", "items": { "type": "string" } },
+    "finding_types": { "type": "array", "items": { "type": "string" } },
+    "cluster_id": { "type": "string" },
+    "contradicted_by_document_ids": { "type": "array", "items": { "type": "string" } },
+    "superseded_by_document_id": { "type": "string" }
+  }
+}

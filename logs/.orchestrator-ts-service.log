@@ -1,0 +1,4 @@
+{"level":"info","service":"analysis-orchestrator","message":"Analysis orchestrator HTTP server listening","port":8086,"persistence":{"enabled":true,"connectionStringConfigured":true}}
+undefined
+C:\Users\simor\Documents\Mod_Compatibilities_Project\apps\analysis-orchestrator:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command failed with exit code 4294967295: tsx src/index.ts

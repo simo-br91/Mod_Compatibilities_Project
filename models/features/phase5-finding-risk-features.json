@@ -1,0 +1,14 @@
+{
+  "namespace": "finding_risk_v1",
+  "features": [
+    "base_confidence",
+    "severity_weight",
+    "evidence_count",
+    "evidence_document_count",
+    "provenance_count",
+    "recommendation_coverage",
+    "has_direct_evidence",
+    "has_verified_rule_provenance",
+    "severity"
+  ]
+}

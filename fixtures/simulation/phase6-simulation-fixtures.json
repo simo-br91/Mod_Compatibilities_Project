@@ -1,0 +1,32 @@
+{
+  "recipes": [
+    {
+      "recipeKey": "client-startup-smoke",
+      "title": "Client startup smoke test",
+      "steps": [
+        "Launch the pack to main menu",
+        "Join a local single-player world",
+        "Render common shader and texture paths"
+      ],
+      "successCriteria": [
+        "No startup crash",
+        "No render transformer conflict",
+        "No duplicated resource load failure"
+      ]
+    }
+  ],
+  "crashSignatures": [
+    {
+      "signatureKey": "render-transformer-conflict",
+      "headline": "Renderer transformer conflict on Fabric client startup",
+      "pattern": "OptiFine and Sodium attempt incompatible renderer transforms",
+      "relatedFindingTypes": ["declared_incompatibility", "community_verified_incompatibility"]
+    },
+    {
+      "signatureKey": "resource-path-collision",
+      "headline": "Resource path collision during client bootstrap",
+      "pattern": "Duplicate shader or resource path ownership causes bootstrap failure",
+      "relatedFindingTypes": ["resource_collision", "class_overlap", "mixin_overlap"]
+    }
+  ]
+}

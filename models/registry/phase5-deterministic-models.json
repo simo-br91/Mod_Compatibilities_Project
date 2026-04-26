@@ -1,0 +1,26 @@
+{
+  "models": [
+    {
+      "model_id": "mdl_finding_risk_v1",
+      "model_key": "finding-risk-calibrator",
+      "version": "phase5-deterministic-v1",
+      "task": "finding_risk_calibration",
+      "status": "active",
+      "metrics": {
+        "validation_precision": 0.81,
+        "validation_recall": 0.76
+      }
+    },
+    {
+      "model_id": "mdl_grounded_summary_v1",
+      "model_key": "grounded-pack-review",
+      "version": "phase5-deterministic-v1",
+      "task": "grounded_summary",
+      "status": "active",
+      "metrics": {
+        "citation_coverage": 1.0,
+        "unsupported_claim_rate": 0.0
+      }
+    }
+  ]
+}

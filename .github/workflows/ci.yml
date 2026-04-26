@@ -1,0 +1,136 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  node:
+    name: Node / Contracts / Web
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: modcompat
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d modcompat"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      POSTGRES_URL: postgresql://postgres:postgres@127.0.0.1:5432/modcompat
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate API contracts
+        run: pnpm contracts:check
+
+      - name: Typecheck TypeScript workspace
+        run: pnpm typecheck
+
+      - name: Run Node test suites
+        run: pnpm test
+
+      - name: Run curated regression fixtures
+        run: pnpm test:regression
+
+      - name: Build web app
+        run: pnpm --filter @modcompat/web build
+
+  go:
+    name: Go / ${{ matrix.app }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        app:
+          - analysis-orchestrator
+          - graph
+          - recommendation
+          - resolver
+          - simulation
+    defaults:
+      run:
+        working-directory: apps/${{ matrix.app }}
+    env:
+      GOTELEMETRY: off
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: apps/${{ matrix.app }}/go.mod
+
+      - name: Run Go tests
+        run: go test ./...
+
+  python:
+    name: Python / ML
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: apps/ml/src
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run ML unit tests
+        run: python -m unittest discover -s apps/ml/tests -v
+
+  artifact-analysis:
+    name: JVM / Artifact Analysis
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/artifact-analysis
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.10.2
+
+      - name: Run artifact analysis tests
+        run: gradle test

@@ -1,0 +1,3 @@
+undefined
+C:\Users\simor\Documents\Mod_Compatibilities_Project\apps\evidence:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command failed with exit code 1: tsx src/index.ts

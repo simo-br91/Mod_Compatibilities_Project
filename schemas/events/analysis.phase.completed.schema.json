@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/events/analysis.phase.completed.schema.json",
+  "title": "analysis.phase.completed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "event_type",
+    "schema_version",
+    "occurred_at",
+    "correlation_id",
+    "trace_id",
+    "producer",
+    "payload"
+  ],
+  "properties": {
+    "event_id": { "type": "string" },
+    "event_type": { "const": "analysis.phase.completed" },
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "correlation_id": { "type": "string" },
+    "trace_id": { "type": "string" },
+    "tenant_id": { "type": "string" },
+    "organization_id": { "type": "string" },
+    "workspace_id": { "type": "string" },
+    "project_id": { "type": "string" },
+    "producer": { "type": "string" },
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["analysis_id", "phase", "status", "duration_ms"],
+      "properties": {
+        "analysis_id": { "type": "string" },
+        "phase": {
+          "type": "string",
+          "enum": [
+            "normalization",
+            "resolution",
+            "rule_evaluation",
+            "static_analysis",
+            "graph_enrichment",
+            "merge_findings",
+            "evidence_enrichment",
+            "simulation",
+            "pack_diff",
+            "risk_scoring",
+            "recommendation",
+            "release_gating",
+            "reporting"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["completed", "skipped", "failed"]
+        },
+        "duration_ms": { "type": "integer", "minimum": 0 },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["type", "id"],
+            "properties": {
+              "type": { "type": "string" },
+              "id": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

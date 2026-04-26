@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/calibrated-finding-score.schema.json",
+  "title": "CalibratedFindingScore",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "calibrated_finding_score_id",
+    "analysis_id",
+    "finding_id",
+    "model_id",
+    "original_confidence",
+    "calibrated_confidence",
+    "predicted_risk_score",
+    "rationale",
+    "created_at"
+  ],
+  "properties": {
+    "calibrated_finding_score_id": { "type": "string" },
+    "analysis_id": { "type": "string" },
+    "finding_id": { "type": "string" },
+    "model_id": { "type": "string" },
+    "original_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "calibrated_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "predicted_risk_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "rationale": { "type": "array", "items": { "type": "string" } },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

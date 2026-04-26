@@ -1,0 +1,150 @@
+{
+  "connectors": [
+    {
+      "connectorName": "github",
+      "sourceType": "github",
+      "trustTier": "maintainer",
+      "records": [
+        {
+          "connectorName": "github",
+          "externalDocumentId": "gh-optifine-sodium-001",
+          "kind": "github_issue",
+          "title": "OptiFine conflicts with Sodium rendering pipeline on Fabric 1.21.1",
+          "sourceUrl": "https://example.local/github/issues/gh-optifine-sodium-001",
+          "author": "mod-maintainer",
+          "publishedAt": "2025-12-01T12:00:00.000Z",
+          "updatedAt": "2025-12-02T09:30:00.000Z",
+          "tags": ["fabric", "rendering", "incompatibility"],
+          "relatedProjectIds": ["cp_optifine", "cp_sodium"],
+          "relatedVersionIds": ["ver_optifine_120", "ver_sodium_121"],
+          "findingTypes": ["declared_incompatibility", "mixin_overlap", "resource_collision"],
+          "body": "Maintainers confirmed that OptiFine shader hooks override the same Fabric rendering targets touched by Sodium. Reproductions on Fabric 1.21.1 show immediate startup instability or broken world rendering when both are present.",
+          "snippets": [
+            {
+              "kind": "summary",
+              "text": "Maintainers confirmed OptiFine and Sodium are incompatible on the supported Fabric baseline."
+            },
+            {
+              "kind": "reproduction",
+              "text": "Reproduction: Fabric 1.21.1 pack with Sodium 0.6.0 and OptiFine HD_U_I6 fails or renders corrupted chunks."
+            }
+          ],
+          "extractedRelations": [
+            {
+              "relationType": "incompatible_with",
+              "subject": "cp_optifine",
+              "object": "cp_sodium",
+              "confidence": 0.98
+            }
+          ]
+        },
+        {
+          "connectorName": "github",
+          "externalDocumentId": "gh-optifine-sodium-002",
+          "kind": "github_discussion",
+          "title": "Updated maintainer guidance: prefer Sodium/Lithium instead of OptiFine on Fabric",
+          "sourceUrl": "https://example.local/github/discussions/gh-optifine-sodium-002",
+          "author": "release-manager",
+          "publishedAt": "2026-01-15T08:00:00.000Z",
+          "tags": ["fabric", "guidance", "replacement"],
+          "relatedProjectIds": ["cp_optifine", "cp_sodium", "cp_lithium"],
+          "relatedVersionIds": ["ver_sodium_121", "ver_lithium_121"],
+          "findingTypes": ["declared_incompatibility"],
+          "body": "This guidance supersedes older community advice. For Fabric packs, maintainers recommend Sodium and Lithium instead of OptiFine due to repeated rendering conflicts.",
+          "snippets": [
+            {
+              "kind": "resolution",
+              "text": "For Fabric, replace OptiFine with Sodium and Lithium rather than trying to keep both optimization stacks."
+            }
+          ],
+          "relationHints": [
+            {
+              "type": "supersedes",
+              "targetExternalDocumentId": "gh-optifine-sodium-001"
+            }
+          ],
+          "extractedRelations": [
+            {
+              "relationType": "recommended_replacement",
+              "subject": "cp_optifine",
+              "object": "cp_sodium",
+              "confidence": 0.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "connectorName": "curated-community",
+      "sourceType": "curated_community",
+      "trustTier": "curated",
+      "records": [
+        {
+          "connectorName": "curated-community",
+          "externalDocumentId": "cur-optifine-sodium-001",
+          "kind": "curated_post",
+          "title": "Curated pack testing notes: OptiFine duplicates Sodium shader resources",
+          "sourceUrl": "https://example.local/curated/posts/cur-optifine-sodium-001",
+          "author": "compat-analyst",
+          "publishedAt": "2026-02-10T10:00:00.000Z",
+          "tags": ["curated", "resource-collision"],
+          "relatedProjectIds": ["cp_optifine", "cp_sodium"],
+          "relatedVersionIds": ["ver_optifine_120", "ver_sodium_121"],
+          "findingTypes": ["resource_collision", "embedded_library_divergence"],
+          "body": "Curated replayable pack fixtures show both mods ship overlapping shader resource paths and divergent LWJGL embeddings. This supports the static-analysis overlap signal.",
+          "snippets": [
+            {
+              "kind": "summary",
+              "text": "Fixture replay confirms overlapping shader resources and divergent LWJGL libraries between OptiFine and Sodium."
+            },
+            {
+              "kind": "status_update",
+              "text": "This post consolidates multiple test runs and is kept as the curated reference for Phase 3."
+            }
+          ],
+          "extractedRelations": [
+            {
+              "relationType": "incompatible_with",
+              "subject": "cp_optifine",
+              "object": "cp_sodium",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "connectorName": "curated-community",
+          "externalDocumentId": "cur-optifine-sodium-legacy",
+          "kind": "curated_post",
+          "title": "Legacy workaround report for OptiFine with Sodium",
+          "sourceUrl": "https://example.local/curated/posts/cur-optifine-sodium-legacy",
+          "author": "old-thread-import",
+          "publishedAt": "2024-03-01T08:00:00.000Z",
+          "tags": ["legacy", "contradicted"],
+          "relatedProjectIds": ["cp_optifine", "cp_sodium"],
+          "findingTypes": ["declared_incompatibility"],
+          "body": "An old report claimed a local workaround made the combination usable, but it was not reproducible on the maintained Fabric baseline.",
+          "snippets": [
+            {
+              "kind": "problem_statement",
+              "text": "Older community comments suggested a workaround, but the result was inconsistent."
+            }
+          ],
+          "relationHints": [
+            {
+              "type": "contradicts",
+              "targetExternalDocumentId": "cur-optifine-sodium-001"
+            }
+          ],
+          "extractedRelations": [
+            {
+              "relationType": "contradicts",
+              "subject": "cur-optifine-sodium-legacy",
+              "object": "cur-optifine-sodium-001",
+              "confidence": 0.82
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

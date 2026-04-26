@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/events/analysis.requested.schema.json",
+  "title": "analysis.requested",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "event_type",
+    "schema_version",
+    "occurred_at",
+    "correlation_id",
+    "trace_id",
+    "producer",
+    "payload"
+  ],
+  "properties": {
+    "event_id": { "type": "string" },
+    "event_type": { "const": "analysis.requested" },
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "correlation_id": { "type": "string" },
+    "trace_id": { "type": "string" },
+    "tenant_id": { "type": "string" },
+    "organization_id": { "type": "string" },
+    "workspace_id": { "type": "string" },
+    "project_id": { "type": "string" },
+    "producer": { "type": "string" },
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "analysis_id",
+        "trigger",
+        "analysis_mode",
+        "input_ref",
+        "environment"
+      ],
+      "properties": {
+        "analysis_id": { "type": "string" },
+        "trigger": {
+          "type": "string",
+          "enum": ["manual", "webhook", "scheduled", "api"]
+        },
+        "analysis_mode": {
+          "type": "string",
+          "enum": ["fast", "standard", "deep"]
+        },
+        "input_ref": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "id"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["pack_snapshot", "import", "manifest", "uploaded_mods"]
+            },
+            "id": { "type": "string" }
+          }
+        },
+        "environment": {
+          "$ref": "../json/analysis.environment.schema.json"
+        },
+        "options": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "run_simulation": { "type": "boolean" },
+            "include_alternatives": { "type": "boolean" },
+            "include_low_confidence": { "type": "boolean" }
+          }
+        }
+      }
+    }
+  }
+}
+

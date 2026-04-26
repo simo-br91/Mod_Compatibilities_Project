@@ -1,0 +1,13 @@
+{
+  "environment": {
+    "minecraftVersion": "1.21.1",
+    "loader": "fabric",
+    "javaVersion": "21",
+    "side": "both"
+  },
+  "mods": [
+    { "name": "sodium", "version": "0.6.0+mc1.21.1" },
+    { "name": "optifine", "version": "HD_U_I6" },
+    { "name": "modmenu", "version": "11.0.2" }
+  ]
+}

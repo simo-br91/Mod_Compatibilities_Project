@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/source-sync-run.schema.json",
+  "title": "SourceSyncRun",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sync_run_id",
+    "connector_id",
+    "status",
+    "started_at",
+    "stats"
+  ],
+  "properties": {
+    "sync_run_id": { "type": "string" },
+    "connector_id": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["queued", "running", "completed", "failed"]
+    },
+    "started_at": { "type": "string", "format": "date-time" },
+    "finished_at": { "type": "string", "format": "date-time" },
+    "checkpoint": { "type": "object", "additionalProperties": true },
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_payload_count",
+        "document_count",
+        "snippet_count",
+        "contradiction_count",
+        "supersession_count"
+      ],
+      "properties": {
+        "raw_payload_count": { "type": "integer", "minimum": 0 },
+        "document_count": { "type": "integer", "minimum": 0 },
+        "snippet_count": { "type": "integer", "minimum": 0 },
+        "contradiction_count": { "type": "integer", "minimum": 0 },
+        "supersession_count": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

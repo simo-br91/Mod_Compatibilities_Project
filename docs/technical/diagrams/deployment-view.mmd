@@ -1,0 +1,39 @@
+flowchart TB
+  subgraph edge[Edge]
+    cdn[CDN]
+    waf[WAF]
+    ingress[Ingress]
+  end
+
+  subgraph cluster[Kubernetes / EKS]
+    web[Next.js Web]
+    api[API Gateway]
+    svc1[Catalog Service]
+    svc2[Resolver Service]
+    svc3[Static Analysis Service]
+    svc4[Recommendation Service]
+    svc5[Notification Service]
+    jobs[Workflow Workers]
+  end
+
+  subgraph data[Managed Data]
+    pg[(RDS PostgreSQL)]
+    redis[(Redis)]
+    os[(OpenSearch)]
+    graph[(Neo4j)]
+    obj[(S3)]
+    kafka[(Kafka)]
+  end
+
+  cdn --> waf --> ingress --> web
+  ingress --> api
+  api --> svc1
+  api --> svc2
+  api --> svc4
+  api --> pg
+  jobs --> kafka
+  jobs --> obj
+  jobs --> os
+  jobs --> graph
+  jobs --> pg
+  jobs --> redis

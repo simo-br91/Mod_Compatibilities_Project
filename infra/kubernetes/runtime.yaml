@@ -1,0 +1,426 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: artifact-analysis
+  namespace: modcompat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: artifact-analysis
+  template:
+    metadata:
+      labels:
+        app: artifact-analysis
+    spec:
+      serviceAccountName: modcompat-runtime
+      containers:
+        - name: artifact-analysis
+          image: modcompat/artifact-analysis:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9090
+              name: http
+          envFrom:
+            - configMapRef:
+                name: modcompat-runtime-config
+            - secretRef:
+                name: modcompat-runtime-secrets
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: artifact-analysis
+  namespace: modcompat
+spec:
+  selector:
+    app: artifact-analysis
+  ports:
+    - port: 9090
+      targetPort: http
+      name: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: evidence
+  namespace: modcompat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: evidence
+  template:
+    metadata:
+      labels:
+        app: evidence
+    spec:
+      serviceAccountName: modcompat-runtime
+      containers:
+        - name: evidence
+          image: modcompat/evidence:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8081
+              name: http
+          envFrom:
+            - configMapRef:
+                name: modcompat-runtime-config
+            - secretRef:
+                name: modcompat-runtime-secrets
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 150m
+              memory: 256Mi
+            limits:
+              cpu: 1000m
+              memory: 768Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: evidence
+  namespace: modcompat
+spec:
+  selector:
+    app: evidence
+  ports:
+    - port: 8081
+      targetPort: http
+      name: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin
+  namespace: modcompat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: admin
+  template:
+    metadata:
+      labels:
+        app: admin
+    spec:
+      serviceAccountName: modcompat-runtime
+      containers:
+        - name: admin
+          image: modcompat/admin:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8082
+              name: http
+          envFrom:
+            - configMapRef:
+                name: modcompat-runtime-config
+            - secretRef:
+                name: modcompat-runtime-secrets
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 150m
+              memory: 256Mi
+            limits:
+              cpu: 1000m
+              memory: 768Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: admin
+  namespace: modcompat
+spec:
+  selector:
+    app: admin
+  ports:
+    - port: 8082
+      targetPort: http
+      name: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: analysis-orchestrator
+  namespace: modcompat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: analysis-orchestrator
+  template:
+    metadata:
+      labels:
+        app: analysis-orchestrator
+    spec:
+      serviceAccountName: modcompat-runtime
+      containers:
+        - name: analysis-orchestrator
+          image: modcompat/analysis-orchestrator:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8086
+              name: http
+          envFrom:
+            - configMapRef:
+                name: modcompat-runtime-config
+            - secretRef:
+                name: modcompat-runtime-secrets
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 25
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 250m
+              memory: 384Mi
+            limits:
+              cpu: 1500m
+              memory: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: analysis-orchestrator
+  namespace: modcompat
+spec:
+  selector:
+    app: analysis-orchestrator
+  ports:
+    - port: 8086
+      targetPort: http
+      name: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendation
+  namespace: modcompat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: recommendation
+  template:
+    metadata:
+      labels:
+        app: recommendation
+    spec:
+      serviceAccountName: modcompat-runtime
+      containers:
+        - name: recommendation
+          image: modcompat/recommendation:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8083
+              name: http
+          envFrom:
+            - configMapRef:
+                name: modcompat-runtime-config
+            - secretRef:
+                name: modcompat-runtime-secrets
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 384Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: recommendation
+  namespace: modcompat
+spec:
+  selector:
+    app: recommendation
+  ports:
+    - port: 8083
+      targetPort: http
+      name: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graph
+  namespace: modcompat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: graph
+  template:
+    metadata:
+      labels:
+        app: graph
+    spec:
+      serviceAccountName: modcompat-runtime
+      containers:
+        - name: graph
+          image: modcompat/graph:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8084
+              name: http
+          envFrom:
+            - configMapRef:
+                name: modcompat-runtime-config
+            - secretRef:
+                name: modcompat-runtime-secrets
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 384Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: graph
+  namespace: modcompat
+spec:
+  selector:
+    app: graph
+  ports:
+    - port: 8084
+      targetPort: http
+      name: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simulation
+  namespace: modcompat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simulation
+  template:
+    metadata:
+      labels:
+        app: simulation
+    spec:
+      serviceAccountName: modcompat-runtime
+      containers:
+        - name: simulation
+          image: modcompat/simulation:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8085
+              name: http
+          envFrom:
+            - configMapRef:
+                name: modcompat-runtime-config
+            - secretRef:
+                name: modcompat-runtime-secrets
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 384Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simulation
+  namespace: modcompat
+spec:
+  selector:
+    app: simulation
+  ports:
+    - port: 8085
+      targetPort: http
+      name: http

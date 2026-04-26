@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/supported-coverage-scope.schema.json",
+  "title": "SupportedCoverageScope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "coverage_scope_id",
+    "snapshot_version",
+    "status",
+    "supported_minecraft_versions",
+    "supported_loaders",
+    "supported_project_ids",
+    "version_freshness_window_days",
+    "created_at"
+  ],
+  "properties": {
+    "coverage_scope_id": { "type": "string" },
+    "snapshot_version": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": [
+        "high_confidence_coverage",
+        "best_effort_coverage",
+        "outside_validated_coverage"
+      ]
+    },
+    "supported_minecraft_versions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "supported_loaders": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["forge", "fabric", "quilt", "neoforge", "unknown"]
+      }
+    },
+    "supported_project_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "version_freshness_window_days": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "notes": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

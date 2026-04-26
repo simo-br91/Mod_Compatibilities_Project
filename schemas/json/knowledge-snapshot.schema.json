@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/knowledge-snapshot.schema.json",
+  "title": "KnowledgeSnapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "snapshot_id",
+    "version",
+    "status",
+    "created_at",
+    "components"
+  ],
+  "properties": {
+    "snapshot_id": { "type": "string" },
+    "version": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "validated", "approved", "promoted", "rolled_back"]
+    },
+    "coverage_scope_id": { "type": "string" },
+    "validation_report_id": { "type": "string" },
+    "activated_at": { "type": "string", "format": "date-time" },
+    "created_by": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["component_type", "record_count", "checksum"],
+        "properties": {
+          "component_type": {
+            "type": "string",
+            "enum": [
+              "catalog",
+              "verified_rules",
+              "promoted_claims",
+              "technical_signatures",
+              "pairwise_matrix",
+              "fragment_cache",
+              "exact_pack_cache",
+              "coverage_scope"
+            ]
+          },
+          "record_count": { "type": "integer", "minimum": 0 },
+          "checksum": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/artifact-analysis.schema.json",
+  "title": "ArtifactAnalysis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_analysis_id",
+    "analysis_id",
+    "pack_snapshot_id",
+    "project_id",
+    "metadata",
+    "class_targets",
+    "resource_targets",
+    "mixin_targets",
+    "embedded_libraries",
+    "fingerprint"
+  ],
+  "properties": {
+    "artifact_analysis_id": { "type": "string" },
+    "analysis_id": { "type": "string" },
+    "pack_snapshot_id": { "type": "string" },
+    "project_id": { "type": "string" },
+    "version_id": { "type": "string" },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_id", "name", "loader_hints", "mixin_config_files"],
+      "properties": {
+        "artifact_id": { "type": "string" },
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "loader_hints": { "type": "array", "items": { "type": "string" } },
+        "mixin_config_files": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "class_targets": { "type": "array", "items": { "$ref": "#/$defs/target" } },
+    "resource_targets": { "type": "array", "items": { "$ref": "#/$defs/target" } },
+    "mixin_targets": { "type": "array", "items": { "$ref": "#/$defs/target" } },
+    "embedded_libraries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["owner_artifact_id", "coordinates", "package_hints"],
+        "properties": {
+          "owner_artifact_id": { "type": "string" },
+          "coordinates": { "type": "string" },
+          "package_hints": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "fingerprint": { "type": "string" }
+  },
+  "$defs": {
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner_artifact_id", "target"],
+      "properties": {
+        "owner_artifact_id": { "type": "string" },
+        "target": { "type": "string" }
+      }
+    }
+  }
+}

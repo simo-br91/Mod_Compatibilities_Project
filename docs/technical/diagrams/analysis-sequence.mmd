@@ -1,0 +1,31 @@
+sequenceDiagram
+  participant U as User/API
+  participant G as API Gateway
+  participant O as Analysis Orchestrator
+  participant R as Resolver
+  participant S as Static Analysis
+  participant K as Graph Service
+  participant E as Evidence Retrieval
+  participant M as ML Service
+  participant X as Simulation
+  participant P as Postgres
+
+  U->>G: Create analysis
+  G->>O: analysis.requested
+  O->>R: normalize and resolve pack
+  R-->>O: resolved pack model + hard conflicts
+  O->>S: analyze artifacts in parallel
+  S-->>O: static overlap signals
+  O->>K: fetch graph neighborhood
+  K-->>O: relationship context
+  O->>E: retrieve evidence bundle
+  E-->>O: normalized evidence
+  O->>M: score risks and rank candidates
+  M-->>O: predictions + confidence inputs
+  alt simulation enabled
+    O->>X: run smoke test
+    X-->>O: simulation outcomes
+  end
+  O->>P: persist findings and report
+  O-->>G: completed analysis summary
+  G-->>U: report ready

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/events/recommendation.generated.schema.json",
+  "title": "recommendation.generated",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "event_type",
+    "schema_version",
+    "occurred_at",
+    "correlation_id",
+    "trace_id",
+    "producer",
+    "payload"
+  ],
+  "properties": {
+    "event_id": { "type": "string" },
+    "event_type": { "const": "recommendation.generated" },
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "correlation_id": { "type": "string" },
+    "trace_id": { "type": "string" },
+    "tenant_id": { "type": "string" },
+    "organization_id": { "type": "string" },
+    "workspace_id": { "type": "string" },
+    "project_id": { "type": "string" },
+    "producer": { "type": "string" },
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["analysis_id", "recommendation_set_id", "recommendations", "recommendation_set"],
+      "properties": {
+        "analysis_id": { "type": "string" },
+        "recommendation_set_id": { "type": "string" },
+        "recommendation_set": {
+          "$ref": "../json/recommendation-set.schema.json"
+        },
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "$ref": "../json/recommendation.schema.json"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1397 @@
+{
+  "https://modrinth.com/mod/cloth-config": {
+    "contentHash": "fa12ec3cd5c2bc15",
+    "fetchedAt": "2026-04-25T12:34:42.242Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/jei": {
+    "contentHash": "983f3b6ea59ab8a8",
+    "fetchedAt": "2026-04-25T12:34:42.200Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/konkrete": {
+    "contentHash": "a99f284f92a83bfa",
+    "fetchedAt": "2026-04-25T12:34:41.861Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/ferrite-core": {
+    "contentHash": "426b77511a198d71",
+    "fetchedAt": "2026-04-25T12:34:41.881Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/entitytexturefeatures": {
+    "contentHash": "1bb5af7012e9dd84",
+    "fetchedAt": "2026-04-25T12:34:41.881Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/immediatelyfast": {
+    "contentHash": "2aaf4741cd211c77",
+    "fetchedAt": "2026-04-25T12:34:43.068Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/entity-model-features": {
+    "contentHash": "f62887f5cfb6240c",
+    "fetchedAt": "2026-04-25T12:35:01.990Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/melody": {
+    "contentHash": "40fde3f32a008e79",
+    "fetchedAt": "2026-04-25T12:34:42.100Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/xaeros-minimap": {
+    "contentHash": "8e9de44ef01ca5eb",
+    "fetchedAt": "2026-04-25T12:34:41.854Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/modernfix": {
+    "contentHash": "0ecfeb83c77bce3b",
+    "fetchedAt": "2026-04-25T12:34:42.121Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/uXXizFIs/versions#9.0.0-fabric": {
+    "contentHash": "040bc3ac596757e9",
+    "fetchedAt": "2026-04-25T12:34:41.979Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/uXXizFIs/versions#9.0.0-neoforge": {
+    "contentHash": "040bc3ac596757e9",
+    "fetchedAt": "2026-04-25T12:34:41.979Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/uXXizFIs/versions#8.2.0-fabric": {
+    "contentHash": "52834753991509b0",
+    "fetchedAt": "2026-04-25T12:34:41.979Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/uXXizFIs/versions#8.2.0-neoforge": {
+    "contentHash": "52834753991509b0",
+    "fetchedAt": "2026-04-25T12:34:41.979Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/uXXizFIs/versions#8.1.0-fabric": {
+    "contentHash": "44d248aa2c37546e",
+    "fetchedAt": "2026-04-25T12:34:41.979Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/uXXizFIs/versions#8.1.0-neoforge": {
+    "contentHash": "44d248aa2c37546e",
+    "fetchedAt": "2026-04-25T12:34:41.979Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/uXXizFIs/versions#8.0.4-fabric": {
+    "contentHash": "f8777717d35a3610",
+    "fetchedAt": "2026-04-25T12:34:41.979Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/uXXizFIs/versions#8.0.4-neoforge": {
+    "contentHash": "f8777717d35a3610",
+    "fetchedAt": "2026-04-25T12:34:41.979Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/J81TRJWm/versions#1.10.1-26.1.1-neoforge": {
+    "contentHash": "19d68d917b5fb894",
+    "fetchedAt": "2026-04-25T12:34:41.965Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/J81TRJWm/versions#1.10.1-26.1.1-fabric": {
+    "contentHash": "19d68d917b5fb894",
+    "fetchedAt": "2026-04-25T12:34:41.965Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/J81TRJWm/versions#1.10.0-26.1.1-neoforge": {
+    "contentHash": "19d68d917b5fb894",
+    "fetchedAt": "2026-04-25T12:34:41.965Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/J81TRJWm/versions#1.10.0-26.1.1-fabric": {
+    "contentHash": "19d68d917b5fb894",
+    "fetchedAt": "2026-04-25T12:34:41.965Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/J81TRJWm/versions#1.9.19-26.1.1-neoforge": {
+    "contentHash": "19d68d917b5fb894",
+    "fetchedAt": "2026-04-25T12:34:41.965Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/J81TRJWm/versions#1.9.19-26.1.1-fabric": {
+    "contentHash": "19d68d917b5fb894",
+    "fetchedAt": "2026-04-25T12:34:41.965Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/J81TRJWm/versions#1.9.18-1.21.11-neoforge": {
+    "contentHash": "19d68d917b5fb894",
+    "fetchedAt": "2026-04-25T12:34:41.965Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/J81TRJWm/versions#1.9.18-1.21.11-fabric": {
+    "contentHash": "19d68d917b5fb894",
+    "fetchedAt": "2026-04-25T12:34:41.965Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/CVT4pFB2/versions#1.0.16-26.1.1-neoforge": {
+    "contentHash": "c78c728437574741",
+    "fetchedAt": "2026-04-25T12:34:42.134Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/CVT4pFB2/versions#1.0.16-26.1.1-fabric": {
+    "contentHash": "c78c728437574741",
+    "fetchedAt": "2026-04-25T12:34:42.134Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/CVT4pFB2/versions#1.0.15-1.21.11-neoforge": {
+    "contentHash": "c78c728437574741",
+    "fetchedAt": "2026-04-25T12:34:42.134Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/CVT4pFB2/versions#1.0.15-1.21.11-fabric": {
+    "contentHash": "c78c728437574741",
+    "fetchedAt": "2026-04-25T12:34:42.134Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/CVT4pFB2/versions#1.0.14-1.21.10-neoforge": {
+    "contentHash": "220bbcd64a39ceb1",
+    "fetchedAt": "2026-04-25T12:34:42.134Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/CVT4pFB2/versions#1.0.14-1.21.10-fabric": {
+    "contentHash": "220bbcd64a39ceb1",
+    "fetchedAt": "2026-04-25T12:34:42.134Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/CVT4pFB2/versions#1.0.13-1.21.10-neoforge": {
+    "contentHash": "220bbcd64a39ceb1",
+    "fetchedAt": "2026-04-25T12:34:42.134Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/CVT4pFB2/versions#1.0.13-1.21.10-fabric": {
+    "contentHash": "220bbcd64a39ceb1",
+    "fetchedAt": "2026-04-25T12:34:42.134Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/u6dRKJwZ/versions#29.5.0.26": {
+    "contentHash": "ee84d668d8252c1e",
+    "fetchedAt": "2026-04-25T12:34:42.366Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/u6dRKJwZ/versions#15.20.0.130": {
+    "contentHash": "471d1e249e3e66a1",
+    "fetchedAt": "2026-04-25T12:34:42.366Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/u6dRKJwZ/versions#29.5.0.25": {
+    "contentHash": "586b86c7067b35ed",
+    "fetchedAt": "2026-04-25T12:34:42.366Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/u6dRKJwZ/versions#29.5.0.24": {
+    "contentHash": "27b2b94e00f9711f",
+    "fetchedAt": "2026-04-25T12:34:42.366Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/4I1XuqiY/versions#3.1.1-fabric-26.1": {
+    "contentHash": "8f9fcd83efed5303",
+    "fetchedAt": "2026-04-25T12:35:02.067Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/4I1XuqiY/versions#3.1.1-neoforge-26.1": {
+    "contentHash": "8f9fcd83efed5303",
+    "fetchedAt": "2026-04-25T12:35:02.067Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/4I1XuqiY/versions#3.1.1-fabric-1.21.11": {
+    "contentHash": "8f9fcd83efed5303",
+    "fetchedAt": "2026-04-25T12:35:02.067Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/4I1XuqiY/versions#3.1.1-neoforge-1.21.11": {
+    "contentHash": "8f9fcd83efed5303",
+    "fetchedAt": "2026-04-25T12:35:02.067Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/4I1XuqiY/versions#3.1.1-forge-1.21.11": {
+    "contentHash": "8f9fcd83efed5303",
+    "fetchedAt": "2026-04-25T12:35:02.067Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/4I1XuqiY/versions#3.1.1-fabric-1.21.9": {
+    "contentHash": "8f9fcd83efed5303",
+    "fetchedAt": "2026-04-25T12:35:02.067Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/4I1XuqiY/versions#3.1.1-neoforge-1.21.9": {
+    "contentHash": "8f9fcd83efed5303",
+    "fetchedAt": "2026-04-25T12:35:02.067Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/4I1XuqiY/versions#3.1.1-forge-1.21.9": {
+    "contentHash": "8f9fcd83efed5303",
+    "fetchedAt": "2026-04-25T12:35:02.067Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.6+mc26.1.2": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-25T12:34:42.229Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.8+mc1.20.1": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-25T12:34:42.229Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.7+mc1.20.1": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-25T12:34:42.229Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.5+mc26.1.2": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-21T22:28:00.491Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.2+mc1.21.1": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-21T22:28:00.491Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.6+mc1.20.1": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-21T22:28:00.491Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.4+mc26.1.2": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-21T22:28:00.491Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.4+mc1.20.1": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-21T22:28:00.491Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/1bokaNcj/versions#fabric-26.1.2-25.3.10": {
+    "contentHash": "4db3e7b84a93eff6",
+    "fetchedAt": "2026-04-25T12:34:41.973Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/1bokaNcj/versions#neoforge-26.1.2-25.3.10": {
+    "contentHash": "4db3e7b84a93eff6",
+    "fetchedAt": "2026-04-25T12:34:41.973Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/1bokaNcj/versions#fabric-1.21.11-25.3.10": {
+    "contentHash": "50b47595a0cd10b0",
+    "fetchedAt": "2026-04-25T12:34:41.973Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/1bokaNcj/versions#forge-1.21.11-25.3.10": {
+    "contentHash": "50b47595a0cd10b0",
+    "fetchedAt": "2026-04-25T12:34:41.973Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/1bokaNcj/versions#neoforge-1.21.11-25.3.10": {
+    "contentHash": "50b47595a0cd10b0",
+    "fetchedAt": "2026-04-25T12:34:41.973Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/1bokaNcj/versions#fabric-1.21.10-25.3.10": {
+    "contentHash": "50b47595a0cd10b0",
+    "fetchedAt": "2026-04-25T12:34:41.973Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/1bokaNcj/versions#forge-1.21.10-25.3.10": {
+    "contentHash": "50b47595a0cd10b0",
+    "fetchedAt": "2026-04-21T22:28:00.634Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/1bokaNcj/versions#neoforge-1.21.10-25.3.10": {
+    "contentHash": "50b47595a0cd10b0",
+    "fetchedAt": "2026-04-21T22:28:00.634Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/5ZwdcRci/versions#1.15.2+26.1.2-neoforge": {
+    "contentHash": "1c71659d517590b7",
+    "fetchedAt": "2026-04-25T12:34:43.138Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/5ZwdcRci/versions#1.15.2+26.1.2-fabric": {
+    "contentHash": "1c71659d517590b7",
+    "fetchedAt": "2026-04-25T12:34:43.138Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/5ZwdcRci/versions#1.15.1+26.1.1-fabric": {
+    "contentHash": "bc46b2cb5d264129",
+    "fetchedAt": "2026-04-25T12:34:43.138Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/5ZwdcRci/versions#1.15.1+26.1.1-neoforge": {
+    "contentHash": "bc46b2cb5d264129",
+    "fetchedAt": "2026-04-25T12:34:43.138Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/5ZwdcRci/versions#1.15.0+26.1-neoforge": {
+    "contentHash": "e10ad7c04b4719c5",
+    "fetchedAt": "2026-04-25T12:34:43.138Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/5ZwdcRci/versions#1.15.0+26.1-fabric": {
+    "contentHash": "e10ad7c04b4719c5",
+    "fetchedAt": "2026-04-25T12:34:43.138Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/5ZwdcRci/versions#1.14.2+1.21.11-neoforge": {
+    "contentHash": "c15d1beca9aa534d",
+    "fetchedAt": "2026-04-25T12:34:43.138Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/5ZwdcRci/versions#1.14.2+1.21.11-fabric": {
+    "contentHash": "c15d1beca9aa534d",
+    "fetchedAt": "2026-04-25T12:34:43.138Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/BVzZfTc1/versions#7.1-fabric-26.1": {
+    "contentHash": "7eaa17cef70e1c71",
+    "fetchedAt": "2026-04-25T12:34:41.991Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/BVzZfTc1/versions#7.1-neoforge-26.1": {
+    "contentHash": "7eaa17cef70e1c71",
+    "fetchedAt": "2026-04-25T12:34:41.991Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/BVzZfTc1/versions#7.1-fabric-1.21.11": {
+    "contentHash": "7eaa17cef70e1c71",
+    "fetchedAt": "2026-04-25T12:34:41.991Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/BVzZfTc1/versions#7.1-forge-1.21.11": {
+    "contentHash": "7eaa17cef70e1c71",
+    "fetchedAt": "2026-04-25T12:34:41.991Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/BVzZfTc1/versions#7.1-neoforge-1.21.11": {
+    "contentHash": "7eaa17cef70e1c71",
+    "fetchedAt": "2026-04-25T12:34:41.991Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/BVzZfTc1/versions#7.1-fabric-1.21.9": {
+    "contentHash": "7eaa17cef70e1c71",
+    "fetchedAt": "2026-04-25T12:34:41.991Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/BVzZfTc1/versions#7.1-neoforge-1.21.9": {
+    "contentHash": "7eaa17cef70e1c71",
+    "fetchedAt": "2026-04-25T12:34:41.991Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/BVzZfTc1/versions#7.1-forge-1.21.9": {
+    "contentHash": "7eaa17cef70e1c71",
+    "fetchedAt": "2026-04-25T12:34:41.991Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/410295": {
+    "contentHash": "e6e69dd2ff34eb0d",
+    "fetchedAt": "2026-04-25T12:34:41.339Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/429235": {
+    "contentHash": "2b3f33b33df85d0b",
+    "fetchedAt": "2026-04-25T12:34:41.389Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/790626": {
+    "contentHash": "ccbea34cf70132ea",
+    "fetchedAt": "2026-04-25T12:34:41.469Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/844662": {
+    "contentHash": "ebde68535e9df2e5",
+    "fetchedAt": "2026-04-25T12:35:01.375Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/568563": {
+    "contentHash": "116ec0d2ed51c436",
+    "fetchedAt": "2026-04-25T12:34:41.378Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/686911": {
+    "contentHash": "014582eba4fa12d5",
+    "fetchedAt": "2026-04-25T12:34:42.681Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/fancymenu": {
+    "contentHash": "46e915ed4097c843",
+    "fetchedAt": "2026-04-25T12:35:11.309Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/jade": {
+    "contentHash": "b14d217794ae2f61",
+    "fetchedAt": "2026-04-25T12:34:50.155Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/geckolib": {
+    "contentHash": "9782a024bb60ddfb",
+    "fetchedAt": "2026-04-25T12:34:42.956Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/Wq5SjeWM/versions#3.8.6-26.1.1-neoforge": {
+    "contentHash": "3f35f89018c1c846",
+    "fetchedAt": "2026-04-25T12:35:11.456Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/Wq5SjeWM/versions#3.8.6-26.1.1-fabric": {
+    "contentHash": "3f35f89018c1c846",
+    "fetchedAt": "2026-04-25T12:35:11.456Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/Wq5SjeWM/versions#3.8.5-26.1.1-neoforge": {
+    "contentHash": "3f35f89018c1c846",
+    "fetchedAt": "2026-04-25T12:35:11.456Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/Wq5SjeWM/versions#3.8.5-26.1.1-fabric": {
+    "contentHash": "3f35f89018c1c846",
+    "fetchedAt": "2026-04-25T12:35:11.456Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/Wq5SjeWM/versions#3.8.4-1.21.11-neoforge": {
+    "contentHash": "3f35f89018c1c846",
+    "fetchedAt": "2026-04-25T12:35:11.456Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/Wq5SjeWM/versions#3.8.4-1.21.11-fabric": {
+    "contentHash": "3f35f89018c1c846",
+    "fetchedAt": "2026-04-25T12:35:11.456Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/Wq5SjeWM/versions#3.8.3-1.21.11-neoforge": {
+    "contentHash": "3f35f89018c1c846",
+    "fetchedAt": "2026-04-25T12:35:11.456Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/Wq5SjeWM/versions#3.8.3-1.21.11-fabric": {
+    "contentHash": "3f35f89018c1c846",
+    "fetchedAt": "2026-04-25T12:35:11.456Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nvQzSEkH/versions#21.1.7+neoforge": {
+    "contentHash": "58b12c3655de7cbc",
+    "fetchedAt": "2026-04-25T12:34:50.224Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nvQzSEkH/versions#26.0.10+neoforge": {
+    "contentHash": "0da98d06d016095f",
+    "fetchedAt": "2026-04-25T12:34:50.224Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nvQzSEkH/versions#26.0.9+neoforge": {
+    "contentHash": "aa1d48a27f6379a5",
+    "fetchedAt": "2026-04-25T12:34:50.224Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nvQzSEkH/versions#21.1.6+fabric": {
+    "contentHash": "34f5aea1b4a952b3",
+    "fetchedAt": "2026-04-25T12:34:50.224Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nvQzSEkH/versions#21.1.6+neoforge": {
+    "contentHash": "d097eb1db859d6c8",
+    "fetchedAt": "2026-04-25T12:34:50.224Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nvQzSEkH/versions#21.1.5+neoforge": {
+    "contentHash": "a3daf611a9d40e6f",
+    "fetchedAt": "2026-04-25T12:34:50.224Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nvQzSEkH/versions#21.1.5+fabric": {
+    "contentHash": "19d1272a6e38e8aa",
+    "fetchedAt": "2026-04-25T12:34:50.224Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nvQzSEkH/versions#26.0.8+fabric": {
+    "contentHash": "89203766b00946a3",
+    "fetchedAt": "2026-04-25T12:34:50.224Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/8BmcQJ2H/versions#5.5.1": {
+    "contentHash": "0c723ca01fb3384a",
+    "fetchedAt": "2026-04-25T12:34:43.013Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/8BmcQJ2H/versions#5.5": {
+    "contentHash": "451ff4b3824e134d",
+    "fetchedAt": "2026-04-25T12:34:43.013Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/8BmcQJ2H/versions#4.8.4": {
+    "contentHash": "e86ae7d25e02e314",
+    "fetchedAt": "2026-04-25T12:34:43.013Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/8BmcQJ2H/versions#5.4.5": {
+    "contentHash": "f3558f1f8fe1ad97",
+    "fetchedAt": "2026-04-25T12:34:43.013Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/xaeros-world-map": {
+    "contentHash": "efd1f204720b8593",
+    "fetchedAt": "2026-04-25T12:34:43.215Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/NcUtCpym/versions#fabric-26.1.2-1.40.14": {
+    "contentHash": "4db3e7b84a93eff6",
+    "fetchedAt": "2026-04-25T12:34:43.327Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/NcUtCpym/versions#neoforge-26.1.2-1.40.14": {
+    "contentHash": "4db3e7b84a93eff6",
+    "fetchedAt": "2026-04-25T12:34:43.327Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/NcUtCpym/versions#fabric-1.21.11-1.40.11": {
+    "contentHash": "c5dbef98d55bb74c",
+    "fetchedAt": "2026-04-25T12:34:43.327Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/NcUtCpym/versions#forge-1.21.11-1.40.11": {
+    "contentHash": "c5dbef98d55bb74c",
+    "fetchedAt": "2026-04-25T12:34:43.327Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/NcUtCpym/versions#neoforge-1.21.11-1.40.11": {
+    "contentHash": "c5dbef98d55bb74c",
+    "fetchedAt": "2026-04-25T12:34:43.327Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/NcUtCpym/versions#fabric-1.21.10-1.40.11": {
+    "contentHash": "c5dbef98d55bb74c",
+    "fetchedAt": "2026-04-25T12:34:43.327Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/NcUtCpym/versions#forge-1.21.10-1.40.11": {
+    "contentHash": "c5dbef98d55bb74c",
+    "fetchedAt": "2026-04-25T12:34:43.327Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/NcUtCpym/versions#neoforge-1.21.10-1.40.11": {
+    "contentHash": "c5dbef98d55bb74c",
+    "fetchedAt": "2026-04-21T22:28:01.896Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/oculus": {
+    "contentHash": "437f1950e7c694c4",
+    "fetchedAt": "2026-04-25T12:34:43.055Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/GchcoXML/versions#1.19.2-1.6.9a": {
+    "contentHash": "b133bc100fbb140e",
+    "fetchedAt": "2026-04-25T12:34:43.091Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/GchcoXML/versions#1.20.1-1.8.0": {
+    "contentHash": "f66f6d38b778528a",
+    "fetchedAt": "2026-04-25T12:34:43.091Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/GchcoXML/versions#1.20.1-1.7.0": {
+    "contentHash": "0f1ec90689fedf87",
+    "fetchedAt": "2026-04-25T12:34:43.091Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/GchcoXML/versions#1.16.5-1.4.8": {
+    "contentHash": "46e75ff362b88ade",
+    "fetchedAt": "2026-04-25T12:34:43.091Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/GchcoXML/versions#1.20.1-1.6.15a": {
+    "contentHash": "8324192f3ac12c54",
+    "fetchedAt": "2026-04-25T12:34:43.091Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/GchcoXML/versions#1.20.1-1.16.5": {
+    "contentHash": "dab6cdae4451e2bf",
+    "fetchedAt": "2026-04-25T12:34:43.091Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/GchcoXML/versions#1.16.5-1.4.7": {
+    "contentHash": "dac264f68adb594d",
+    "fetchedAt": "2026-04-25T12:34:43.091Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/GchcoXML/versions#1.20.1-1.16.3": {
+    "contentHash": "d7ad02c9c3c03e66",
+    "fetchedAt": "2026-04-25T12:34:43.091Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/architectury-api": {
+    "contentHash": "ca0b7c51875981a6",
+    "fetchedAt": "2026-04-25T12:34:43.331Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/317780": {
+    "contentHash": "1b4386dcb10e1561",
+    "fetchedAt": "2026-04-25T12:34:42.778Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/balm": {
+    "contentHash": "bb2f8d7235d63eb4",
+    "fetchedAt": "2026-04-25T12:34:43.341Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/starlight-forge": {
+    "contentHash": "fc1f2e17004585c4",
+    "fetchedAt": "2026-04-25T12:34:43.443Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/lhGA9TYQ/versions#19.0.1+neoforge": {
+    "contentHash": "bc3c7935053c31f0",
+    "fetchedAt": "2026-04-25T12:34:43.390Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/lhGA9TYQ/versions#19.0.1+fabric": {
+    "contentHash": "bc3c7935053c31f0",
+    "fetchedAt": "2026-04-25T12:34:43.390Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/lhGA9TYQ/versions#18.0.8+neoforge": {
+    "contentHash": "2a4f30f7796195bf",
+    "fetchedAt": "2026-04-25T12:34:43.390Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/lhGA9TYQ/versions#18.0.8+fabric": {
+    "contentHash": "2a4f30f7796195bf",
+    "fetchedAt": "2026-04-25T12:34:43.390Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/lhGA9TYQ/versions#18.0.6+neoforge": {
+    "contentHash": "c086611d4f33b4fd",
+    "fetchedAt": "2026-04-25T12:34:43.390Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/lhGA9TYQ/versions#18.0.6+fabric": {
+    "contentHash": "c086611d4f33b4fd",
+    "fetchedAt": "2026-04-25T12:34:43.390Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/lhGA9TYQ/versions#18.0.5+neoforge": {
+    "contentHash": "2e2e57388b764e05",
+    "fetchedAt": "2026-04-25T12:34:43.390Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/lhGA9TYQ/versions#18.0.5+fabric": {
+    "contentHash": "2e2e57388b764e05",
+    "fetchedAt": "2026-04-25T12:34:43.390Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/terrablender": {
+    "contentHash": "efd9ab5a7e6d2487",
+    "fetchedAt": "2026-04-25T12:34:43.991Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/iRfIGC1s/versions#1.1.3+1.20.2": {
+    "contentHash": "d0f5f69fa1ece902",
+    "fetchedAt": "2026-04-25T12:34:43.475Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/iRfIGC1s/versions#1.1.2+1.20": {
+    "contentHash": "3c450c4bdae1ff39",
+    "fetchedAt": "2026-04-25T12:34:43.475Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/iRfIGC1s/versions#1.1.1+1.19": {
+    "contentHash": "93eb049218c09dd9",
+    "fetchedAt": "2026-04-25T12:34:43.475Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/iRfIGC1s/versions#1.0.2+1.18.2": {
+    "contentHash": "1cf26d2a4edf3ffe",
+    "fetchedAt": "2026-04-25T12:34:43.475Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/iRfIGC1s/versions#1.0.1+1.18.1": {
+    "contentHash": "bd064faf891a742e",
+    "fetchedAt": "2026-04-25T12:34:43.475Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#26.1.2.4+forge-26.1.2": {
+    "contentHash": "e30e3b550ea23141",
+    "fetchedAt": "2026-04-25T12:34:43.408Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#26.1.2.4+neoforge-26.1.2": {
+    "contentHash": "e30e3b550ea23141",
+    "fetchedAt": "2026-04-25T12:34:43.408Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#26.1.2.4+fabric-26.1.2": {
+    "contentHash": "e30e3b550ea23141",
+    "fetchedAt": "2026-04-25T12:34:43.408Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#26.1.2.3+forge-26.1.2": {
+    "contentHash": "502c410efab384b3",
+    "fetchedAt": "2026-04-25T12:34:43.408Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#26.1.2.3+neoforge-26.1.2": {
+    "contentHash": "502c410efab384b3",
+    "fetchedAt": "2026-04-25T12:34:43.408Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#26.1.2.3+fabric-26.1.2": {
+    "contentHash": "502c410efab384b3",
+    "fetchedAt": "2026-04-21T22:28:02.821Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#26.1.2.2+forge-26.1.2": {
+    "contentHash": "f4590fbb8155b49f",
+    "fetchedAt": "2026-04-21T22:28:02.821Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#26.1.2.2+neoforge-26.1.2": {
+    "contentHash": "f4590fbb8155b49f",
+    "fetchedAt": "2026-04-21T22:28:02.821Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/appleskin": {
+    "contentHash": "0776cb4ca3049fb9",
+    "fetchedAt": "2026-04-25T12:34:44.139Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/not-enough-animations": {
+    "contentHash": "1946f8904f15adba",
+    "fetchedAt": "2026-04-25T12:34:44.245Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/EsAfCjCV/versions#3.0.9+mc26.1": {
+    "contentHash": "302071252605ea60",
+    "fetchedAt": "2026-04-25T12:34:44.189Z",
+    "extractionStatus": "success"
+  },
+  "https://modrinth.com/mod/EsAfCjCV/versions#3.0.9+mc1.21": {
+    "contentHash": "187722a6916baa2a",
+    "fetchedAt": "2026-04-25T12:34:44.189Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/EsAfCjCV/versions#3.0.8+mc1.21.11": {
+    "contentHash": "8ad1bbd2f6ca8ca1",
+    "fetchedAt": "2026-04-25T12:34:44.189Z",
+    "extractionStatus": "success"
+  },
+  "https://modrinth.com/mod/EsAfCjCV/versions#3.0.8+mc1.21.9": {
+    "contentHash": "8ad1bbd2f6ca8ca1",
+    "fetchedAt": "2026-04-25T12:34:44.189Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/EsAfCjCV/versions#3.0.8+mc1.21.6": {
+    "contentHash": "8ad1bbd2f6ca8ca1",
+    "fetchedAt": "2026-04-25T12:34:44.189Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/EsAfCjCV/versions#3.0.8+mc1.21.5": {
+    "contentHash": "8ad1bbd2f6ca8ca1",
+    "fetchedAt": "2026-04-25T12:34:44.189Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/kkmrDlKT/versions#26.1.2.0.1": {
+    "contentHash": "1b53e62bcfbdd7e2",
+    "fetchedAt": "2026-04-25T12:34:44.061Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/kkmrDlKT/versions#26.1.2.0.0": {
+    "contentHash": "1b53e62bcfbdd7e2",
+    "fetchedAt": "2026-04-25T12:34:44.061Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/kkmrDlKT/versions#26.1.1.0.1": {
+    "contentHash": "1b53e62bcfbdd7e2",
+    "fetchedAt": "2026-04-25T12:34:44.061Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/526854": {
+    "contentHash": "f1c43417f03f0776",
+    "fetchedAt": "2026-04-25T12:34:42.981Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/419699": {
+    "contentHash": "b09462a10f0ed948",
+    "fetchedAt": "2026-04-25T12:34:42.888Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/yeetus-experimentus": {
+    "contentHash": "5b5e2a32bbf09652",
+    "fetchedAt": "2026-04-25T12:34:50.938Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/badoptimizations": {
+    "contentHash": "21163d4df8b09199",
+    "fetchedAt": "2026-04-25T12:34:52.588Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/collective": {
+    "contentHash": "501ccee4f69f5101",
+    "fetchedAt": "2026-04-25T12:34:44.818Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/HaaH232J/versions#99.0.0": {
+    "contentHash": "6719830fd0b71d5f",
+    "fetchedAt": "2026-04-25T12:34:50.974Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/HaaH232J/versions#84.0.3": {
+    "contentHash": "19c4dcd29e20c98c",
+    "fetchedAt": "2026-04-25T12:34:50.974Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/HaaH232J/versions#87.0.0": {
+    "contentHash": "6719830fd0b71d5f",
+    "fetchedAt": "2026-04-25T12:34:50.974Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/HaaH232J/versions#86.0.0": {
+    "contentHash": "6d4ec7b2a56020b8",
+    "fetchedAt": "2026-04-25T12:34:50.974Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/g96Z4WVZ/versions#2.4.1": {
+    "contentHash": "96a576b300537769",
+    "fetchedAt": "2026-04-25T12:34:52.626Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MPCX6s5C/versions#1.12.2": {
+    "contentHash": "cf3e1e00cb15cad2",
+    "fetchedAt": "2026-04-25T12:34:44.318Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/embeddium": {
+    "contentHash": "deda889c1ad0a218",
+    "fetchedAt": "2026-04-25T12:34:44.572Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/e0M1UDsY/versions#26.1.2-8.20-fabric+forge+neo": {
+    "contentHash": "75075f5529c8f921",
+    "fetchedAt": "2026-04-25T12:34:44.891Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/e0M1UDsY/versions#1.21.11-8.20-fabric+forge+neo": {
+    "contentHash": "75075f5529c8f921",
+    "fetchedAt": "2026-04-25T12:34:44.891Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/e0M1UDsY/versions#1.21.1-8.20-fabric+forge+neo": {
+    "contentHash": "75075f5529c8f921",
+    "fetchedAt": "2026-04-25T12:34:44.891Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/e0M1UDsY/versions#1.20.1-8.20-fabric+forge+neo": {
+    "contentHash": "75075f5529c8f921",
+    "fetchedAt": "2026-04-25T12:34:44.891Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/e0M1UDsY/versions#26.1.2-8.19-fabric+forge+neo": {
+    "contentHash": "9944cd3294ae2738",
+    "fetchedAt": "2026-04-25T12:34:44.891Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/e0M1UDsY/versions#1.21.11-8.19-fabric+forge+neo": {
+    "contentHash": "9944cd3294ae2738",
+    "fetchedAt": "2026-04-25T12:34:44.891Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/e0M1UDsY/versions#1.21.1-8.19-fabric+forge+neo": {
+    "contentHash": "9944cd3294ae2738",
+    "fetchedAt": "2026-04-25T12:34:44.891Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/e0M1UDsY/versions#1.20.1-8.19-fabric+forge+neo": {
+    "contentHash": "9944cd3294ae2738",
+    "fetchedAt": "2026-04-25T12:34:44.891Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/sk9rgfiA/versions#1.0.15+mc1.21.1": {
+    "contentHash": "b54d70adc84deb64",
+    "fetchedAt": "2026-04-25T12:34:44.620Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/sk9rgfiA/versions#1.0.14+mc1.21.1": {
+    "contentHash": "b54d70adc84deb64",
+    "fetchedAt": "2026-04-25T12:34:44.620Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/sk9rgfiA/versions#1.0.12-beta.1+mc1.21.4": {
+    "contentHash": "f323a6070495126a",
+    "fetchedAt": "2026-04-25T12:34:44.620Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/sk9rgfiA/versions#1.0.13+mc1.21.1": {
+    "contentHash": "b54d70adc84deb64",
+    "fetchedAt": "2026-04-25T12:34:44.620Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/sk9rgfiA/versions#1.0.12+mc1.21.1": {
+    "contentHash": "b54d70adc84deb64",
+    "fetchedAt": "2026-04-25T12:34:44.620Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/sk9rgfiA/versions#1.0.11+mc1.21.1": {
+    "contentHash": "b54d70adc84deb64",
+    "fetchedAt": "2026-04-25T12:34:44.620Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/sk9rgfiA/versions#0.3.31+mc1.20.1": {
+    "contentHash": "b54d70adc84deb64",
+    "fetchedAt": "2026-04-25T12:34:44.620Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/sk9rgfiA/versions#1.0.10+mc1.21.1": {
+    "contentHash": "b54d70adc84deb64",
+    "fetchedAt": "2026-04-25T12:34:44.620Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/433760": {
+    "contentHash": "f2eaa1d177306cb9",
+    "fetchedAt": "2026-04-25T12:34:43.819Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/635427": {
+    "contentHash": "f4d4d6d1024c11f6",
+    "fetchedAt": "2026-04-25T12:34:50.560Z",
+    "extractionStatus": "skipped"
+  },
+  "https://www.curseforge.com/minecraft/mc-mods/949555": {
+    "contentHash": "cef2c600ca986ea2",
+    "fetchedAt": "2026-04-25T12:34:52.251Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/RaphiMC/ImmediatelyFast/releases/tag/v1.15.2": {
+    "contentHash": "d5e5c638ac011c4e",
+    "fetchedAt": "2026-04-25T12:35:12.312Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/RaphiMC/ImmediatelyFast/releases/tag/v1.15.1": {
+    "contentHash": "fe4a7109a36f04cc",
+    "fetchedAt": "2026-04-25T12:35:12.312Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/RaphiMC/ImmediatelyFast/releases/tag/v1.15.0": {
+    "contentHash": "ad815c51b8d839da",
+    "fetchedAt": "2026-04-25T12:35:12.312Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/RaphiMC/ImmediatelyFast/releases/tag/v1.14.2": {
+    "contentHash": "4b1f2f5f7008147f",
+    "fetchedAt": "2026-04-25T12:35:12.312Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/RaphiMC/ImmediatelyFast/releases/tag/v1.13.5": {
+    "contentHash": "c5f61a91bf57f98f",
+    "fetchedAt": "2026-04-25T12:35:12.312Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/RaphiMC/ImmediatelyFast/releases/tag/v1.12.5": {
+    "contentHash": "503e124ca487f93b",
+    "fetchedAt": "2026-04-25T12:35:12.312Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/RaphiMC/ImmediatelyFast/releases/tag/v1.8.6": {
+    "contentHash": "3d346fce40c868a5",
+    "fetchedAt": "2026-04-25T12:35:12.312Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/RaphiMC/ImmediatelyFast/releases/tag/v1.6.10": {
+    "contentHash": "34a3fb4169fdb203",
+    "fetchedAt": "2026-04-25T12:35:12.312Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/embeddedt/ModernFix/releases/tag/5.26.2%2B1.20.1": {
+    "contentHash": "381e51fec2d3d890",
+    "fetchedAt": "2026-04-25T12:35:12.704Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/embeddedt/ModernFix/releases/tag/5.25.2%2B1.20.1": {
+    "contentHash": "4e1237158cb66e49",
+    "fetchedAt": "2026-04-25T12:35:12.704Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/embeddedt/ModernFix/releases/tag/5.25.1%2B1.21.1": {
+    "contentHash": "6e322a1b4a1675d1",
+    "fetchedAt": "2026-04-25T12:35:12.704Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/embeddedt/ModernFix/releases/tag/5.25.1%2B1.20.1": {
+    "contentHash": "aa43ca476ab5b2d0",
+    "fetchedAt": "2026-04-25T12:35:12.704Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/mezz/JustEnoughItems/releases/tag/v2.0.1": {
+    "contentHash": "80c88f2b5b9b1bdc",
+    "fetchedAt": "2026-04-25T12:35:13.015Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/mezz/JustEnoughItems/releases/tag/v2.0.0": {
+    "contentHash": "470164bf0d11cbac",
+    "fetchedAt": "2026-04-25T12:35:13.015Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/mezz/JustEnoughItems/releases/tag/1.0.0": {
+    "contentHash": "c50a1c1794ab275e",
+    "fetchedAt": "2026-04-25T12:35:13.015Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Texture_Features/releases/tag/v4.5.0": {
+    "contentHash": "85869e82d924f985",
+    "fetchedAt": "2026-04-25T12:35:14.237Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Texture_Features/releases/tag/v4.3.3": {
+    "contentHash": "09644c61929fbceb",
+    "fetchedAt": "2026-04-25T12:35:14.237Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Texture_Features/releases/tag/v4.3.2": {
+    "contentHash": "c3d41bc05cdd166a",
+    "fetchedAt": "2026-04-25T12:35:14.237Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Texture_Features/releases/tag/v4.3.1": {
+    "contentHash": "a0570e37a84d6f2f",
+    "fetchedAt": "2026-04-25T12:35:14.237Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Texture_Features/releases/tag/v4.3.0": {
+    "contentHash": "0e5fe71fffee217c",
+    "fetchedAt": "2026-04-25T12:35:14.237Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Texture_Features/releases/tag/v4.2": {
+    "contentHash": "78493451f59f60f6",
+    "fetchedAt": "2026-04-25T12:35:14.237Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Texture_Features/releases/tag/releasefinal": {
+    "contentHash": "440a5853c99a2b4f",
+    "fetchedAt": "2026-04-25T12:35:14.237Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Texture_Features/releases/tag/release5": {
+    "contentHash": "2bfb707b387e4a6f",
+    "fetchedAt": "2026-04-25T12:35:14.237Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Model_Features/releases/tag/v1.0": {
+    "contentHash": "5e48bfa58d4244ac",
+    "fetchedAt": "2026-04-25T12:35:14.543Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/PaperMC/Starlight/releases/tag/1.0.0-RC3": {
+    "contentHash": "a1fa3b6f391c20a2",
+    "fetchedAt": "2026-04-25T12:35:16.980Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/PaperMC/Starlight/releases/tag/1.0.0-RC2": {
+    "contentHash": "5bb0a20159571e3a",
+    "fetchedAt": "2026-04-25T12:35:16.980Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/PaperMC/Starlight/releases/tag/1.0.0-RC1": {
+    "contentHash": "51154c17c8cb613e",
+    "fetchedAt": "2026-04-25T12:35:16.980Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/PaperMC/Starlight/releases/tag/0.0.3": {
+    "contentHash": "42e98d7af5acfa94",
+    "fetchedAt": "2026-04-25T12:35:16.980Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/PaperMC/Starlight/releases/tag/0.0.2": {
+    "contentHash": "2e3d6a37c1b16352",
+    "fetchedAt": "2026-04-25T12:35:16.980Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/PaperMC/Starlight/releases/tag/0.0.2-rc3": {
+    "contentHash": "f68bd397874f0502",
+    "fetchedAt": "2026-04-25T12:35:16.980Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/PaperMC/Starlight/releases/tag/0.0.2-rc2": {
+    "contentHash": "a4297e1c4cf96315",
+    "fetchedAt": "2026-04-25T12:35:16.980Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/PaperMC/Starlight/releases/tag/0.0.2-rc1": {
+    "contentHash": "c872a58768ed059f",
+    "fetchedAt": "2026-04-25T12:35:16.980Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/squeek502/AppleSkin/releases/tag/v3.0.9": {
+    "contentHash": "9b1e675a53e44da8",
+    "fetchedAt": "2026-04-25T12:35:17.614Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/squeek502/AppleSkin/releases/tag/v2.5.2": {
+    "contentHash": "dfdd96652065d44e",
+    "fetchedAt": "2026-04-25T12:35:17.614Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/squeek502/AppleSkin/releases/tag/v3.0.8": {
+    "contentHash": "4107e162efafcd7a",
+    "fetchedAt": "2026-04-25T12:35:17.614Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/squeek502/AppleSkin/releases/tag/v3.0.5": {
+    "contentHash": "e93539fce3b39e65",
+    "fetchedAt": "2026-04-25T12:35:17.614Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/squeek502/AppleSkin/releases/tag/v3.0.2": {
+    "contentHash": "723d2e9c98ede318",
+    "fetchedAt": "2026-04-25T12:35:17.614Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/squeek502/AppleSkin/releases/tag/v3.0.0": {
+    "contentHash": "45580e96d7600eb5",
+    "fetchedAt": "2026-04-25T12:35:17.614Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/squeek502/AppleSkin/releases/tag/v2.5.1": {
+    "contentHash": "b6517caec0f9c293",
+    "fetchedAt": "2026-04-25T12:35:17.614Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/squeek502/AppleSkin/releases/tag/v2.5.0": {
+    "contentHash": "8edeb08980731b7f",
+    "fetchedAt": "2026-04-25T12:35:17.614Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/tr7zw/NotEnoughAnimations/releases/tag/1.12.2": {
+    "contentHash": "c4348c8f3152dca0",
+    "fetchedAt": "2026-04-25T12:35:18.132Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/tr7zw/NotEnoughAnimations/releases/tag/1.12.1": {
+    "contentHash": "b6e6a7e3c1c89665",
+    "fetchedAt": "2026-04-25T12:35:18.132Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/tr7zw/NotEnoughAnimations/releases/tag/1.12.0": {
+    "contentHash": "26296256f080fd7d",
+    "fetchedAt": "2026-04-25T12:35:18.132Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/tr7zw/NotEnoughAnimations/releases/tag/1.11.3": {
+    "contentHash": "2a9beb50a3f87052",
+    "fetchedAt": "2026-04-25T12:35:18.132Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/tr7zw/NotEnoughAnimations/releases/tag/1.11.2": {
+    "contentHash": "840aa5c1c93f552b",
+    "fetchedAt": "2026-04-25T12:35:18.132Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/tr7zw/NotEnoughAnimations/releases/tag/1.11.1": {
+    "contentHash": "6191d4eb74c1240b",
+    "fetchedAt": "2026-04-25T12:35:18.132Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/tr7zw/NotEnoughAnimations/releases/tag/1.11.0": {
+    "contentHash": "f40ea9f99e2b9539",
+    "fetchedAt": "2026-04-25T12:35:18.132Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/tr7zw/NotEnoughAnimations/releases/tag/1.10.6": {
+    "contentHash": "13c31207809e737f",
+    "fetchedAt": "2026-04-25T12:35:18.132Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/nanite/Yeetus-Experimentus/releases/tag/v2.3.0_1.19.4": {
+    "contentHash": "f8a33134df84250f",
+    "fetchedAt": "2026-04-25T12:35:19.307Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/nanite/Yeetus-Experimentus/releases/tag/v2.3.0": {
+    "contentHash": "285b1bcdf5d19063",
+    "fetchedAt": "2026-04-25T12:35:19.307Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/nanite/Yeetus-Experimentus/releases/tag/v1.0.2_1.18.2_2": {
+    "contentHash": "a460f9ee370a805a",
+    "fetchedAt": "2026-04-25T12:35:19.307Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/imthosea/BadOptimizations/releases/tag/v2.2.3": {
+    "contentHash": "076fd90d5c734eaf",
+    "fetchedAt": "2026-04-25T12:35:19.912Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/imthosea/BadOptimizations/releases/tag/v2.2.2": {
+    "contentHash": "fb247f3559df5ca0",
+    "fetchedAt": "2026-04-25T12:35:19.912Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/malte0811/FerriteCore#readme": {
+    "contentHash": "1e30b611961ecd17",
+    "fetchedAt": "2026-04-25T12:35:20.534Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/RaphiMC/ImmediatelyFast#readme": {
+    "contentHash": "58931a16bb62bd18",
+    "fetchedAt": "2026-04-25T12:35:20.815Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/embeddedt/ModernFix#readme": {
+    "contentHash": "44a42f51ee49abee",
+    "fetchedAt": "2026-04-25T12:35:21.101Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/mezz/JustEnoughItems#readme": {
+    "contentHash": "9e0fb554bb89561a",
+    "fetchedAt": "2026-04-25T12:35:21.360Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Keksuccino/Konkrete#readme": {
+    "contentHash": "e33eb19fd8b4a887",
+    "fetchedAt": "2026-04-25T12:35:21.649Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/shedaniel/ClothConfig#readme": {
+    "contentHash": "cb42c03677faac73",
+    "fetchedAt": "2026-04-25T12:35:22.112Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Texture_Features#readme": {
+    "contentHash": "d0306dab7bcf6bce",
+    "fetchedAt": "2026-04-25T12:35:22.382Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Traben-0/Entity_Model_Features#readme": {
+    "contentHash": "4b1bb2067c70dc7b",
+    "fetchedAt": "2026-04-25T12:35:22.641Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Keksuccino/Melody#readme": {
+    "contentHash": "76945e845f96be06",
+    "fetchedAt": "2026-04-25T12:35:22.942Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Keksuccino/FancyMenu#readme": {
+    "contentHash": "5ff342b8c2e00995",
+    "fetchedAt": "2026-04-25T12:35:23.242Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Snownee/Jade#readme": {
+    "contentHash": "02ff1faae0fde9f5",
+    "fetchedAt": "2026-04-25T12:35:23.512Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/bernie-g/geckolib#readme": {
+    "contentHash": "b68345c474ca5a01",
+    "fetchedAt": "2026-04-25T12:35:23.773Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Asek3/Oculus#readme": {
+    "contentHash": "bb156fe51c20d2b2",
+    "fetchedAt": "2026-04-25T12:35:24.050Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/architectury/architectury#readme": {
+    "contentHash": "482f7d12a8268a37",
+    "fetchedAt": "2026-04-25T12:35:24.566Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/TwelveIterations/Balm#readme": {
+    "contentHash": "ff3dc7fe620f6e6a",
+    "fetchedAt": "2026-04-25T12:35:24.865Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/PaperMC/Starlight#readme": {
+    "contentHash": "672fe90aa47aea6a",
+    "fetchedAt": "2026-04-25T12:35:25.254Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Glitchfiend/TerraBlender#readme": {
+    "contentHash": "ce5d5cd43003963b",
+    "fetchedAt": "2026-04-25T12:35:25.540Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/squeek502/AppleSkin#readme": {
+    "contentHash": "9c40a3d5be452543",
+    "fetchedAt": "2026-04-25T12:35:25.801Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/tr7zw/NotEnoughAnimations#readme": {
+    "contentHash": "dd7647a4da44bd15",
+    "fetchedAt": "2026-04-25T12:35:26.136Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/Serilum/.issue-tracker#readme": {
+    "contentHash": "025c3930e94bb542",
+    "fetchedAt": "2026-04-25T12:35:26.686Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/ItsThosea/BadOpitmizations#readme": {
+    "contentHash": "4c2bf55802c969e6",
+    "fetchedAt": "2026-04-25T12:35:27.477Z",
+    "extractionStatus": "skipped"
+  },
+  "https://github.com/FiniteReality/embeddium#readme": {
+    "contentHash": "19f3d7e5ff56c3e8",
+    "fetchedAt": "2026-04-25T12:35:27.784Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/1bokaNcj/versions#fabric-26.1.2-25.3.11": {
+    "contentHash": "50b47595a0cd10b0",
+    "fetchedAt": "2026-04-25T12:34:41.973Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/1bokaNcj/versions#neoforge-26.1.2-25.3.11": {
+    "contentHash": "50b47595a0cd10b0",
+    "fetchedAt": "2026-04-25T12:34:41.973Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.12+mc1.20.1": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-25T12:34:42.229Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.11+mc1.20.1": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-25T12:34:42.229Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.3+mc1.21.1": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-25T12:34:42.229Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.7+mc26.1.2": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-25T12:34:42.229Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/nmDcB62a/versions#5.27.10+mc1.20.1": {
+    "contentHash": "35a1308f27f49581",
+    "fetchedAt": "2026-04-25T12:34:42.229Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/NcUtCpym/versions#neoforge-26.1.2-1.40.15": {
+    "contentHash": "c292c52b7bf16077",
+    "fetchedAt": "2026-04-25T12:34:43.327Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#21.0.57+forge-1.21.1": {
+    "contentHash": "653c969aee07ad49",
+    "fetchedAt": "2026-04-25T12:34:43.408Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#21.0.57+neoforge-1.21.1": {
+    "contentHash": "653c969aee07ad49",
+    "fetchedAt": "2026-04-25T12:34:43.408Z",
+    "extractionStatus": "skipped"
+  },
+  "https://modrinth.com/mod/MBAkmtvl/versions#21.0.57+fabric-1.21.1": {
+    "contentHash": "653c969aee07ad49",
+    "fetchedAt": "2026-04-25T12:34:43.408Z",
+    "extractionStatus": "skipped"
+  }
+}

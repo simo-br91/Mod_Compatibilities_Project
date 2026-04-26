@@ -1,0 +1,18 @@
+{
+  "quotaPlans": {
+    "tightTest": {
+      "planId": "plan_test_tight",
+      "name": "Tight Test Plan",
+      "maxAnalysesPerDay": 3,
+      "maxImportsPerDay": 4,
+      "maxConcurrentAnalyses": 1,
+      "maxEvidenceSyncsPerHour": 2,
+      "maxExportBytesPerDay": 1048576
+    }
+  },
+  "rateLimitConfig": {
+    "limit": 3,
+    "windowMs": 60000
+  },
+  "expectedAuditEventTypes": ["import.created", "analysis.created"]
+}

@@ -1,0 +1,224 @@
+name: Release / Staging
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Release action to perform
+        required: true
+        type: choice
+        options:
+          - deploy
+          - rollback
+      release_version:
+        description: Optional explicit release version for deploy
+        required: false
+        type: string
+      target_release_version:
+        description: Optional explicit rollback target version
+        required: false
+        type: string
+      reason:
+        description: Optional operator note for release history
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  packages: write
+
+concurrency:
+  group: staging-release
+  cancel-in-progress: false
+
+jobs:
+  staging-release:
+    name: Staging / ${{ inputs.action }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      POSTGRES_URL: postgresql://postgres:postgres@127.0.0.1:5432/modcompat
+      APP_ENV: staging
+      LOG_LEVEL: info
+      MODCOMPAT_IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
+      MODCOMPAT_IMAGE_NAMESPACE: platform
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Set up Go
+        if: inputs.action == 'deploy'
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: apps/recommendation/go.mod
+
+      - name: Set up Java
+        if: inputs.action == 'deploy'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Resolve release version
+        id: release
+        if: inputs.action == 'deploy'
+        shell: bash
+        run: |
+          if [ -n "${{ inputs.release_version }}" ]; then
+            release_version="${{ inputs.release_version }}"
+          else
+            release_version="staging-$(date -u +'%Y%m%d%H%M%SZ')-${GITHUB_SHA::7}"
+          fi
+          echo "release_version=$release_version" >> "$GITHUB_OUTPUT"
+
+      - name: Validate release candidate
+        if: inputs.action == 'deploy'
+        run: |
+          pnpm contracts:check
+          pnpm typecheck
+          pnpm test:regression
+          pnpm --filter @modcompat/web build
+
+      - name: Deploy compose-backed staging runtime
+        if: inputs.action == 'deploy'
+        shell: bash
+        run: |
+          export MODCOMPAT_IMAGE_TAG="${{ steps.release.outputs.release_version }}"
+          docker compose -f docker-compose.yml -f docker-compose.staging.yml up -d --build
+          docker compose -f docker-compose.yml -f docker-compose.staging.yml ps
+
+      - name: Log in to GHCR
+        if: inputs.action == 'deploy'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish staging image set to GHCR
+        if: inputs.action == 'deploy'
+        shell: bash
+        run: |
+          release_version="${{ steps.release.outputs.release_version }}"
+          services=(
+            artifact-analysis
+            evidence
+            admin
+            analysis-orchestrator
+            recommendation
+            graph
+            simulation
+          )
+
+          for service in "${services[@]}"; do
+            local_ref="modcompat/${service}:${release_version}"
+            remote_ref="${MODCOMPAT_IMAGE_REGISTRY}/${MODCOMPAT_IMAGE_NAMESPACE}/${service}:${release_version}"
+            docker tag "${local_ref}" "${remote_ref}"
+            docker push "${remote_ref}"
+          done
+
+      - name: Run staging canary against deployed runtime
+        if: inputs.action == 'deploy'
+        run: pnpm canary:staging
+
+      - name: Run staging probe against deployed runtime
+        if: inputs.action == 'deploy'
+        run: pnpm smoke:staging -- --probe-only
+
+      - name: Create release bundle manifest
+        if: inputs.action == 'deploy'
+        run: >
+          pnpm release:bundle --
+          --environment staging
+          --release-version ${{ steps.release.outputs.release_version }}
+          --actor ${{ github.actor }}
+          --reason "${{ inputs.reason || 'Promote validated staging release' }}"
+
+      - name: Record published staging image set
+        if: inputs.action == 'deploy'
+        run: >
+          pnpm release:publish:staging --
+          --release-version ${{ steps.release.outputs.release_version }}
+
+      - name: Promote staging release
+        if: inputs.action == 'deploy'
+        run: >
+          pnpm release:deploy:staging --
+          --release-version ${{ steps.release.outputs.release_version }}
+          --actor ${{ github.actor }}
+          --reason "${{ inputs.reason || 'Promote validated staging release' }}"
+
+      - name: Roll back staging release
+        if: inputs.action == 'rollback'
+        shell: bash
+        run: |
+          command=(pnpm release:rollback:staging -- --actor "${{ github.actor }}" --reason "${{ inputs.reason || 'Rollback staging release' }}")
+          if [ -n "${{ inputs.target_release_version }}" ]; then
+            command+=(--target-release-version "${{ inputs.target_release_version }}")
+          fi
+          "${command[@]}"
+
+      - name: Show staging release state
+        run: pnpm release:status -- --environment staging
+
+      - name: Verify release control plane references
+        run: pnpm release:verify:staging
+
+      - name: Capture compose diagnostics
+        if: always() && inputs.action == 'deploy'
+        shell: bash
+        run: |
+          docker compose -f docker-compose.yml -f docker-compose.staging.yml ps > .staging-compose-ps.txt || true
+          docker compose -f docker-compose.yml -f docker-compose.staging.yml logs --no-color > .staging-compose.log || true
+
+      - name: Upload release metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: staging-release-metadata
+          path: |
+            infra/releases
+            .phase13-canary-report.json
+            .phase13-canary.prom
+            .staging-compose-ps.txt
+            .staging-compose.log
+          if-no-files-found: error
+
+      - name: Tear down compose-backed staging runtime
+        if: always() && inputs.action == 'deploy'
+        shell: bash
+        run: docker compose -f docker-compose.yml -f docker-compose.staging.yml down --remove-orphans
+
+      - name: Commit release metadata
+        shell: bash
+        run: |
+          if git diff --quiet -- infra/releases; then
+            echo "No release metadata changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add infra/releases
+          if [ "${{ inputs.action }}" = "deploy" ]; then
+            commit_message="chore(release): promote staging ${{ steps.release.outputs.release_version }}"
+          else
+            commit_message="chore(release): rollback staging"
+          fi
+          git commit -m "$commit_message"
+          git push

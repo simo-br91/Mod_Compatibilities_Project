@@ -1,0 +1,8 @@
+{
+  "analysis_id": "ana_phase5_truth",
+  "expected": {
+    "top_risk_finding_type": "declared_incompatibility",
+    "required_bundle_strategy": "minimal_unblock",
+    "summary_must_cite": ["finding", "recommendation"]
+  }
+}

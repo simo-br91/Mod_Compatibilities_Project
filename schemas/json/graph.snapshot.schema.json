@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/graph.snapshot.schema.json",
+  "title": "GraphSnapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["graph_id", "analysis_id", "nodes", "edges"],
+  "properties": {
+    "graph_id": { "type": "string" },
+    "analysis_id": { "type": "string" },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["node_id", "node_type", "label", "analysis_id"],
+        "properties": {
+          "node_id": { "type": "string" },
+          "node_type": { "type": "string" },
+          "label": { "type": "string" },
+          "analysis_id": { "type": "string" },
+          "properties": { "type": "object", "additionalProperties": true }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["edge_id", "analysis_id", "edge_type", "source_id", "target_id"],
+        "properties": {
+          "edge_id": { "type": "string" },
+          "analysis_id": { "type": "string" },
+          "edge_type": { "type": "string" },
+          "source_id": { "type": "string" },
+          "target_id": { "type": "string" },
+          "weight": { "type": "number" },
+          "properties": { "type": "object", "additionalProperties": true }
+        }
+      }
+    }
+  }
+}

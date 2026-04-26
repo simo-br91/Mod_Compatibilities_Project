@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/offline-dataset.schema.json",
+  "title": "OfflineDataset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dataset_id",
+    "analysis_id",
+    "dataset_kind",
+    "feature_vector_ids",
+    "summary",
+    "created_at"
+  ],
+  "properties": {
+    "dataset_id": { "type": "string" },
+    "analysis_id": { "type": "string" },
+    "dataset_kind": { "type": "string", "enum": ["finding_risk_training", "recommendation_ranking_eval"] },
+    "feature_vector_ids": { "type": "array", "items": { "type": "string" } },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["row_count", "labeled_row_count", "feature_namespaces"],
+      "properties": {
+        "row_count": { "type": "integer", "minimum": 0 },
+        "labeled_row_count": { "type": "integer", "minimum": 0 },
+        "feature_namespaces": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

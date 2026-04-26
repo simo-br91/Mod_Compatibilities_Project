@@ -1,0 +1,20 @@
+{
+  "name": "@modcompat/platform-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@modcompat/api-contracts": "workspace:*",
+    "@modcompat/domain-models": "workspace:*",
+    "@modcompat/id-generation": "workspace:*",
+    "pg": "^8.20.0"
+  },
+  "scripts": {
+    "test": "node --import tsx --test ./src/**/*.test.ts",
+    "test:regression": "node --import tsx --test ./src/phase13-regression.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  }
+}

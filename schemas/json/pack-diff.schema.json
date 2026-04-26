@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://modcompat.dev/schemas/json/pack-diff.schema.json",
+  "title": "PackDiff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pack_diff_id",
+    "project_id",
+    "base_snapshot_id",
+    "target_snapshot_id",
+    "summary",
+    "changes"
+  ],
+  "properties": {
+    "pack_diff_id": { "type": "string" },
+    "project_id": { "type": "string" },
+    "base_snapshot_id": { "type": "string" },
+    "target_snapshot_id": { "type": "string" },
+    "baseline_analysis_id": { "type": "string" },
+    "target_analysis_id": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "added_mods",
+        "removed_mods",
+        "changed_versions",
+        "finding_adds",
+        "finding_resolutions"
+      ],
+      "properties": {
+        "added_mods": { "type": "integer" },
+        "removed_mods": { "type": "integer" },
+        "changed_versions": { "type": "integer" },
+        "finding_adds": { "type": "integer" },
+        "finding_resolutions": { "type": "integer" }
+      }
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["change_type", "summary"],
+        "properties": {
+          "change_type": {
+            "type": "string",
+            "enum": [
+              "mod_added",
+              "mod_removed",
+              "version_changed",
+              "environment_changed",
+              "finding_added",
+              "finding_resolved"
+            ]
+          },
+          "project_id": { "type": "string" },
+          "before": { "type": "string" },
+          "after": { "type": "string" },
+          "summary": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: modcompat-runtime-config
+  namespace: modcompat
+data:
+  APP_ENV: "production"
+  LOG_LEVEL: "info"
+  TEMPORAL_NAMESPACE: "default"
+  TEMPORAL_TASK_QUEUE: "analysis-orchestrator"
+  TEMPORAL_ADDRESS: "temporal-frontend:7233"
+  EVIDENCE_HTTP_PORT: "8081"
+  ADMIN_HTTP_PORT: "8082"
+  RECOMMENDATION_HTTP_PORT: "8083"
+  GRAPH_HTTP_PORT: "8084"
+  SIMULATION_HTTP_PORT: "8085"
+  ORCHESTRATOR_HTTP_PORT: "8086"
+  ARTIFACT_ANALYSIS_HTTP_PORT: "9090"
+  EVIDENCE_SERVICE_URL: "http://evidence:8081"
+  ADMIN_SERVICE_URL: "http://admin:8082"
+  RECOMMENDATION_SERVICE_URL: "http://recommendation:8083"
+  GRAPH_SERVICE_URL: "http://graph:8084"
+  SIMULATION_SERVICE_URL: "http://simulation:8085"
+  ORCHESTRATOR_SERVICE_URL: "http://analysis-orchestrator:8086"
+  ARTIFACT_ANALYSIS_SERVICE_URL: "http://artifact-analysis:9090"

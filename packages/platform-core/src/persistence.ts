@@ -1933,22 +1933,37 @@ export class PostgresPlatformPersistence {
         [snapshot.snapshotId]
       );
 
-      for (const component of snapshot.components) {
+      if (snapshot.components.length > 0) {
+        const componentRows = snapshot.components.map((component) => ({
+          id: createPlatformId("ksc"),
+          component_type: component.componentType,
+          record_count: component.recordCount,
+          checksum: component.checksum,
+          schema_version: 1,
+          created_at: snapshot.createdAt
+        }));
+
         await client.query(
           `INSERT INTO knowledge_snapshot_components (
             id, snapshot_id, component_type, record_count, checksum, schema_version, created_at
-          ) VALUES (
-            $1, $2, $3, $4, $5, $6, $7
-          )`,
-          [
-            createPlatformId("ksc"),
-            snapshot.snapshotId,
-            component.componentType,
-            component.recordCount,
+          )
+          SELECT
+            component.id,
+            $1,
+            component.component_type,
+            component.record_count,
             component.checksum,
-            1,
-            snapshot.createdAt
-          ]
+            component.schema_version,
+            component.created_at
+          FROM jsonb_to_recordset($2::jsonb) AS component(
+            id text,
+            component_type text,
+            record_count integer,
+            checksum text,
+            schema_version integer,
+            created_at timestamptz
+          )`,
+          [snapshot.snapshotId, JSON.stringify(componentRows)]
         );
       }
 

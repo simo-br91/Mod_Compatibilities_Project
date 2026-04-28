@@ -101,18 +101,6 @@ async function main() {
       "offline_candidate"
     );
 
-    if (platform.persistence.isEnabled()) {
-      for (const candidate of platform.repository.groundTruthCandidates.values()) {
-        if (
-          candidate.status === "queued" &&
-          platform.repository.snapshots.has(candidate.packSnapshotId)
-        ) {
-          await platform.persistence.persistPackSnapshot(candidate.packSnapshotId);
-          await platform.persistence.persistGroundTruthCandidate(candidate);
-        }
-      }
-    }
-
     console.log(
       JSON.stringify(
         {
@@ -136,15 +124,6 @@ async function main() {
     }
 
     const discovery = platform.groundTruth.enqueueDiscoveredPackSnapshots(discoverLimit);
-    if (platform.persistence.isEnabled()) {
-      for (const candidate of platform.repository.groundTruthCandidates.values()) {
-        if (platform.repository.snapshots.has(candidate.packSnapshotId)) {
-          await platform.persistence.persistPackSnapshot(candidate.packSnapshotId);
-          await platform.persistence.persistGroundTruthCandidate(candidate);
-        }
-      }
-    }
-
     console.log(
       JSON.stringify(
         {

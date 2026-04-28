@@ -964,6 +964,7 @@ export class GroundTruthService {
     const record = this.upsertExactPackRecord(snapshot, run);
 
     if (this.persistence?.isEnabled()) {
+      await this.persistence.persistPackSnapshot(snapshot.packSnapshotId);
       await this.persistence.persistGroundTruthRun(run);
       await this.persistence.persistGroundTruthCandidate(finalCandidate);
       await this.persistence.persistGroundTruthExactPackRecord(record);
